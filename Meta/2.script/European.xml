@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<ScriptLibrary>
+  <!-- Cash settled European EQ, FX, COM Option                                               
+   
+       Inputs:                                                                            
+       Expiry                          option expiry date                                     
+       Settlement                      option payoff settlement date                          
+       Strike                          option strike                                          
+       PutCall                         1 for call, -1 for put                                 
+       LongShort                       1 for a long, -1 for a short position                  
+       Notional                        ccy1 Notional                             
+       Underlying                      underlying index                                       
+       PayCcy                          payment currency                                       
+       
+       Results:                                                                           
+       NPV                             npv of the option                                      
+       ExerciseProbability             exercise probability of the option                      
+  -->
+  <Script>
+    <Name>EuropeanOption</Name>
+    <ProductTag>SingleAssetOption(FX)</ProductTag>
+    <Script>
+      <Code>
+        <![CDATA[
+          NUMBER Payoff, CurrentNotional;
+          Payoff = PutCall * (Underlying(Expiry) - Strike);
+          Option = LOGPAY( LongShort * Notional * max( Payoff, 0 ), Expiry, Settlement, PayCcy, 1, OptionFlow);
+          CurrentNotional = Strike * Notional;
+        ]]></Code>
+      <NPV>Option</NPV>
+      <Results>
+        <Result>CurrentNotional</Result>
+        <Result rename="notionalCurrency">PayCcy</Result>
+      </Results>
+      <CalibrationSpec>
+        <Calibration>
+          <Index>Underlying</Index>
+          <Strikes>
+            <Strike>Strike</Strike>
+          </Strikes>
+        </Calibration>
+      </CalibrationSpec>
+    </Script>
+
+    <Script purpose = "FD">
+      <Code>
+        <![CDATA[
+          NUMBER Payoff, CurrentNotional;
+          Payoff = PutCall * (Underlying(Expiry) - Strike);
+          Option = LOGPAY( LongShort * Notional * max( Payoff, 0 ), Expiry, Settlement, PayCcy, 1, OptionFlow);
+          CurrentNotional = Strike * Notional;
+        ]]></Code>
+      <NPV>Option</NPV>
+      <Results>
+        <Result>CurrentNotional</Result>
+        <Result rename="notionalCurrency">PayCcy</Result>
+      </Results>
+      <CalibrationSpec>
+        <Calibration>
+          <Index>Underlying</Index>
+          <Strikes>
+            <Strike>Strike</Strike>
+          </Strikes>
+        </Calibration>
+      </CalibrationSpec>
+    </Script>
+  </Script>
+  
+</ScriptLibrary>

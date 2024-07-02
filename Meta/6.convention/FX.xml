@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Conventions>
+  
+  <FxOption> 
+    <Id>FX-EUR-USD-OPTION-CONVENTIONS</Id> 
+    <AtmType>AtmDeltaNeutral</AtmType> 
+    <DeltaType>Fwd</DeltaType> 
+  </FxOption>
+
+  <FxOption> 
+    <Id>FX-USD-CNY-OPTION-CONVENTIONS</Id> 
+    <AtmType>AtmDeltaNeutral</AtmType> 
+    <DeltaType>Fwd</DeltaType> 
+  </FxOption>
+
+  <FX>
+    <Id>USD-CNY-FX-CONVENTIONS</Id>
+    <SpotDays>0</SpotDays>
+    <SourceCurrency>USD</SourceCurrency>
+    <TargetCurrency>CNY</TargetCurrency>
+    <PointsFactor>10000</PointsFactor>
+    <AdvanceCalendar>CN,US</AdvanceCalendar>
+    <SpotRelative>true</SpotRelative>
+  </FX>
+
+  <CrossCurrencyBasis>
+    <Id>USD-CNY-XCCY-BASIS-CONVENTIONS</Id>
+    <SettlementDays>2</SettlementDays>
+    <SettlementCalendar>CN,US</SettlementCalendar>
+    <RollConvention>MF</RollConvention>
+    <FlatIndex>CNY-SHIBOR-3M</FlatIndex>
+    <SpreadIndex>USD-LIBOR-3M</SpreadIndex>
+  </CrossCurrencyBasis>
+
+</Conventions>

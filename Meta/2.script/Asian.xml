@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<ScriptLibrary>
+  
+  <Script>
+    <Name>SingleAsianOption</Name>
+    <!-- default script -->
+    <Script>
+      <Code><![CDATA[
+      NUMBER i, Payoff, sumS,CurrentNotional;
+      sumS = 0;
+      FOR i IN (1, SIZE(ObservationDates),1) DO
+        sumS =  sumS + Underlying(ObservationDates[i]);
+      END;
+
+      Payoff = OptionType * (sumS/i - Strike);
+      Option = PAY(max(Payoff, 0), ObservationDates[i], ObservationDates[i], PayCcy);
+      
+      Option =Amount* Option * LongShort;
+      CurrentNotional = Strike * Amount;
+      ]]></Code>
+      <NPV>Option</NPV>
+      <Results>
+        <Result>CurrentNotional</Result>
+        <Result rename="notionalCurrency">PayCcy</Result>
+      </Results>
+    </Script>
+
+  </Script>
+  
+</ScriptLibrary>

@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<TodaysMarket>
+  <Configuration id="default">
+    <DiscountingCurvesId>default</DiscountingCurvesId>
+    <YieldCurvesId>default</YieldCurvesId>
+  </Configuration>
+  <Configuration id="xois_CNY">
+    <DiscountingCurvesId>xois_CNY</DiscountingCurvesId>
+    <YieldCurvesId>xois_CNY</YieldCurvesId>
+  </Configuration>
+
+  <DiscountingCurves id="default">
+    <DiscountingCurve currency="EUR">Yield/EUR/EUR1D</DiscountingCurve>
+    <DiscountingCurve currency="USD">Yield/USD/USD1D</DiscountingCurve>
+    <DiscountingCurve currency="CNY">Yield/CNY/CNY_REPO_7D</DiscountingCurve>
+  </DiscountingCurves>
+  
+  <YieldCurves id="default">
+    <YieldCurve name="BENCHMARK_USD">Yield/USD/BENCHMARK_USD</YieldCurve>
+    <YieldCurve name="BENCHMARK_CNY">Yield/CNY/BENCHMARK_CNY</YieldCurve>
+    <YieldCurve name="BENCHMARK_EUR">Yield/EUR/EUR1D</YieldCurve>
+  </YieldCurves>
+  
+  <YieldCurves id="xois_CNY">
+    <YieldCurve name="CNY-SHIBOR-3M">Yield/CNY/CNY_SHIBOR_3M</YieldCurve>
+    <YieldCurve name="ZC_CNY">Yield/CNY/ZC_CNY</YieldCurve>
+  </YieldCurves>
+
+  <DiscountingCurves id="xois_CNY">
+    <DiscountingCurve currency="USD">Yield/USD/USD-IN-CNY</DiscountingCurve>
+    <DiscountingCurve currency="EUR">Yield/EUR/EUR1D</DiscountingCurve>
+    <DiscountingCurve currency="CNY">Yield/CNY/CNY_REPO_7D</DiscountingCurve>
+  </DiscountingCurves>
+  
+  <!-- index forwarding curve definition -->
+  <IndexForwardingCurves id="default">
+    <Index name="CNY-REPOFIX-7D">Yield/CNY/CNY_REPO_7D</Index>
+    <Index name="CNY-SHIBOR-3M">Yield/CNY/CNY_SHIBOR_3M</Index>
+    <Index name="CNY-SHIBOR-1D">Yield/CNY/CNY_SHIBOR_ON</Index>
+    <Index name="EUR-EONIA">Yield/EUR/EUR1D</Index>
+    <Index name="USD-FedFunds">Yield/USD/USD1D</Index>
+    <Index name="USD-LIBOR-3M">Yield/USD/USD3M</Index>
+    <Index name="USD-LIBOR-6M">Yield/USD/USD6M</Index>
+  </IndexForwardingCurves>
+  
+  <FxSpots id="default">
+    <FxSpot pair="EURUSD">FX/EUR/USD</FxSpot>
+    <FxSpot pair="USDCNY">FX/USD/CNY</FxSpot>
+  </FxSpots>
+  
+  <FxVolatilities id="default">
+    <FxVolatility pair="EURUSD">FXVolatility/EUR/USD/EURUSD</FxVolatility>
+    <FxVolatility pair="USDCNY">FXVolatility/USD/CNY/USDCNY</FxVolatility>
+  </FxVolatilities>
+
+  <SwaptionVolatilities id="default">
+    <SwaptionVolatility currency="USD">SwaptionVolatility/USD/USD_SW_LN</SwaptionVolatility>
+    <SwaptionVolatility currency="CNY">SwaptionVolatility/CNY/CNY_SW_LN</SwaptionVolatility>
+  </SwaptionVolatilities>
+
+  <CapFloorVolatilities id="default">
+    <CapFloorVolatility currency="USD">CapFloorVolatility/USD/USD_CF_LN</CapFloorVolatility>
+    <CapFloorVolatility currency="CNY">CapFloorVolatility/CNY/CNY_CF_LN</CapFloorVolatility>
+  </CapFloorVolatilities>
+
+  <SwapIndexCurves id="default">
+    <SwapIndex name="USD-CMS-1Y"><Discounting>USD-FedFunds</Discounting></SwapIndex>
+    <SwapIndex name="USD-CMS-10Y"><Discounting>USD-FedFunds</Discounting></SwapIndex>
+    <SwapIndex name="CNY-CMS-1Y"><Discounting>CNY-REPOFIX-7D</Discounting></SwapIndex>
+    <SwapIndex name="CNY-CMS-10Y"><Discounting>CNY-REPOFIX-7D</Discounting></SwapIndex>
+  </SwapIndexCurves>
+
+</TodaysMarket>

@@ -1,0 +1,186 @@
+<?xml version="1.0"?>
+<ScriptLibrary>
+
+  <!-- Single Barrier Option
+
+       Inputs:
+       PayoffType                           0 = Vanilla max(0, S-K), 1 = Cash or Nothing
+       LongShort                            long / short indicator, +1 for long, -1 for short position
+       PutCall                              put / call indicator, +1 for call, -1 for put
+       Quantity                             quantity for PayoffType = 0 (Vanilla)
+       Strike                               the strike for PayoffType = 0 (Vanilla)
+       Amount                               amount for PayoffType = 1 (Cash or Nothing)
+       PayCcy                               payment currency
+       Expiry                               option expiry date
+       Settlement                           option settlement date
+       Underlying                           the underlying index
+       BarrierType                          1 = DonwIn, 2 = UpIn, 3 = DownOut, 4 = UpOut
+       BarrierLevel                         barrier level
+       BarrierRebate                        barrier rebate (only for out)
+       BarrierRebateCurrency                barrier rebate currency
+       BarrierRebatePayTime                 0 = atHit, 1 = atExpiry (only for out)
+       BarrierMonitoringDates               list of barrier monitoring dates
+
+       Results:
+       Value                                NPV of the barrier option
+       currentNotional                      current notional
+       notionalCurrency                     current notional currency
+  -->
+
+  <Script>
+    <Name>SingleBarrierOption</Name>
+    <!--<ProductTag>SingleAssetOptionBwd(EQ)</ProductTag>-->
+    <Script>
+      <Code><![CDATA[
+        REQUIRE PayoffType == 0 OR PayoffType == 1;
+        NUMBER KnockedIn, KnockedOut, Active, Rebate;
+        NUMBER U, i, d, CurrentNotional;
+
+        FOR d IN (1, SIZE(BarrierMonitoringDates), 1) DO
+          U = Underlying(BarrierMonitoringDates[d]);
+          IF {BarrierType == 1 AND U <= BarrierLevel} OR {BarrierType == 2 AND U >= BarrierLevel} THEN
+            IF KnockedOut == 0 THEN
+              KnockedIn = 1;
+	          END;
+          END;
+
+          IF {BarrierType == 3 AND U < BarrierLevel} OR {BarrierType == 4 AND U > BarrierLevel} THEN
+            IF KnockedOut == 0 THEN
+              IF BarrierRebatePayTime == 0 THEN
+                Rebate = PAY( LongShort * BarrierRebate, BarrierMonitoringDates[d], BarrierMonitoringDates[d], BarrierRebateCurrency );
+              ELSE
+                Rebate = PAY( LongShort * BarrierRebate, BarrierMonitoringDates[d], Settlement, BarrierRebateCurrency );
+              END;
+            END;
+            KnockedOut = 1;
+          END;
+        END;
+
+        Active = 1;
+        IF BarrierType == 1 OR BarrierType == 2 THEN
+          Active = 0;
+        END;
+        Active = max(Active, KnockedIn) * (1 - KnockedOut);
+
+	      IF BarrierRebate != 0 THEN
+	        Rebate = (1 - Active) * PAY( LongShort * BarrierRebate, Settlement, Settlement, BarrierRebateCurrency );
+	      END;
+
+        IF PayoffType == 0 THEN
+	        value = Active * PAY( LongShort * Quantity * max(0, PutCall * (Underlying(Expiry) - Strike)), Expiry, Settlement, PayCcy ) + Rebate;
+	      ELSE
+	        value = Active * PAY( LongShort * Amount, Expiry, Settlement, PayCcy ) + Rebate;
+	      END;
+
+        IF PayoffType == 0 THEN
+          CurrentNotional = Quantity * Strike;
+        ELSE
+          CurrentNotional = Amount;
+        END;
+        ]]></Code>
+      <NPV>value</NPV>
+      <Results>
+        <Result>CurrentNotional</Result>
+        <Result rename="notionalCurrency">PayCcy</Result>
+	      <Result>Active</Result>
+      </Results>
+      <CalibrationSpec>
+        <Calibration>
+          <Index>Underlying</Index>
+          <Strikes>
+            <Strike>Strike</Strike>
+            <Strike>BarrierLevel</Strike>
+          </Strikes>
+        </Calibration>
+      </CalibrationSpec>
+    </Script>
+  </Script>
+
+  <Script>
+    <Name>SingleContinuousBarrierOption</Name>
+    <!--<ProductTag>SingleAssetOptionBwd({AssetClass})</ProductTag>-->
+    <Script>
+      <Code><![CDATA[
+        REQUIRE PayoffType == 0 OR PayoffType == 1;
+        NUMBER KnockedIn, KnockedOut, Active, Rebate;
+        NUMBER U, i, d, CurrentNotional, Alive;
+        Alive = 1;
+
+        FOR d IN (1, SIZE(BarrierMonitoringDates), 1) DO
+          U = Underlying(BarrierMonitoringDates[d]);
+          IF {BarrierType == 1 AND U <= BarrierLevel} OR {BarrierType == 2 AND U >= BarrierLevel} THEN
+            IF KnockedOut == 0 THEN
+              KnockedIn = 1;
+	          END;
+          END;
+
+          IF {BarrierType == 3 AND U < BarrierLevel} OR {BarrierType == 4 AND U > BarrierLevel} THEN
+            IF KnockedOut == 0 THEN
+              IF BarrierRebatePayTime == 0 THEN
+                Rebate = PAY( LongShort * BarrierRebate, BarrierMonitoringDates[d], BarrierMonitoringDates[d], BarrierRebateCurrency );
+              ELSE
+                Rebate = PAY( LongShort * BarrierRebate, BarrierMonitoringDates[d], Settlement, BarrierRebateCurrency );
+              END;
+            END;
+            KnockedOut = 1;
+          END;
+
+          IF BarrierType == 4 THEN
+            IF d == 1 OR BarrierMonitoringDates[d-1] <= StartDate THEN
+              Alive = Alive * (1 - ABOVEPROB(Underlying, StartDate, BarrierMonitoringDates[d], BarrierLevel));
+            ELSE
+              Alive = Alive * (1 - ABOVEPROB(Underlying, BarrierMonitoringDates[d-1], BarrierMonitoringDates[d], BarrierLevel));
+	          END;
+          END;
+
+          IF BarrierType == 3 THEN
+            IF d == 1 OR BarrierMonitoringDates[d-1] <= StartDate THEN
+              Alive = Alive * (1 - BELOWPROB(Underlying, StartDate, BarrierMonitoringDates[d], BarrierLevel));
+	          ELSE
+              Alive = Alive * (1 - BELOWPROB(Underlying, BarrierMonitoringDates[d-1], BarrierMonitoringDates[d], BarrierLevel));
+	          END;
+          END;
+        END;
+
+        Active = 1;
+        IF BarrierType == 1 OR BarrierType == 2 THEN
+          Active = 0;
+        END;
+        Active = max(Active, KnockedIn) * (1 - KnockedOut);
+
+	      IF BarrierRebate != 0 THEN
+	        Rebate = (1 - Active) * PAY( LongShort * BarrierRebate, Settlement, Settlement, BarrierRebateCurrency );
+	      END;
+
+        IF PayoffType == 0 THEN
+	        value = Active * Alive * PAY( LongShort * Quantity * max(0, PutCall * (Underlying(Expiry) - Strike)), Expiry, Settlement, PayCcy ) + Rebate;
+	      ELSE
+	        value = Active * Alive * PAY( LongShort * Amount, Expiry, Settlement, PayCcy ) + Rebate;
+	      END;
+
+        IF PayoffType == 0 THEN
+          CurrentNotional = Quantity * Strike;
+        ELSE
+          CurrentNotional = Amount;
+        END;
+        ]]></Code>
+      <NPV>value</NPV>
+      <Results>
+        <Result>CurrentNotional</Result>
+        <Result rename="notionalCurrency">PayCcy</Result>
+	      <Result>Active</Result>
+      </Results>
+      <CalibrationSpec>
+        <Calibration>
+          <Index>Underlying</Index>
+          <Strikes>
+            <Strike>Strike</Strike>
+            <Strike>BarrierLevel</Strike>
+          </Strikes>
+        </Calibration>
+      </CalibrationSpec>
+    </Script>
+  </Script>
+
+  
+</ScriptLibrary>

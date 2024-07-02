@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Conventions>
+  <IborIndex>
+    <Id>CNY-REPOFIX-7D</Id>
+    <DayCounter>A365</DayCounter>
+    <SettlementDays>2</SettlementDays>
+    <BusinessDayConvention>MF</BusinessDayConvention>
+    <EndOfMonth>true</EndOfMonth>
+  </IborIndex>
+
+  <IborIndex>
+    <Id>CNY-SHIBOR-3M</Id>
+    <DayCounter>A360</DayCounter>
+    <SettlementDays>2</SettlementDays>
+    <BusinessDayConvention>MF</BusinessDayConvention>
+    <EndOfMonth>true</EndOfMonth>
+  </IborIndex>
+
+  <IborIndex>
+    <Id>CNY-SHIBOR-1D</Id>
+    <DayCounter>A360</DayCounter>
+    <SettlementDays>2</SettlementDays>
+    <BusinessDayConvention>MF</BusinessDayConvention>
+    <EndOfMonth>true</EndOfMonth>
+  </IborIndex>
+
+  <Deposit>
+    <Id>CNY-REPOFIX-CONVENTIONS</Id>
+    <IndexBased>true</IndexBased>
+    <Index>CNY-REPOFIX</Index>
+  </Deposit>
+
+  <Deposit>
+    <Id>CNY-SHIBOR-CONVENTIONS</Id>
+    <IndexBased>true</IndexBased>
+    <Index>CNY-SHIBOR</Index>
+  </Deposit>
+
+  <Swap>
+    <Id>CNY-REPO7D-SWAP-CONVENTIONS</Id>
+    <FixedCalendar>CN</FixedCalendar>
+    <FixedFrequency>Semiannual</FixedFrequency>
+    <FixedConvention>MF</FixedConvention>
+    <FixedDayCounter>ACT/365</FixedDayCounter>
+    <Index>CNY-REPOFIX-7D</Index>
+  </Swap>
+  
+  <Swap>
+    <Id>CNY-SHIBOR3M-SWAP-CONVENTIONS</Id>
+    <FixedCalendar>CN</FixedCalendar>
+    <FixedFrequency>Semiannual</FixedFrequency>
+    <FixedConvention>MF</FixedConvention>
+    <FixedDayCounter>ACT/360</FixedDayCounter>
+    <Index>CNY-SHIBOR-3M</Index>
+  </Swap>
+
+  <Swap>
+    <Id>CNY-SHIBORON-SWAP-CONVENTIONS</Id>
+    <FixedCalendar>CN</FixedCalendar>
+    <FixedFrequency>Semiannual</FixedFrequency>
+    <FixedConvention>MF</FixedConvention>
+    <FixedDayCounter>ACT/360</FixedDayCounter>
+    <Index>CNY-SHIBOR-1D</Index>
+  </Swap>
+
+
+  
+  <SwapIndex>
+    <Id>CNY-CMS-1Y</Id>
+    <Conventions>CNY-SHIBOR3M-SWAP-CONVENTIONS</Conventions>
+  </SwapIndex>
+
+  <SwapIndex>
+    <Id>CNY-CMS-10Y</Id>
+    <Conventions>CNY-SHIBOR3M-SWAP-CONVENTIONS</Conventions>
+  </SwapIndex>
+
+
+
+  <Zero>
+    <Id>CNY-ZERO-CONVENTIONS-TENOR-BASED</Id>
+    <TenorBased>true</TenorBased>
+    <DayCounter>A365</DayCounter>
+    <Compounding>Continuous</Compounding>
+    <CompoundingFrequency>Daily</CompoundingFrequency>
+    <TenorCalendar>CN</TenorCalendar>
+    <SpotLag>2</SpotLag>
+    <SpotCalendar>CN</SpotCalendar>
+    <RollConvention>Following</RollConvention>
+    <EOM>false</EOM>
+  </Zero>
+
+
+</Conventions>

@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<ORE>
+  <Setup>
+    <Parameter name="asofDate">2016-02-05</Parameter>
+    <Parameter name="inputPath">d:/gygCode/myORE/Input</Parameter>
+    <Parameter name="outputPath">d:/gygCode/myORE/Output</Parameter>
+
+    <Parameter name="logFile">outlog.txt</Parameter>
+    <Parameter name="logMask">255</Parameter>
+    <Parameter name="marketDataFile">7.data/market.txt</Parameter>
+    <Parameter name="fixingDataFile">7.data/fixings.txt</Parameter>
+    <Parameter name="implyTodaysFixings">N</Parameter> 
+    <Parameter name="dividendDataFile"></Parameter>
+    
+    <Parameter name="portfolioFile">1.portfolio.xml</Parameter>
+    <Parameter name="scriptLibrary">2.script/_all.xml</Parameter>
+    <Parameter name="curveConfigFile">3.curveconfig/_all.xml</Parameter>
+    <Parameter name="pricingEnginesFile">4.pricingengine.xml</Parameter>
+    <Parameter name="marketConfigFile">5.todaysmarket.xml</Parameter>
+    <Parameter name="conventionsFile">6.convention/_all.xml</Parameter>
+    <Parameter name="calendarAdjustment"></Parameter>
+    <Parameter name="currencyConfiguration"></Parameter>
+    
+    <Parameter name="observationModel">None</Parameter> <!-- None, Unregister, Defer or Disable -->
+    <Parameter name="lazyMarketBuilding">False</Parameter>
+    <Parameter name="continueOnError">True</Parameter>
+    <Parameter name="buildFailedTrades">true</Parameter>
+    <!--Parameter name="nThreads">8</Parameter-->
+  </Setup>
+  
+  <Markets>
+    <!--Parameter name="lgmcalibration">ois</Parameter-->
+    <Parameter name="fxcalibration">xois_CNY</Parameter>
+    <!--Parameter name="eqcalibration">ois</Parameter-->
+    <Parameter name="pricing">default</Parameter>
+    <!--Parameter name="simulation">ois</Parameter-->
+  </Markets>
+  
+  <Analytics>
+    <Analytic type="npv">
+      <Parameter name="active">Y</Parameter>
+      <Parameter name="baseCurrency">USD</Parameter>
+      <Parameter name="outputFileName">out_npv.csv</Parameter>
+    </Analytic>
+    <Analytic type="cashflow">
+      <Parameter name="active">Y</Parameter>
+      <Parameter name="outputFileName">flows.csv</Parameter>
+      <Parameter name="includePastCashflows">N</Parameter>
+    </Analytic>
+    <Analytic type="curves">
+      <Parameter name="active">N</Parameter>
+      <Parameter name="configuration">xois_CNY</Parameter>
+      <Parameter name="grid">240,3M</Parameter>
+      <Parameter name="outputFileName">curves.csv</Parameter>
+    </Analytic>
+
+    <Analytic type="sensitivity">
+      <Parameter name="active">Y</Parameter>
+      <Parameter name="marketConfigFile">8.analytics/IRS/simulation.xml</Parameter>
+      <Parameter name="sensitivityConfigFile">8.analytics/IRS/sensitivity.xml</Parameter>
+      <!--Parameter name="pricingEnginesFile">pricingengine.xml</Parameter-->
+      <Parameter name="scenarioOutputFile">scenario.csv</Parameter>
+      <Parameter name="sensitivityOutputFile">sensitivity.csv</Parameter>
+      <Parameter name="outputSensitivityThreshold">0.000001</Parameter>
+      <Parameter name="recalibrateModels">N</Parameter>
+
+      <!-- Additional parametrisation for par sensitivity analysis -->
+      <Parameter name="parSensitivity">N</Parameter>
+      <Parameter name="parSensitivityOutputFile">parsensitivity.csv</Parameter>
+      <Parameter name="outputJacobi">Y</Parameter>
+      <Parameter name="jacobiOutputFile">jacobi.csv</Parameter>
+      <Parameter name="jacobiInverseOutputFile">jacobi_inverse.csv</Parameter>
+    </Analytic>
+
+
+    <Analytic type="simulation">
+      <Parameter name="active">Y</Parameter>
+      <Parameter name="simulationConfigFile">8.analytics/IRS/simulation.xml</Parameter>
+      <!--Parameter name="pricingEnginesFile">pricingengine.xml</Parameter-->
+      <Parameter name="baseCurrency">USD</Parameter>
+      <Parameter name="storeScenarios">N</Parameter>
+      <Parameter name="cubeFile">cube.csv.gz</Parameter>
+      <Parameter name="aggregationScenarioDataFileName">scenariodata.csv.gz</Parameter>
+    </Analytic>
+    
+    <Analytic type="xva">
+      <Parameter name="active">N</Parameter>
+      <Parameter name="csaFile">8.analytics/IRS/netting.xml</Parameter>
+      <Parameter name="cubeFile">cube.csv.gz</Parameter>
+      <Parameter name="scenarioFile">scenariodata.csv.gz</Parameter>
+      <Parameter name="baseCurrency">USD</Parameter>
+      <Parameter name="exposureProfiles">Y</Parameter>
+      <Parameter name="quantile">0.95</Parameter>
+      <Parameter name="calculationType">Symmetric</Parameter>
+      <Parameter name="allocationMethod">None</Parameter>
+      <Parameter name="marginalAllocationLimit">1.0</Parameter>
+      <Parameter name="exerciseNextBreak">N</Parameter>
+      <Parameter name="cva">Y</Parameter>
+      <Parameter name="dva">N</Parameter>
+      <Parameter name="dvaName">BANK</Parameter>
+      <Parameter name="fva">N</Parameter>
+      <Parameter name="fvaBorrowingCurve">USD-LIBOR-3M</Parameter>
+      <Parameter name="fvaLendingCurve">USD-LIBOR-3M</Parameter>
+      <Parameter name="colva">N</Parameter>
+      <Parameter name="collateralFloor">N</Parameter>
+      <Parameter name="rawCubeOutputFile">rawcube.csv</Parameter>
+      <Parameter name="netCubeOutputFile">netcube.csv</Parameter>
+    </Analytic>
+    <Analytic type="initialMargin">
+      <Parameter name="active">N</Parameter>
+      <Parameter name="method"/>
+    </Analytic>
+    
+    <Analytic type="stress">
+      <Parameter name="active">N</Parameter>
+      <Parameter name="marketConfigFile">8.analytics/IRS/simulation.xml</Parameter>
+      <Parameter name="stressConfigFile">8.analytics/IRS/stresstest.xml</Parameter>
+      <!--Parameter name="pricingEnginesFile">../../Input/pricingengine.xml</Parameter-->
+      <Parameter name="scenarioOutputFile">stresstest.csv</Parameter>
+      <Parameter name="outputThreshold">0.000001</Parameter>
+    </Analytic>
+    <Analytic type="parametricVar">
+      <Parameter name="active">N</Parameter>
+      <Parameter name="sensitivityInputFile">../Output/sensitivity.csv</Parameter>
+      <Parameter name="covarianceInputFile">8.analytics/IRS/covariance.csv</Parameter>
+      <Parameter name="salvageCovarianceMatrix">N</Parameter>
+      <Parameter name="quantiles">0.01,0.05,0.95,0.99</Parameter>
+      <!-- Breakdown of risk classes and types -->
+      <Parameter name="breakdown">Y</Parameter>
+      <!-- Portfolio filter (regex), may be empty or not given -->
+      <Parameter name="portfolioFilter">PF1|PF2</Parameter>
+      <!-- VaR method (Delta, DeltaGammaNormal, MonteCarlo) -->
+      <Parameter name="method">DeltaGammaNormal</Parameter>
+      <!-- Only required for method = MonteCarlo -->
+      <!-- <Parameter name="mcSamples">100000</Parameter> -->
+      <!-- <Parameter name="mcSeed">42</Parameter> -->
+      <Parameter name="outputFile">var.csv</Parameter>
+    </Analytic>
+  </Analytics>
+
+</ORE>

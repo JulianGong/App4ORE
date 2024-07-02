@@ -1,0 +1,6 @@
+#TradeId,TradeType,NumberOfPricings,CumulativeTiming,AverageTiming
+Leg001,Swap,529,3858,7
+Leg002,ScriptedTrade,1,219378,219378
+Leg003,ScriptedTrade,1,629865,629865
+Leg004,ScriptedTrade,1,10694,10694
+Leg005,ScriptedTrade,1,17793,17793

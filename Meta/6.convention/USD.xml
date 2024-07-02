@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Conventions>
+  
+  <!-- Zero Rates -->
+  <Zero>
+    <Id>USD-ZERO-CONVENTIONS</Id>
+    <TenorBased>false</TenorBased>
+    <DayCounter>A365</DayCounter>
+    <CompoundingFrequency>Daily</CompoundingFrequency>
+  </Zero>
+
+
+  <Zero>
+    <Id>USD-ZERO-CONVENTIONS-TENOR-BASED</Id>
+    <TenorBased>true</TenorBased>
+    <DayCounter>A365</DayCounter>
+    <Compounding>Continuous</Compounding>
+    <CompoundingFrequency>Daily</CompoundingFrequency>
+    <TenorCalendar>TARGET</TenorCalendar>
+    <SpotLag>2</SpotLag>
+    <SpotCalendar>TARGET</SpotCalendar>
+    <RollConvention>Following</RollConvention>
+    <EOM>false</EOM>
+  </Zero>
+
+  
+  <!-- Deposits -->
+  <Deposit>
+    <Id>USD-LIBOR-CONVENTIONS</Id>
+    <IndexBased>true</IndexBased>
+    <Index>USD-LIBOR</Index>
+  </Deposit>
+
+  <Deposit>
+    <Id>USD-FED-FUNDS-CONVENTIONS</Id>
+    <IndexBased>true</IndexBased>
+    <Index>USD-FedFunds</Index>
+  </Deposit>
+
+  <!-- Money Market Futures -->
+  <Future>
+    <Id>USD-LIBOR-3M-FUTURES-CONVENTIONS</Id>
+    <Index>USD-LIBOR-3M</Index>
+  </Future>
+
+  <!-- Forward Rate Agreements -->
+  <FRA>
+    <Id>USD-3M-FRA-CONVENTIONS</Id>
+    <Index>USD-LIBOR-3M</Index>
+  </FRA>
+   <FRA>
+    <Id>USD-6M-FRA-CONVENTIONS</Id>
+    <Index>USD-LIBOR-6M</Index>
+  </FRA>
+  <!-- Interest Rate Swaps -->
+
+  <Swap>
+    <Id>USD-1M-SWAP-CONVENTIONS</Id>
+    <FixedCalendar>US,UK</FixedCalendar>
+    <FixedFrequency>Annual</FixedFrequency>
+    <FixedConvention>MF</FixedConvention>
+    <FixedDayCounter>30/360</FixedDayCounter>
+    <Index>USD-LIBOR-1M</Index>
+  </Swap>
+  <Swap>
+    <Id>USD-3M-SWAP-CONVENTIONS</Id>
+    <FixedCalendar>US,UK</FixedCalendar>
+    <FixedFrequency>Semiannual</FixedFrequency>
+    <FixedConvention>MF</FixedConvention>
+    <FixedDayCounter>30/360</FixedDayCounter>
+    <Index>USD-LIBOR-3M</Index>
+  </Swap>
+
+  <!-- Overnight Index linked Swap Legs -->
+  <OIS>
+    <Id>USD-OIS-CONVENTIONS</Id>
+    <SpotLag>2</SpotLag>
+    <Index>USD-FedFunds</Index>
+    <FixedDayCounter>A360</FixedDayCounter>
+    <PaymentLag>2</PaymentLag>
+    <EOM>false</EOM>
+    <FixedFrequency>Annual</FixedFrequency>
+    <FixedConvention>Following</FixedConvention>
+    <FixedPaymentConvention>Following</FixedPaymentConvention>
+    <Rule>Backward</Rule>
+  </OIS>
+
+  <TenorBasisSwap>
+    <Id>USD-LIBOR-3M-6M-BASIS-CONVENTIONS</Id>
+    <PayIndex>USD-LIBOR-6M</PayIndex>
+    <ReceiveIndex>USD-LIBOR-3M</ReceiveIndex>
+    <ReceiveFrequency>6M</ReceiveFrequency>
+    <SpreadOnRec>true</SpreadOnRec>
+    <IncludeSpread>false</IncludeSpread>
+    <SubPeriodsCouponType>Compounding</SubPeriodsCouponType>
+  </TenorBasisSwap>
+
+  <SwapIndex>
+    <Id>USD-CMS-1Y</Id>
+    <Conventions>USD-3M-SWAP-CONVENTIONS</Conventions>
+  </SwapIndex>
+
+  <SwapIndex>
+    <Id>USD-CMS-10Y</Id>
+    <Conventions>USD-3M-SWAP-CONVENTIONS</Conventions>
+  </SwapIndex>
+
+
+</Conventions>

@@ -1,0 +1,103 @@
+<?xml version="1.0" ?>
+<Portfolio>
+  
+  <Trade id="FXEuropeanNS">
+    <TradeType>FxOption</TradeType>
+    <Envelope>
+      <CounterParty>ICBC</CounterParty>
+      <NettingSetId>BOCOM</NettingSetId>
+      <AdditionalFields/>
+    </Envelope>
+    
+    <FxOptionData>
+      <OptionData>
+        <LongShort>Long</LongShort>
+        <OptionType>Call</OptionType>
+        <Style>European</Style>
+        <Settlement>Cash</Settlement>
+        <PayOffAtExpiry>True</PayOffAtExpiry>
+        <ExerciseDates>
+          <ExerciseDate>2017-02-05</ExerciseDate>
+        </ExerciseDates>
+      </OptionData>
+      <BoughtCurrency>EUR</BoughtCurrency>
+      <BoughtAmount>1000000</BoughtAmount>
+      <SoldCurrency>USD</SoldCurrency>
+      <SoldAmount>1130000</SoldAmount>
+    </FxOptionData>
+  </Trade>
+
+
+  <!-- Reference to external script, default MC engine -->
+  <Trade id="FXEuropean">
+    <TradeType>ScriptedTrade</TradeType>
+    <Envelope>
+      <CounterParty>ICBC</CounterParty>
+      <NettingSetId>BOCOM</NettingSetId>
+      <PortfolioIds>
+        <PortfolioId>PF1</PortfolioId>
+      </PortfolioIds>
+      <AdditionalFields/>
+    </Envelope>
+
+    <EuropeanOptionData>
+      <Underlying type='index'>FX-ECB-EUR-USD</Underlying>
+      <Strike type='number'>1.13</Strike>
+      <PutCall type='number'>1</PutCall>
+      <LongShort type='number'>1</LongShort>
+      <PayCcy type='currency'>USD</PayCcy>
+      <Expiry type='event'>2017-02-05</Expiry>
+      <Settlement type='event'>2017-02-07</Settlement>
+      <Notional type='number'>1000000</Notional>
+    </EuropeanOptionData>
+  </Trade>
+
+
+  <Trade id="FXEuropeanEF">
+    <TradeType>ScriptedTrade</TradeType>
+    <Envelope>
+      <CounterParty>ICBC</CounterParty>
+      <NettingSetId>BOCOM</NettingSetId>
+      <AdditionalFields/>
+    </Envelope>
+    <ScriptedTradeData>
+      <ScriptName>EuropeanOption</ScriptName>
+      <Data>
+        <Index>
+          <Name>Underlying</Name>
+          <Value>FX-ECB-EUR-USD</Value>
+        </Index>
+        <Number>
+          <Name>Strike</Name>
+          <Value>1.13</Value>
+        </Number>
+        <Number>
+          <Name>PutCall</Name>
+          <Value>1</Value>
+        </Number>
+        <Number>
+          <Name>LongShort</Name>
+          <Value>1</Value>
+        </Number>
+        <Currency>
+          <Name>PayCcy</Name>
+          <Value>USD</Value>
+        </Currency>
+        <Event>
+          <Name>Expiry</Name>
+          <Value>2017-02-05</Value>
+        </Event>
+        <Event>
+          <Name>Settlement</Name>
+          <Value>2017-02-07</Value>
+        </Event>
+        <Number>
+          <Name>Notional</Name>
+          <Value>1000000</Value>
+        </Number>
+      </Data>
+    </ScriptedTradeData>
+  </Trade>
+
+
+</Portfolio>

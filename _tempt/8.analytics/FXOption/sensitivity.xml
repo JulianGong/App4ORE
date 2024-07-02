@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<SensitivityAnalysis>
+  <!-- Discount curve shifts -->
+  <DiscountCurves>
+    <DiscountCurve ccy="EUR">
+      <ShiftType>Absolute</ShiftType>
+      <ShiftSize>0.0001</ShiftSize>
+      <ShiftSize key="IR_FD">0.001</ShiftSize>
+      <ShiftScheme>Forward</ShiftScheme>
+      <ShiftScheme key="IR_FD">Central</ShiftScheme>
+      <ShiftTenors>6M,1Y,2Y,3Y,5Y,7Y,10Y,15Y,20Y</ShiftTenors>
+    </DiscountCurve>
+    <DiscountCurve ccy="USD">
+      <ShiftType>Absolute</ShiftType>
+      <ShiftSize>0.0001</ShiftSize>
+      <ShiftSize key="IR_FD">0.001</ShiftSize>
+      <ShiftScheme>Forward</ShiftScheme>
+      <ShiftScheme key="IR_FD">Central</ShiftScheme>
+      <ShiftTenors>6M,1Y,2Y,3Y,5Y,7Y,10Y,15Y,20Y</ShiftTenors>
+    </DiscountCurve>
+    <DiscountCurve ccy="CNY">
+      <ShiftType>Absolute</ShiftType>
+      <ShiftSize>0.0001</ShiftSize>
+      <ShiftSize key="IR_FD">0.001</ShiftSize>
+      <ShiftScheme>Forward</ShiftScheme>
+      <ShiftScheme key="IR_FD">Central</ShiftScheme>
+      <ShiftTenors>6M,1Y,2Y,3Y,5Y,7Y,10Y,15Y,20Y</ShiftTenors>
+    </DiscountCurve>
+    
+  </DiscountCurves>
+  
+  <!-- FX spot shifts -->
+  <FxSpots>
+    <FxSpot ccypair="USDCNY">
+      <ShiftType>Relative</ShiftType>
+      <ShiftSize>0.01</ShiftSize>
+      <ShiftScheme>Forward</ShiftScheme>
+    </FxSpot>
+
+    <FxSpot ccypair="EURUSD">
+      <ShiftType>Relative</ShiftType>
+      <ShiftSize>0.01</ShiftSize>
+      <ShiftScheme>Forward</ShiftScheme>
+    </FxSpot>
+  </FxSpots>
+  <!-- FX ATM vol shifts -->
+  <FxVolatilities>
+    <FxVolatility ccypair="USDCNY">
+      <ShiftType>Relative</ShiftType>
+      <ShiftSize>0.01</ShiftSize>
+      <ShiftScheme>Forward</ShiftScheme>
+      <ShiftExpiries>1Y,2Y,3Y,5Y</ShiftExpiries>
+      <ShiftStrikes/>
+    </FxVolatility>
+    <FxVolatility ccypair="EURUSD">
+      <ShiftType>Relative</ShiftType>
+      <ShiftSize>0.01</ShiftSize>
+      <ShiftScheme>Forward</ShiftScheme>
+      <ShiftExpiries>1Y,2Y,3Y,5Y</ShiftExpiries>
+      <ShiftStrikes/>
+    </FxVolatility>
+  </FxVolatilities>
+  
+  
+  <!-- Cross Gamma filter: Pairs of factor sub-strings -->
+  <!--CrossGammaFilter>
+    <Pair>DiscountCurve/USD,DiscountCurve/USD</Pair>
+    <Pair>IndexCurve/USD,IndexCurve/USD</Pair>
+    <Pair>DiscountCurve/USD,IndexCurve/USD</Pair>
+  </CrossGammaFilter-->
+</SensitivityAnalysis>

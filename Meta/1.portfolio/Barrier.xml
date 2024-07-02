@@ -1,0 +1,154 @@
+<?xml version="1.0" ?>
+<Portfolio>
+
+  <!-- Equity Barrier Option as scripted trade with daily observations -->
+  <Trade id="FXBarrier">
+    <TradeType>ScriptedTrade</TradeType>
+    <Envelope>
+      <CounterParty>ICBC</CounterParty>
+      <NettingSetId>BOCOM</NettingSetId>
+      <PortfolioIds>
+        <PortfolioId>PF1</PortfolioId>
+      </PortfolioIds>
+      <AdditionalFields/>
+    </Envelope>
+
+    <SingleBarrierOptionData>
+      <Underlying type='index'>FX-ECB-EUR-USD</Underlying>
+      <StartDate type='event'>2016-02-05</StartDate>
+      <Strike type='number'>1.01</Strike>
+      <PutCall type='number'>1</PutCall>
+      <LongShort type='number'>1</LongShort>
+      <PayCcy type='currency'>USD</PayCcy>
+      <Expiry type='event'>2017-03-01</Expiry>
+      <Settlement type='event'>2017-03-01</Settlement>
+
+      <!-- barrier option specifics -->
+      <PayoffType type='number'>0</PayoffType> <!-- 0:Vanilla 1:CashOrNothing -->
+      <Quantity type='number'>100</Quantity>
+      <Amount type='number'>0</Amount>
+      <BarrierLevel type='number'>1.9</BarrierLevel>
+      <BarrierType type='number'>4</BarrierType> <!-- 1:DownIn 2:UpIn 3:DownOut 4:UpOut -->
+      <BarrierRebate type='number'>0</BarrierRebate>
+      <BarrierRebateCurrency type='currency'>EUR</BarrierRebateCurrency>
+      <BarrierRebatePayTime type='number'>1</BarrierRebatePayTime> <!-- 0:atHit 1:atExpiry -->
+      <BarrierMonitoringDates type='event'>
+        <ScheduleData>
+            <Rules>
+              <StartDate>2016-02-05</StartDate>
+              <EndDate>2017-03-01</EndDate>
+              <Tenor>1D</Tenor>
+              <Calendar>TARGET</Calendar>
+              <Convention>F</Convention>
+              <TermConvention>F</TermConvention>
+              <Rule>Forward</Rule>
+              <EndOfMonth/>
+              <FirstDate/>
+              <LastDate/>
+            </Rules>
+          </ScheduleData>
+      </BarrierMonitoringDates>
+    </SingleBarrierOptionData>
+  </Trade>
+
+
+  <Trade id="FXBarrierEF">
+    <TradeType>ScriptedTrade</TradeType>
+    <Envelope>
+      <CounterParty>ICBC</CounterParty>
+      <NettingSetId>BOCOM</NettingSetId>
+      <AdditionalFields/>
+    </Envelope>
+    <ScriptedTradeData>
+      <ScriptName>SingleBarrierOption</ScriptName>
+      <Data>
+        <Index>
+          <Name>Underlying</Name>
+          <Value>FX-ECB-EUR-USD</Value>
+        </Index>
+        <Event>
+          <Name>StartDate</Name>
+          <Value>2016-02-05</Value>
+        </Event>
+        <Number>
+          <Name>Strike</Name>
+          <Value>1.01</Value>
+        </Number>
+        <Number>
+          <Name>PutCall</Name>
+          <Value>1</Value> <!-- 1:Call -1:Put -->
+        </Number>
+        <Number>
+          <Name>LongShort</Name>
+          <Value>1</Value> <!-- 1:Long -1:Short -->
+        </Number>
+        <Currency>
+          <Name>PayCcy</Name>
+          <Value>USD</Value>
+        </Currency>
+        <Event>
+          <Name>Expiry</Name>
+          <Value>2017-03-01</Value>
+        </Event>
+        <Event>
+          <Name>Settlement</Name>
+          <Value>2017-03-01</Value>
+        </Event>
+        <Number>
+          <Name>Quantity</Name>
+          <Value>1000</Value>
+        </Number>
+        
+        <!-- barrier option specifics -->
+        <Number>
+          <Name>PayoffType</Name>
+          <Value>0</Value><!-- 0:Vanilla 1:CashOrNothing -->
+        </Number>
+        <Number>
+          <Name>Amount</Name>
+          <Value>0</Value>
+        </Number>
+        <Number>
+          <Name>BarrierLevel</Name>
+          <Value>1.9</Value>
+        </Number>
+        <Number>
+          <Name>BarrierType</Name>
+          <Value>4</Value> <!-- 1:DownIn 2:UpIn 3:DownOut 4:UpOut -->
+        </Number>
+        <Number>
+          <Name>BarrierRebate</Name>
+          <Value>0</Value>
+        </Number>
+        <Currency>
+          <Name>BarrierRebateCurrency</Name>
+          <Value>EUR</Value>
+        </Currency>
+        <Number>
+          <Name>BarrierRebatePayTime</Name>
+          <Value>1</Value> <!-- 0:atHit 1:atExpiry -->
+        </Number>
+        <Event>
+          <Name>BarrierMonitoringDates</Name>
+          <ScheduleData>
+            <Rules>
+              <StartDate>2016-02-05</StartDate>
+              <EndDate>2017-03-01</EndDate>
+              <Tenor>1D</Tenor>
+              <Calendar>TARGET</Calendar>
+              <Convention>F</Convention>
+              <TermConvention>F</TermConvention>
+              <Rule>Forward</Rule>
+              <EndOfMonth/>
+              <FirstDate/>
+              <LastDate/>
+            </Rules>
+          </ScheduleData>
+        </Event>       
+      </Data>
+    </ScriptedTradeData>
+  </Trade>
+
+
+
+</Portfolio>

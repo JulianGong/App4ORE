@@ -1,0 +1,401 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ScriptLibrary>
+	<Script>
+    <Name>Accumulator</Name>
+    
+    <Script>
+      <Code>
+            REQUIRE KnockOutType == 3 OR KnockOutType == 4;
+            NUMBER Payoff, fix, d, r, Alive, CurrentNotional, Factor, ThisPayout, Fixing[SIZE(FixingDates)];
+            Alive = 1;
+            FOR d IN (1, SIZE(FixingDates), 1) DO
+                fix = Underlying(FixingDates[d]);
+                Fixing[d] = fix;
+                IF AmericanKO == 1 THEN
+                  IF KnockOutType == 4 THEN
+                    IF FixingDates[d] &gt;= StartDate THEN
+                      IF d == 1 OR FixingDates[d-1] &lt;= StartDate THEN
+                        Alive = Alive * (1 - ABOVEPROB(Underlying, StartDate, FixingDates[d], KnockOutLevel));
+		                  ELSE
+                        Alive = Alive * (1 - ABOVEPROB(Underlying, FixingDates[d-1], FixingDates[d], KnockOutLevel));
+		                  END;
+                    END;
+                  ELSE
+                    IF FixingDates[d] &gt;= StartDate THEN
+                      IF d == 1 OR FixingDates[d-1] &lt;= StartDate THEN
+                        Alive = Alive * (1 - BELOWPROB(Underlying, StartDate, FixingDates[d], KnockOutLevel));
+		                  ELSE
+                        Alive = Alive * (1 - BELOWPROB(Underlying, FixingDates[d-1], FixingDates[d], KnockOutLevel));
+		                  END;
+                    END;
+                  END;
+                ELSE
+                  IF {KnockOutType == 4 AND fix &gt;= KnockOutLevel} OR {KnockOutType == 3 AND fix &lt;= KnockOutLevel} THEN
+                    Alive = 0;
+                  END;
+                END;
+
+                IF d &lt;= GuaranteedFixings THEN
+                  Factor = 1;
+                ELSE
+                  Factor = Alive;
+                END;
+
+                FOR r IN (1, SIZE(RangeUpperBounds), 1) DO
+                  IF fix &gt; RangeLowerBounds[r] AND fix &lt;= RangeUpperBounds[r] THEN
+                    ThisPayout = RangeLeverages[r] * FixingAmount * (fix - Strike) * Factor;
+                    IF d &gt; GuaranteedFixings OR ThisPayout &gt;= 0 THEN
+                      Payoff = Payoff + LOGPAY(RangeLeverages[r] * FixingAmount * (fix - Strike) * Factor, FixingDates[d], SettlementDates[d], PayCcy);
+                    END;
+                  END;
+                END;
+            END;
+            value = LongShort * Payoff;
+            CurrentNotional = FixingAmount * Strike;
+        </Code>
+      <NPV>value</NPV>
+      <Results>
+        <Result>CurrentNotional</Result>
+        <Result rename="notionalCurrency">PayCcy</Result>
+        <Result>Alive</Result>
+        <Result>Fixing</Result>
+      </Results>
+      <CalibrationSpec>
+        <Calibration>
+          <Index>Underlying</Index>
+          <Strikes>
+            <Strike>Strike</Strike>
+            <Strike>KnockOutLevel</Strike>
+          </Strikes>
+        </Calibration>
+      </CalibrationSpec>
+    </Script>
+  </Script>
+  
+
+  
+  
+<Script>
+    <Name>SingleAmericanOption</Name>
+    
+    <Script>
+      <Code>
+      NUMBER i, Payoff, EstimatedPayoff,CurrentNotional;
+      FOR i IN (SIZE(ExerciseDates), 1, -1) DO
+        IF ExerciseDates[i] &gt; TODAY THEN
+          Payoff = max(PutCall * (Underlying(ExerciseDates[i]) - Strike), 0);
+          Payoff = PAY(Payoff, ExerciseDates[i], SettlementDates[i], PayCcy);
+        
+          EstimatedPayoff = NPV( Option, ExerciseDates[i], Payoff&gt; 0);
+          IF Payoff &gt; 0 AND Payoff &gt; EstimatedPayoff THEN
+            Option = Payoff;
+          END;
+        END;
+      END;
+      Option =Notional* Option * LongShort;
+      CurrentNotional = Notional * Strike;
+      </Code>
+      <NPV>Option</NPV>
+      <Results>
+        <Result>CurrentNotional</Result>
+        <Result rename="notionalCurrency">PayCcy</Result>
+      </Results>
+    </Script>
+
+  </Script>
+  
+<Script>
+    <Name>SingleAsianOption</Name>
+    
+    <Script>
+      <Code>
+      NUMBER i, Payoff, sumS,CurrentNotional;
+      sumS = 0;
+      FOR i IN (1, SIZE(ObservationDates),1) DO
+        sumS =  sumS + Underlying(ObservationDates[i]);
+      END;
+
+      Payoff = OptionType * (sumS/i - Strike);
+      Option = PAY(max(Payoff, 0), ObservationDates[i], ObservationDates[i], PayCcy);
+      
+      Option =Amount* Option * LongShort;
+      CurrentNotional = Strike * Amount;
+      </Code>
+      <NPV>Option</NPV>
+      <Results>
+        <Result>CurrentNotional</Result>
+        <Result rename="notionalCurrency">PayCcy</Result>
+      </Results>
+    </Script>
+
+  </Script>
+  
+<Script>
+    <Name>SingleBarrierOption</Name>
+    
+    <Script>
+      <Code>
+        REQUIRE PayoffType == 0 OR PayoffType == 1;
+        NUMBER KnockedIn, KnockedOut, Active, Rebate;
+        NUMBER U, i, d, CurrentNotional;
+
+        FOR d IN (1, SIZE(BarrierMonitoringDates), 1) DO
+          U = Underlying(BarrierMonitoringDates[d]);
+          IF {BarrierType == 1 AND U &lt;= BarrierLevel} OR {BarrierType == 2 AND U &gt;= BarrierLevel} THEN
+            IF KnockedOut == 0 THEN
+              KnockedIn = 1;
+	          END;
+          END;
+
+          IF {BarrierType == 3 AND U &lt; BarrierLevel} OR {BarrierType == 4 AND U &gt; BarrierLevel} THEN
+            IF KnockedOut == 0 THEN
+              IF BarrierRebatePayTime == 0 THEN
+                Rebate = PAY( LongShort * BarrierRebate, BarrierMonitoringDates[d], BarrierMonitoringDates[d], BarrierRebateCurrency );
+              ELSE
+                Rebate = PAY( LongShort * BarrierRebate, BarrierMonitoringDates[d], Settlement, BarrierRebateCurrency );
+              END;
+            END;
+            KnockedOut = 1;
+          END;
+        END;
+
+        Active = 1;
+        IF BarrierType == 1 OR BarrierType == 2 THEN
+          Active = 0;
+        END;
+        Active = max(Active, KnockedIn) * (1 - KnockedOut);
+
+	      IF BarrierRebate != 0 THEN
+	        Rebate = (1 - Active) * PAY( LongShort * BarrierRebate, Settlement, Settlement, BarrierRebateCurrency );
+	      END;
+
+        IF PayoffType == 0 THEN
+	        value = Active * PAY( LongShort * Quantity * max(0, PutCall * (Underlying(Expiry) - Strike)), Expiry, Settlement, PayCcy ) + Rebate;
+	      ELSE
+	        value = Active * PAY( LongShort * Amount, Expiry, Settlement, PayCcy ) + Rebate;
+	      END;
+
+        IF PayoffType == 0 THEN
+          CurrentNotional = Quantity * Strike;
+        ELSE
+          CurrentNotional = Amount;
+        END;
+        </Code>
+      <NPV>value</NPV>
+      <Results>
+        <Result>CurrentNotional</Result>
+        <Result rename="notionalCurrency">PayCcy</Result>
+	      <Result>Active</Result>
+      </Results>
+      <CalibrationSpec>
+        <Calibration>
+          <Index>Underlying</Index>
+          <Strikes>
+            <Strike>Strike</Strike>
+            <Strike>BarrierLevel</Strike>
+          </Strikes>
+        </Calibration>
+      </CalibrationSpec>
+    </Script>
+  </Script>
+
+  <Script>
+    <Name>SingleContinuousBarrierOption</Name>
+    
+    <Script>
+      <Code>
+        REQUIRE PayoffType == 0 OR PayoffType == 1;
+        NUMBER KnockedIn, KnockedOut, Active, Rebate;
+        NUMBER U, i, d, CurrentNotional, Alive;
+        Alive = 1;
+
+        FOR d IN (1, SIZE(BarrierMonitoringDates), 1) DO
+          U = Underlying(BarrierMonitoringDates[d]);
+          IF {BarrierType == 1 AND U &lt;= BarrierLevel} OR {BarrierType == 2 AND U &gt;= BarrierLevel} THEN
+            IF KnockedOut == 0 THEN
+              KnockedIn = 1;
+	          END;
+          END;
+
+          IF {BarrierType == 3 AND U &lt; BarrierLevel} OR {BarrierType == 4 AND U &gt; BarrierLevel} THEN
+            IF KnockedOut == 0 THEN
+              IF BarrierRebatePayTime == 0 THEN
+                Rebate = PAY( LongShort * BarrierRebate, BarrierMonitoringDates[d], BarrierMonitoringDates[d], BarrierRebateCurrency );
+              ELSE
+                Rebate = PAY( LongShort * BarrierRebate, BarrierMonitoringDates[d], Settlement, BarrierRebateCurrency );
+              END;
+            END;
+            KnockedOut = 1;
+          END;
+
+          IF BarrierType == 4 THEN
+            IF d == 1 OR BarrierMonitoringDates[d-1] &lt;= StartDate THEN
+              Alive = Alive * (1 - ABOVEPROB(Underlying, StartDate, BarrierMonitoringDates[d], BarrierLevel));
+            ELSE
+              Alive = Alive * (1 - ABOVEPROB(Underlying, BarrierMonitoringDates[d-1], BarrierMonitoringDates[d], BarrierLevel));
+	          END;
+          END;
+
+          IF BarrierType == 3 THEN
+            IF d == 1 OR BarrierMonitoringDates[d-1] &lt;= StartDate THEN
+              Alive = Alive * (1 - BELOWPROB(Underlying, StartDate, BarrierMonitoringDates[d], BarrierLevel));
+	          ELSE
+              Alive = Alive * (1 - BELOWPROB(Underlying, BarrierMonitoringDates[d-1], BarrierMonitoringDates[d], BarrierLevel));
+	          END;
+          END;
+        END;
+
+        Active = 1;
+        IF BarrierType == 1 OR BarrierType == 2 THEN
+          Active = 0;
+        END;
+        Active = max(Active, KnockedIn) * (1 - KnockedOut);
+
+	      IF BarrierRebate != 0 THEN
+	        Rebate = (1 - Active) * PAY( LongShort * BarrierRebate, Settlement, Settlement, BarrierRebateCurrency );
+	      END;
+
+        IF PayoffType == 0 THEN
+	        value = Active * Alive * PAY( LongShort * Quantity * max(0, PutCall * (Underlying(Expiry) - Strike)), Expiry, Settlement, PayCcy ) + Rebate;
+	      ELSE
+	        value = Active * Alive * PAY( LongShort * Amount, Expiry, Settlement, PayCcy ) + Rebate;
+	      END;
+
+        IF PayoffType == 0 THEN
+          CurrentNotional = Quantity * Strike;
+        ELSE
+          CurrentNotional = Amount;
+        END;
+        </Code>
+      <NPV>value</NPV>
+      <Results>
+        <Result>CurrentNotional</Result>
+        <Result rename="notionalCurrency">PayCcy</Result>
+	      <Result>Active</Result>
+      </Results>
+      <CalibrationSpec>
+        <Calibration>
+          <Index>Underlying</Index>
+          <Strikes>
+            <Strike>Strike</Strike>
+            <Strike>BarrierLevel</Strike>
+          </Strikes>
+        </Calibration>
+      </CalibrationSpec>
+    </Script>
+  </Script>
+
+  
+<Script>
+    <Name>EuropeanOption</Name>
+    <ProductTag>SingleAssetOption(FX)</ProductTag>
+    <Script>
+      <Code>
+        
+          NUMBER Payoff, CurrentNotional;
+          Payoff = PutCall * (Underlying(Expiry) - Strike);
+          Option = LOGPAY( LongShort * Notional * max( Payoff, 0 ), Expiry, Settlement, PayCcy, 1, OptionFlow);
+          CurrentNotional = Strike * Notional;
+        </Code>
+      <NPV>Option</NPV>
+      <Results>
+        <Result>CurrentNotional</Result>
+        <Result rename="notionalCurrency">PayCcy</Result>
+      </Results>
+      <CalibrationSpec>
+        <Calibration>
+          <Index>Underlying</Index>
+          <Strikes>
+            <Strike>Strike</Strike>
+          </Strikes>
+        </Calibration>
+      </CalibrationSpec>
+    </Script>
+
+    <Script purpose="FD">
+      <Code>
+        
+          NUMBER Payoff, CurrentNotional;
+          Payoff = PutCall * (Underlying(Expiry) - Strike);
+          Option = LOGPAY( LongShort * Notional * max( Payoff, 0 ), Expiry, Settlement, PayCcy, 1, OptionFlow);
+          CurrentNotional = Strike * Notional;
+        </Code>
+      <NPV>Option</NPV>
+      <Results>
+        <Result>CurrentNotional</Result>
+        <Result rename="notionalCurrency">PayCcy</Result>
+      </Results>
+      <CalibrationSpec>
+        <Calibration>
+          <Index>Underlying</Index>
+          <Strikes>
+            <Strike>Strike</Strike>
+          </Strikes>
+        </Calibration>
+      </CalibrationSpec>
+    </Script>
+  </Script>
+  
+<Script>
+    <Name>MultipleRanges</Name>
+    <Script>
+      <Code>
+            REQUIRE SIZE(Coupon)-SIZE(Strike) == 1;
+            NUMBER i, Payoff, accrTerm, rate, Outright[SIZE(Strike)];
+            
+            FOR i IN (1, SIZE(Strike), 1) DO
+              Outright[i] = FX0 + Strike[i]* CF;
+            END;
+
+            rate = Coupon[1];
+            FOR i IN (SIZE(Strike), 1, -1) DO
+              IF PutCall* Underlying(Expiry) &gt;= PutCall* Outright[i] THEN
+                rate = Coupon[i+1];
+              END;
+            END;
+            accrTerm = dcf(dc, AccrStart, AccrEnd);
+            Payoff = PAY(Notional* rate* accrTerm, Expiry, Settlement, PayCcy);
+            value = LongShort * Payoff;
+            
+        </Code>
+      <NPV>value</NPV>
+      <Results>
+        <Result rename="notionalCurrency">PayCcy</Result>
+      </Results>
+
+    </Script>
+  </Script>
+  
+<Script>
+    <Name>RangeAccrual</Name>
+    <Script>
+      <Code>
+            NUMBER i, N, M, Payoff, accrTerm, rate, Outright[2]; 
+            N = 0;
+            M = 0;
+            Outright[1] = FX0 + Strike[1] * CF;
+            Outright[2] = FX0 + Strike[2] * CF;
+            
+            FOR i IN (1, SIZE(ObserverDates), 1) DO
+              IF Underlying(ObserverDates[i]) &gt;= Outright[1] AND Underlying(ObserverDates[i]) &lt;= Outright[2] THEN
+                 N = N + 1;
+              ELSE
+                 M = M + 1;
+              END;
+            END;
+            
+            accrTerm = dcf(dc, AccrStart, AccrEnd);
+            rate = N/(N+M) * Coupon[2] + M/(N+M) *Coupon[1];
+            Payoff = PAY(Notional* (1 + rate)* accrTerm, Expiry, Settlement, PayCcy);
+            value = LongShort * Payoff;
+        </Code>
+      <NPV>value</NPV>
+      <Results>
+        <Result rename="notionalCurrency">PayCcy</Result>
+      </Results>
+
+    </Script>
+  </Script>
+  
+</ScriptLibrary>
+

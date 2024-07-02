@@ -1,0 +1,146 @@
+<?xml version="1.0" ?>
+<Portfolio>
+  
+  <Trade id="FXAmericanNS">
+    <TradeType>FxOption</TradeType>
+    <Envelope>
+      <CounterParty>ICBC</CounterParty>
+      <NettingSetId>BOCOM</NettingSetId>
+      <PortfolioIds>
+        <PortfolioId>PF1</PortfolioId>
+      </PortfolioIds>
+      <AdditionalFields/>
+    </Envelope>
+    
+    <FxOptionData>
+      <OptionData>
+        <LongShort>Long</LongShort>
+        <OptionType>Call</OptionType>
+        <Style>American</Style>
+        <Settlement>Cash</Settlement>
+        <PayOffAtExpiry>False</PayOffAtExpiry>
+        <ExerciseDates>
+          <ExerciseDate>2017-02-05</ExerciseDate>
+        </ExerciseDates>
+      </OptionData>
+      <BoughtCurrency>EUR</BoughtCurrency>
+      <BoughtAmount>1000000</BoughtAmount>
+      <SoldCurrency>USD</SoldCurrency>
+      <SoldAmount>1130000</SoldAmount>
+    </FxOptionData>
+  </Trade>
+
+
+  <Trade id="FXAmerican">
+    <TradeType>ScriptedTrade</TradeType>
+    <Envelope>
+      <CounterParty>ICBC</CounterParty>
+      <NettingSetId>BOCOM</NettingSetId>
+      <PortfolioIds>
+        <PortfolioId>PF1</PortfolioId>
+      </PortfolioIds>
+      <AdditionalFields/>
+    </Envelope>
+    <SingleAmericanOptionData>
+      <Notional type='number'>1000000</Notional>
+      <PutCall type='number'>1</PutCall>
+      <Strike type='number'>1.13</Strike>
+      <LongShort type='number'>1</LongShort>
+      <PayCcy type='currency'>USD</PayCcy>
+      <Underlying type='index'>FX-ECB-EUR-USD</Underlying>
+      <ExerciseDates type='event'>
+        <ScheduleData>
+            <Rules>
+              <StartDate>2016-02-05</StartDate>
+              <EndDate>2017-02-05</EndDate>
+              <Tenor>1W</Tenor>
+              <Calendar>TARGET</Calendar>
+              <Convention>Following</Convention>
+              <TermConvention>Following</TermConvention>
+              <Rule>Forward</Rule>
+              <EndOfMonth/>
+              <FirstDate/>
+              <LastDate/>
+            </Rules>
+          </ScheduleData>
+      </ExerciseDates>
+      <SettlementDates type='event'>
+        <DerivedSchedule>
+          <BaseSchedule>ExerciseDates</BaseSchedule>
+          <Shift>2D</Shift>
+          <Calendar>TARGET</Calendar>
+          <Convention>MF</Convention>
+        </DerivedSchedule>
+      </SettlementDates>
+    </SingleAmericanOptionData>
+  </Trade>
+
+  <Trade id="FXAmericanEF">
+    <TradeType>ScriptedTrade</TradeType>
+    <Envelope>
+      <CounterParty>ICBC</CounterParty>
+      <NettingSetId>BOCOM</NettingSetId>
+      <PortfolioIds>
+        <PortfolioId>PF1</PortfolioId>
+      </PortfolioIds>
+      <AdditionalFields/>
+    </Envelope>
+    
+    <ScriptedTradeData>
+      <ScriptName>SingleAmericanOption</ScriptName>
+      <Data>
+        <Number>
+          <Name>Notional</Name>
+          <Value>1000000</Value>
+        </Number>
+        <Number>
+          <Name>PutCall</Name>
+          <Value>1</Value>
+        </Number>
+        <Number>
+          <Name>Strike</Name>
+          <Value>1.13</Value>
+        </Number>
+        <Number>
+          <Name>LongShort</Name>
+          <Value>1</Value>
+        </Number>
+        <Currency>
+          <Name>PayCcy</Name>
+          <Value>USD</Value>
+        </Currency>
+        <Index>
+          <Name>Underlying</Name>
+          <Value>FX-ECB-EUR-USD</Value>
+        </Index>
+        <Event>
+          <Name>ExerciseDates</Name>
+          <ScheduleData>
+            <Rules>
+              <StartDate>2016-02-05</StartDate>
+              <EndDate>2017-02-05</EndDate>
+              <Tenor>1W</Tenor>
+              <Calendar>TARGET</Calendar>
+              <Convention>Following</Convention>
+              <TermConvention>Following</TermConvention>
+              <Rule>Forward</Rule>
+              <EndOfMonth/>
+              <FirstDate/>
+              <LastDate/>
+            </Rules>
+          </ScheduleData>
+        </Event>
+        <Event>
+          <Name>SettlementDates</Name>
+          <DerivedSchedule>
+          <BaseSchedule>ExerciseDates</BaseSchedule>
+          <Shift>2D</Shift>
+          <Calendar>TARGET</Calendar>
+          <Convention>MF</Convention>
+          </DerivedSchedule>
+        </Event>
+      </Data>
+    </ScriptedTradeData>
+  </Trade>
+
+</Portfolio>

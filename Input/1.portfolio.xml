@@ -1,0 +1,228 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Portfolio>
+	<Trade id="Leg001">
+    <TradeType>Swap</TradeType>
+    <Envelope>
+      <CounterParty>ICBC</CounterParty>
+      <NettingSetId>BOCOM</NettingSetId>
+      <PortfolioIds>
+        <PortfolioId>PF1</PortfolioId>
+      </PortfolioIds>
+      <AdditionalFields />
+    </Envelope>
+    <SwapData>
+      <LegData>
+        <LegType>Fixed</LegType>
+        <Payer>false</Payer>
+        <Currency>USD</Currency>
+        <Notionals>
+          <Notional>100</Notional>
+        </Notionals>
+        <DayCounter>30/360</DayCounter>
+        <PaymentConvention>MF</PaymentConvention>
+        <PaymentLag>0</PaymentLag>
+        <FixedLegData>
+          <Rates>
+            <Rate>0.009</Rate>
+          </Rates>
+        </FixedLegData>
+        <ScheduleData>
+          <Rules>
+            <StartDate>20160209</StartDate>
+            <EndDate>20190209</EndDate>
+            <Tenor>3M</Tenor>
+            <Calendar>US</Calendar>
+            <Convention>MF</Convention>
+            <TermConvention>MF</TermConvention>
+            <EndOfMonth />
+            <FirstDate />
+            <LastDate />
+          </Rules>
+        </ScheduleData>
+      </LegData>
+      <LegData>
+        <LegType>Floating</LegType>
+        <Payer>true</Payer>
+        <Currency>USD</Currency>
+        <Notionals>
+          <Notional>100</Notional>
+        </Notionals>
+        <DayCounter>ACT/360</DayCounter>
+        <PaymentLag>0</PaymentLag>
+        <PaymentConvention>MF</PaymentConvention>
+        <FloatingLegData>
+          <Index>USD-LIBOR-3M</Index>
+          <Spreads>
+            <Spread>0</Spread>
+          </Spreads>
+          <FixingDays>2</FixingDays>
+        </FloatingLegData>
+        <ScheduleData>
+          <Rules>
+            <StartDate>20160209</StartDate>
+            <EndDate>20190209</EndDate>
+            <Tenor>3M</Tenor>
+            <Calendar>US</Calendar>
+            <Convention>MF</Convention>
+            <TermConvention>MF</TermConvention>
+            <EndOfMonth />
+            <FirstDate />
+            <LastDate />
+          </Rules>
+        </ScheduleData>
+      </LegData>
+    </SwapData>
+  </Trade>
+
+  
+
+
+<Trade id="Leg002">
+    <TradeType>ScriptedTrade</TradeType>
+    <Envelope>
+      <CounterParty>ICBC</CounterParty>
+      <NettingSetId>BOCOM</NettingSetId>
+      <PortfolioIds>
+        <PortfolioId>PF1</PortfolioId>
+      </PortfolioIds>
+      <AdditionalFields />
+    </Envelope>
+    <SingleAmericanOptionData>
+      <Notional type="number">2000</Notional>
+      <PutCall type="number">1</PutCall>
+      <Strike type="number">1.13</Strike>
+      <LongShort type="number">1</LongShort>
+      <PayCcy type="currency">USD</PayCcy>
+      <Underlying type="index">FX-ECB-EUR-USD</Underlying>
+      <ExerciseDates type="event">
+        <ScheduleData>
+            <Rules>
+              <StartDate>2016-02-05</StartDate>
+              <EndDate>2017-02-05</EndDate>
+              <Tenor>1W</Tenor>
+              <Calendar>TARGET</Calendar>
+              <Convention>Following</Convention>
+              <TermConvention>Following</TermConvention>
+              <Rule>Forward</Rule>
+              <EndOfMonth />
+              <FirstDate />
+              <LastDate />
+            </Rules>
+          </ScheduleData>
+      </ExerciseDates>
+      <SettlementDates type="event">
+        <DerivedSchedule>
+          <BaseSchedule>ExerciseDates</BaseSchedule>
+          <Shift>2D</Shift>
+          <Calendar>TARGET</Calendar>
+          <Convention>MF</Convention>
+        </DerivedSchedule>
+      </SettlementDates>
+    </SingleAmericanOptionData>
+  </Trade>
+
+  <Trade id="Leg003">
+    <TradeType>ScriptedTrade</TradeType>
+    <Envelope>
+      <CounterParty>ICBC</CounterParty>
+      <NettingSetId>BOCOM</NettingSetId>
+      <PortfolioIds>
+        <PortfolioId>PF1</PortfolioId>
+      </PortfolioIds>
+      <AdditionalFields />
+    </Envelope>
+    <SingleAsianOptionData>
+      <Amount type="number">2000</Amount>
+      <OptionType type="number">1</OptionType>
+      <Strike type="number">1.13</Strike>
+      <LongShort type="number">1</LongShort>
+      <PayCcy type="currency">USD</PayCcy>
+      <Underlying type="index">FX-ECB-EUR-USD</Underlying>
+      <ObservationDates type="event">
+          <ScheduleData>
+            <Rules>
+              <StartDate>2016-02-05</StartDate>
+              <EndDate>2017-02-05</EndDate>
+              <Tenor>1D</Tenor>
+              <Calendar>US</Calendar>
+              <Convention>Following</Convention>
+              <TermConvention>Following</TermConvention>
+              <Rule>Forward</Rule>
+              <EndOfMonth />
+              <FirstDate />
+              <LastDate />
+            </Rules>
+
+            
+          </ScheduleData>
+      </ObservationDates>
+      <ExerciseSettlement type="number">1</ExerciseSettlement>
+    </SingleAsianOptionData>
+  </Trade>
+
+  
+  <Trade id="Leg004">
+    <TradeType>ScriptedTrade</TradeType>
+    <Envelope>
+      <CounterParty>ICBC</CounterParty>
+      <NettingSetId>BOCOM</NettingSetId>
+      <PortfolioIds>
+        <PortfolioId>PF1</PortfolioId>
+      </PortfolioIds>
+      <AdditionalFields />
+    </Envelope>
+
+    <EuropeanOptionData>
+      <Underlying type="index">FX-ECB-EUR-USD</Underlying>
+      <Strike type="number">1.13</Strike>
+      <PutCall type="number">1</PutCall>
+      <LongShort type="number">1</LongShort>
+      <PayCcy type="currency">USD</PayCcy>
+      <Expiry type="event">2017-02-05</Expiry>
+      <Settlement type="event">2017-02-07</Settlement>
+      <Notional type="number">2000</Notional>
+    </EuropeanOptionData>
+  </Trade>
+
+
+  <Trade id="Leg005">
+    <TradeType>ScriptedTrade</TradeType>
+    <Envelope>
+      <CounterParty>ICBC</CounterParty>
+      <NettingSetId>BOCOM</NettingSetId>
+      <PortfolioIds>
+        <PortfolioId>PF2</PortfolioId>
+      </PortfolioIds>
+      <AdditionalFields />
+    </Envelope>
+
+    <MultipleRangesData>
+      <Underlying type="index">FX-ECB-EUR-USD</Underlying>
+      <FX0 type="number">1.132337</FX0>
+      <CF type="number">0.0001</CF>
+      <Strike type="number">
+          <Value>-500</Value>
+            <Value>0</Value>
+            <Value>500</Value>
+      </Strike>
+      <Coupon type="number">
+            <Value>0.01</Value>
+            <Value>0.04</Value>
+            <Value>0.05</Value>
+            <Value>0.08</Value>
+      </Coupon>
+      <PutCall type="number">1</PutCall>
+      <LongShort type="number">1</LongShort>
+      <PayCcy type="currency">USD</PayCcy>
+      <Expiry type="event">2017-02-05</Expiry>
+      <Settlement type="event">2017-02-07</Settlement>
+      <AccrStart type="event">2016-02-05</AccrStart>
+      <AccrEnd type="event">2017-02-05</AccrEnd>
+      <dc type="dayCounter">ACT/360</dc>
+      <Notional type="number">2000</Notional>
+      
+    </MultipleRangesData>
+  </Trade>
+
+
+  </Portfolio>

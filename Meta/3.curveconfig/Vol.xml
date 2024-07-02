@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CurveConfiguration>
+
+	<FXVolatilities>
+    <FXVolatility>
+      <CurveId>EURUSD</CurveId>
+      <CurveDescription/>
+      <Dimension>ATM</Dimension>
+      <Expiries> 1M,3M,6M,1Y,2Y,3Y,10Y </Expiries>
+      <FXSpotID>FX/EUR/USD</FXSpotID>
+      <FXForeignCurveID>Yield/USD/USD1D</FXForeignCurveID>
+      <FXDomesticCurveID>Yield/EUR/EUR1D</FXDomesticCurveID>
+			<DayCounter>A365</DayCounter>
+      <Calendar>US,TARGET</Calendar>
+      <Conventions>FX-EUR-USD-OPTION-CONVENTIONS</Conventions>
+    </FXVolatility>
+        
+    <FXVolatility>
+      <CurveId>USDCNY</CurveId>
+      <CurveDescription/>
+      <Dimension>ATM</Dimension>
+      <Expiries> 1M,3M,6M,1Y,2Y,3Y,10Y </Expiries>
+      <FXSpotID>FX/USD/CNY</FXSpotID>
+      <FXForeignCurveID>Yield/USD/USD1D</FXForeignCurveID>
+      <FXDomesticCurveID>Yield/CNY/CNY_REPO_7D</FXDomesticCurveID>
+			<DayCounter>A365</DayCounter>
+      <Calendar>US,TARGET</Calendar>
+      <Conventions>FX-USD-CNY-OPTION-CONVENTIONS</Conventions>
+      </FXVolatility>
+	</FXVolatilities>
+
+
+  <CapFloorVolatilities>
+    <CapFloorVolatility>
+      <CurveId>USD_CF_LN</CurveId>
+      <CurveDescription>USD Lognormal cap floor volatilities</CurveDescription>
+      <!--  Normal, Lognormal or ShiftedLognormal  -->
+      <VolatilityType>Lognormal</VolatilityType>
+      <!--  Linear, Flat, None  -->
+      <Extrapolation>Linear</Extrapolation>
+      <!--  Include ATM vol quotes also: True or False  -->
+      <IncludeAtm>True</IncludeAtm>
+      <!--  Day counter for date to time conversion  -->
+      <DayCounter>Actual/365 (Fixed)</DayCounter>
+      <!-- Calendar and Business day convention for cap/floor term to date conversion  -->
+      <Calendar>US</Calendar>
+      <BusinessDayConvention>Following</BusinessDayConvention>
+      <Tenors>1Y,2Y,3Y,5Y,7Y,10Y</Tenors>
+      <Strikes>0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08,0.09,0.10</Strikes>
+      <IborIndex>USD-LIBOR-3M</IborIndex>
+      <DiscountCurve>Yield/USD/USD1D</DiscountCurve>
+    </CapFloorVolatility>
+
+    <CapFloorVolatility>
+      <CurveId>CNY_CF_LN</CurveId>
+      <CurveDescription>CNY Lognormal cap floor volatilities</CurveDescription>
+      <VolatilityType>Lognormal</VolatilityType>
+      <Extrapolation>Linear</Extrapolation>
+      <IncludeAtm>True</IncludeAtm>
+      <DayCounter>Actual/365 (Fixed)</DayCounter>
+      <Calendar>CN</Calendar>
+      <BusinessDayConvention>Following</BusinessDayConvention>
+      <Tenors>1Y,2Y,3Y,5Y,7Y,10Y</Tenors>
+      <Strikes>0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08,0.09,0.10</Strikes>
+      <IborIndex>CNY-SHIBOR-3M</IborIndex>
+      <DiscountCurve>Yield/CNY/CNY_REPO_7D</DiscountCurve>
+    </CapFloorVolatility>
+    
+  </CapFloorVolatilities>
+    
+    
+  <SwaptionVolatilities>
+    <SwaptionVolatility>
+      <CurveId>USD_SW_LN</CurveId>
+      <CurveDescription>USD Lognormal swaption volatilities</CurveDescription>
+      <!--  ATM (Smile not yet supported)  -->
+      <Dimension>ATM</Dimension>
+      <!--  Normal or Lognormal or ShiftedLognormal  -->
+      <VolatilityType>Lognormal</VolatilityType>
+      <!--  Flat or Linear  -->
+      <Extrapolation>Flat</Extrapolation>
+      <!--  Day counter for date to time conversion  -->
+      <DayCounter>Actual/365 (Fixed)</DayCounter>
+      <!-- Ccalendar and Business day convention for option tenor to date conversion  -->
+      <Calendar>TARGET</Calendar>
+      <BusinessDayConvention>Following</BusinessDayConvention>
+      <OptionTenors>3M,6M,1Y,2Y,3Y,5Y,7Y,10Y</OptionTenors>
+      <SwapTenors> 1Y,2Y,3Y,4Y,5Y,7Y,10Y,15Y,20Y,25Y,30Y </SwapTenors>
+      <ShortSwapIndexBase>USD-CMS-1Y</ShortSwapIndexBase>
+      <SwapIndexBase>USD-CMS-10Y</SwapIndexBase>
+    </SwaptionVolatility>
+
+    <SwaptionVolatility>
+      <CurveId>CNY_SW_LN</CurveId>
+      <CurveDescription>CNY Lognormal swaption volatilities</CurveDescription>
+      <Dimension>ATM</Dimension>
+      <VolatilityType>Lognormal</VolatilityType>
+      <Extrapolation>Flat</Extrapolation>
+      <DayCounter>Actual/365 (Fixed)</DayCounter>
+      <Calendar>CNY</Calendar>
+      <BusinessDayConvention>Following</BusinessDayConvention>
+      <OptionTenors>3M,6M,1Y,2Y,3Y,5Y,7Y,10Y</OptionTenors>
+      <SwapTenors> 1Y,2Y,3Y,4Y,5Y,7Y,10Y,15Y,20Y,25Y,30Y </SwapTenors>
+      <ShortSwapIndexBase>CNY-CMS-1Y</ShortSwapIndexBase>
+      <SwapIndexBase>CNY-CMS-10Y</SwapIndexBase>
+    </SwaptionVolatility>
+
+  </SwaptionVolatilities>
+
+</CurveConfiguration>

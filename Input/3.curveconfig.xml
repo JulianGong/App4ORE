@@ -1,0 +1,505 @@
+<?xml version='1.0' encoding='utf-8'?>
+<CurveConfiguration>
+	<YieldCurves>
+		<YieldCurve>
+			<CurveId>CNY_REPO_7D</CurveId>
+			<CurveDescription />
+			<Currency>CNY</Currency>
+			<DiscountCurve>CNY_REPO_7D</DiscountCurve>
+			<Segments>
+				<Simple>
+					<Type>Deposit</Type>
+					<Quotes>
+					    <Quote>MM/RATE/CNY/REPOFIX/0D/1D</Quote>
+					    <Quote>MM/RATE/CNY/REPOFIX/0D/7D</Quote>
+					</Quotes>
+					<Conventions>CNY-REPOFIX-CONVENTIONS</Conventions>
+				</Simple>
+				<Simple>
+					<Type>Swap</Type>
+					<Quotes>
+						<Quote>IR_SWAP/RATE/CNY/REPOFIX/1D/7D/6M</Quote>
+						<Quote>IR_SWAP/RATE/CNY/REPOFIX/1D/7D/1Y</Quote>
+						<Quote>IR_SWAP/RATE/CNY/REPOFIX/1D/7D/2Y</Quote>
+						<Quote>IR_SWAP/RATE/CNY/REPOFIX/1D/7D/3Y</Quote>
+						<Quote>IR_SWAP/RATE/CNY/REPOFIX/1D/7D/5Y</Quote>
+						<Quote>IR_SWAP/RATE/CNY/REPOFIX/1D/7D/7Y</Quote>
+						<Quote>IR_SWAP/RATE/CNY/REPOFIX/1D/7D/10Y</Quote>
+					</Quotes>
+					<Conventions>CNY-REPO7D-SWAP-CONVENTIONS</Conventions>
+				</Simple>
+			</Segments>
+			<InterpolationVariable>Discount</InterpolationVariable>
+			<InterpolationMethod>LogLinear</InterpolationMethod>
+			<YieldCurveDayCounter>A365</YieldCurveDayCounter>
+			<Tolerance>0.000000000001</Tolerance>
+		</YieldCurve>
+		
+        <YieldCurve>
+			<CurveId>CNY_SHIBOR_3M</CurveId>
+			<CurveDescription />
+			<Currency>CNY</Currency>
+			<DiscountCurve>CNY_REPO_7D</DiscountCurve>
+			<Segments>
+				<Simple>
+					<Type>Deposit</Type>
+					<Quotes>
+					    <Quote>MM/RATE/CNY/SHIBOR/0D/1D</Quote>
+					    <Quote>MM/RATE/CNY/SHIBOR/0D/1W</Quote>
+					    <Quote>MM/RATE/CNY/SHIBOR/0D/3M</Quote>
+					</Quotes>
+					<Conventions>CNY-SHIBOR-CONVENTIONS</Conventions>
+				</Simple>
+				<Simple>
+					<Type>Swap</Type>
+					<Quotes>
+						<Quote>IR_SWAP/RATE/CNY/SHIBOR/1D/3M/6M</Quote>
+						<Quote>IR_SWAP/RATE/CNY/SHIBOR/1D/3M/1Y</Quote>
+						<Quote>IR_SWAP/RATE/CNY/SHIBOR/1D/3M/2Y</Quote>
+						<Quote>IR_SWAP/RATE/CNY/SHIBOR/1D/3M/3Y</Quote>
+						<Quote>IR_SWAP/RATE/CNY/SHIBOR/1D/3M/5Y</Quote>
+						<Quote>IR_SWAP/RATE/CNY/SHIBOR/1D/3M/7Y</Quote>
+						<Quote>IR_SWAP/RATE/CNY/SHIBOR/1D/3M/10Y</Quote>
+					</Quotes>
+					<Conventions>CNY-SHIBOR3M-SWAP-CONVENTIONS</Conventions>
+				</Simple>
+			</Segments>
+			<InterpolationVariable>Discount</InterpolationVariable>
+			<InterpolationMethod>LogLinear</InterpolationMethod>
+			<YieldCurveDayCounter>A360</YieldCurveDayCounter>
+			<Tolerance>0.000000000001</Tolerance>
+		</YieldCurve>
+
+		<YieldCurve>
+			<CurveId>CNY_SHIBOR_ON</CurveId>
+			<CurveDescription />
+			<Currency>CNY</Currency>
+			<DiscountCurve>CNY_REPO_7D</DiscountCurve>
+			<Segments>
+				<Simple>
+					<Type>Deposit</Type>
+					<Quotes>
+					    <Quote>MM/RATE/CNY/SHIBOR/0D/1D</Quote>
+					    <Quote>MM/RATE/CNY/SHIBOR/0D/1W</Quote>
+					</Quotes>
+					<Conventions>CNY-SHIBOR-CONVENTIONS</Conventions>
+				</Simple>
+				<Simple>
+					<Type>Swap</Type>
+					<Quotes>
+						<Quote>IR_SWAP/RATE/CNY/SHIBOR/1D/1D/6M</Quote>
+						<Quote>IR_SWAP/RATE/CNY/SHIBOR/1D/1D/1Y</Quote>
+						<Quote>IR_SWAP/RATE/CNY/SHIBOR/1D/1D/2Y</Quote>
+						<Quote>IR_SWAP/RATE/CNY/SHIBOR/1D/1D/3Y</Quote>
+						<Quote>IR_SWAP/RATE/CNY/SHIBOR/1D/1D/5Y</Quote>
+						<Quote>IR_SWAP/RATE/CNY/SHIBOR/1D/1D/7Y</Quote>
+						<Quote>IR_SWAP/RATE/CNY/SHIBOR/1D/1D/10Y</Quote>
+					</Quotes>
+					<Conventions>CNY-SHIBORON-SWAP-CONVENTIONS</Conventions>
+				</Simple>
+			</Segments>
+			<InterpolationVariable>Discount</InterpolationVariable>
+			<InterpolationMethod>LogLinear</InterpolationMethod>
+			<YieldCurveDayCounter>A360</YieldCurveDayCounter>
+			<Tolerance>0.000000000001</Tolerance>
+		</YieldCurve>
+
+		
+	<YieldCurve>
+        <CurveId>BENCHMARK_CNY</CurveId>
+        <Currency>CNY</Currency>
+		<CurveDescription>CNY BENCHMARK curve</CurveDescription>
+        <DiscountCurve />
+        <Segments>
+            <Direct>
+              <Type>Zero</Type>
+              <Quotes>
+                <Quote>ZERO/RATE/CNY/BENCHMARK_CNY/A365/1Y</Quote>
+                <Quote>ZERO/RATE/CNY/BENCHMARK_CNY/A365/2Y</Quote>
+                <Quote>ZERO/RATE/CNY/BENCHMARK_CNY/A365/3Y</Quote>
+                <Quote>ZERO/RATE/CNY/BENCHMARK_CNY/A365/5Y</Quote>
+                <Quote>ZERO/RATE/CNY/BENCHMARK_CNY/A365/7Y</Quote>
+                <Quote>ZERO/RATE/CNY/BENCHMARK_CNY/A365/10Y</Quote>
+              </Quotes>
+              <Conventions>CNY-ZERO-CONVENTIONS-TENOR-BASED</Conventions>
+            </Direct>
+          </Segments>
+    </YieldCurve>
+
+	<YieldCurve>
+        <CurveId>ZC_CNY</CurveId>
+        <Currency>CNY</Currency>
+		<CurveDescription>CNY Zero-coupon curve</CurveDescription>
+        <DiscountCurve />
+        <Segments>
+            <Direct>
+              <Type>Zero</Type>
+              <Quotes>
+                <Quote>ZERO/RATE/CNY/ZC_CNY/A365/1Y</Quote>
+                <Quote>ZERO/RATE/CNY/ZC_CNY/A365/2Y</Quote>
+                <Quote>ZERO/RATE/CNY/ZC_CNY/A365/3Y</Quote>
+                <Quote>ZERO/RATE/CNY/ZC_CNY/A365/5Y</Quote>
+                <Quote>ZERO/RATE/CNY/ZC_CNY/A365/7Y</Quote>
+                <Quote>ZERO/RATE/CNY/ZC_CNY/A365/10Y</Quote>
+              </Quotes>
+              <Conventions>CNY-ZERO-CONVENTIONS-TENOR-BASED</Conventions>
+            </Direct>
+          </Segments>
+    </YieldCurve>
+
+	<YieldCurve>
+			<CurveId>EUR1D</CurveId>
+			<CurveDescription>EUR discount curve bootstrapped from EONIA swap rates</CurveDescription>
+			<Currency>EUR</Currency>
+			<DiscountCurve>EUR1D</DiscountCurve>
+			<Segments>
+				<Simple>
+					<Type>Deposit</Type>
+					<Quotes>
+						<Quote>MM/RATE/EUR/EURIBOR/0D/1D</Quote>
+					</Quotes>
+					<Conventions>EUR-EONIA-CONVENTIONS</Conventions>
+				</Simple>
+				<Simple>
+					<Type>OIS</Type>
+					<Quotes>
+					    <Quote>IR_SWAP/RATE/EUR/OIS/2D/1D/1M</Quote>
+						<Quote>IR_SWAP/RATE/EUR/OIS/2D/1D/3M</Quote>
+						<Quote>IR_SWAP/RATE/EUR/OIS/2D/1D/6M</Quote>
+						<Quote>IR_SWAP/RATE/EUR/OIS/2D/1D/1Y</Quote>
+						<Quote>IR_SWAP/RATE/EUR/OIS/2D/1D/2Y</Quote>
+						<Quote>IR_SWAP/RATE/EUR/OIS/2D/1D/3Y</Quote>
+						<Quote>IR_SWAP/RATE/EUR/OIS/2D/1D/5Y</Quote>
+						<Quote>IR_SWAP/RATE/EUR/OIS/2D/1D/7Y</Quote>
+						<Quote>IR_SWAP/RATE/EUR/OIS/2D/1D/10Y</Quote>
+						<Quote>IR_SWAP/RATE/EUR/OIS/2D/1D/15Y</Quote>
+						<Quote>IR_SWAP/RATE/EUR/OIS/2D/1D/20Y</Quote>
+						<Quote>IR_SWAP/RATE/EUR/OIS/2D/1D/30Y</Quote>
+					</Quotes>
+					<Conventions>EUR-OIS-CONVENTIONS</Conventions>
+				</Simple>
+			</Segments>
+			<InterpolationVariable>Discount</InterpolationVariable>
+			<InterpolationMethod>LogLinear</InterpolationMethod>
+			<YieldCurveDayCounter>A365</YieldCurveDayCounter>
+			<Tolerance>0.000000000001</Tolerance>
+		</YieldCurve>
+
+		
+	<YieldCurve>
+			<CurveId>USD1D</CurveId>
+			<CurveDescription>USD discount curve bootstrapped from FED FUNDS swap rates</CurveDescription>
+			<Currency>USD</Currency>
+			<DiscountCurve>USD1D</DiscountCurve>
+			<Segments>
+				<Simple>
+					<Type>Deposit</Type>
+					<Quotes>
+						<Quote>MM/RATE/USD/LIBOR/0D/1D</Quote>
+					</Quotes>
+					<Conventions>USD-FED-FUNDS-CONVENTIONS</Conventions>
+					
+				</Simple>
+				<Simple>
+					<Type>OIS</Type>
+					<Quotes>
+						<Quote>IR_SWAP/RATE/USD/OIS/2D/1D/1M</Quote>
+						<Quote>IR_SWAP/RATE/USD/OIS/2D/1D/3M</Quote>
+						<Quote>IR_SWAP/RATE/USD/OIS/2D/1D/6M</Quote>
+						<Quote>IR_SWAP/RATE/USD/OIS/2D/1D/9M</Quote>
+						<Quote>IR_SWAP/RATE/USD/OIS/2D/1D/1Y</Quote>
+						<Quote>IR_SWAP/RATE/USD/OIS/2D/1D/1Y3M</Quote>
+						<Quote>IR_SWAP/RATE/USD/OIS/2D/1D/1Y6M</Quote>
+						<Quote>IR_SWAP/RATE/USD/OIS/2D/1D/1Y9M</Quote>
+						<Quote>IR_SWAP/RATE/USD/OIS/2D/1D/2Y</Quote>
+						<Quote>IR_SWAP/RATE/USD/OIS/2D/1D/3Y</Quote>
+						<Quote>IR_SWAP/RATE/USD/OIS/2D/1D/4Y</Quote>
+						<Quote>IR_SWAP/RATE/USD/OIS/2D/1D/5Y</Quote>
+						<Quote>IR_SWAP/RATE/USD/OIS/2D/1D/7Y</Quote>
+						<Quote>IR_SWAP/RATE/USD/OIS/2D/1D/10Y</Quote>
+						<Quote>IR_SWAP/RATE/USD/OIS/2D/1D/12Y</Quote>
+						<Quote>IR_SWAP/RATE/USD/OIS/2D/1D/15Y</Quote>
+						<Quote>IR_SWAP/RATE/USD/OIS/2D/1D/20Y</Quote>
+						<Quote>IR_SWAP/RATE/USD/OIS/2D/1D/25Y</Quote>
+						<Quote>IR_SWAP/RATE/USD/OIS/2D/1D/30Y</Quote>
+					</Quotes>
+					<Conventions>USD-OIS-CONVENTIONS</Conventions>
+					
+				</Simple>
+			</Segments>
+			<InterpolationVariable>Discount</InterpolationVariable>
+			<InterpolationMethod>LogLinear</InterpolationMethod>
+			<YieldCurveDayCounter>A365</YieldCurveDayCounter>
+			<Tolerance>0.000000000001</Tolerance>
+		</YieldCurve>
+
+		<YieldCurve>
+			<CurveId>USD3M</CurveId>
+			<CurveDescription />
+			<Currency>USD</Currency>
+			<DiscountCurve>USD1D</DiscountCurve>
+			<Segments>
+				<Simple>
+					<Type>Deposit</Type>
+					<Quotes>
+						<Quote>MM/RATE/USD/LIBOR/2D/1W</Quote>
+						<Quote>MM/RATE/USD/LIBOR/2D/1M</Quote>
+						<Quote>MM/RATE/USD/LIBOR/2D/2M</Quote>
+						<Quote>MM/RATE/USD/LIBOR/2D/3M</Quote>
+					</Quotes>
+					<Conventions>USD-FED-FUNDS-CONVENTIONS</Conventions>
+					<ProjectionCurve>USD3M</ProjectionCurve>
+				</Simple>
+				<Simple>
+					<Type>FRA</Type>
+					<Quotes>
+						<Quote>FRA/RATE/USD/3M/3M</Quote>
+						<Quote>FRA/RATE/USD/6M/3M</Quote>
+						<Quote>FRA/RATE/USD/9M/3M</Quote>
+						<Quote>FRA/RATE/USD/1Y/3M</Quote>
+					</Quotes>
+					<Conventions>USD-3M-FRA-CONVENTIONS</Conventions>
+					<ProjectionCurve>USD3M</ProjectionCurve>
+				</Simple>
+				<Simple>
+					<Type>Swap</Type>
+					<Quotes>
+						<Quote>IR_SWAP/RATE/USD/LIBOR/2D/3M/2Y</Quote>
+						<Quote>IR_SWAP/RATE/USD/LIBOR/2D/3M/3Y</Quote>
+						<Quote>IR_SWAP/RATE/USD/LIBOR/2D/3M/4Y</Quote>
+						<Quote>IR_SWAP/RATE/USD/LIBOR/2D/3M/5Y</Quote>
+						<Quote>IR_SWAP/RATE/USD/LIBOR/2D/3M/6Y</Quote>
+						<Quote>IR_SWAP/RATE/USD/LIBOR/2D/3M/7Y</Quote>
+						<Quote>IR_SWAP/RATE/USD/LIBOR/2D/3M/8Y</Quote>
+						<Quote>IR_SWAP/RATE/USD/LIBOR/2D/3M/9Y</Quote>
+						<Quote>IR_SWAP/RATE/USD/LIBOR/2D/3M/10Y</Quote>
+						<Quote>IR_SWAP/RATE/USD/LIBOR/2D/3M/12Y</Quote>
+						<Quote>IR_SWAP/RATE/USD/LIBOR/2D/3M/15Y</Quote>
+						<Quote>IR_SWAP/RATE/USD/LIBOR/2D/3M/20Y</Quote>
+						<Quote>IR_SWAP/RATE/USD/LIBOR/2D/3M/25Y</Quote>
+						<Quote>IR_SWAP/RATE/USD/LIBOR/2D/3M/30Y</Quote>
+					</Quotes>
+					<Conventions>USD-3M-SWAP-CONVENTIONS</Conventions>
+					<ProjectionCurve>USD3M</ProjectionCurve>
+				</Simple>
+			</Segments>
+		</YieldCurve>
+		<YieldCurve>
+			<CurveId>USD6M</CurveId>
+			<CurveDescription />
+			<Currency>USD</Currency>
+			<DiscountCurve>USD1D</DiscountCurve>
+			<Segments>
+				<Simple>
+					<Type>Deposit</Type>
+					<Quotes>
+						<Quote>MM/RATE/USD/LIBOR/2D/1W</Quote>
+						<Quote>MM/RATE/USD/LIBOR/2D/1M</Quote>
+						<Quote>MM/RATE/USD/LIBOR/2D/2M</Quote>
+						<Quote>MM/RATE/USD/LIBOR/2D/3M</Quote>
+						<Quote>MM/RATE/USD/LIBOR/2D/6M</Quote>
+					</Quotes>
+					<Conventions>USD-FED-FUNDS-CONVENTIONS</Conventions>
+					<ProjectionCurve>USD6M</ProjectionCurve>
+				</Simple>
+				<Simple>
+					<Type>FRA</Type>
+					<Quotes>
+						<Quote>FRA/RATE/USD/6M/6M</Quote>
+						<Quote>FRA/RATE/USD/1Y/6M</Quote>
+					</Quotes>
+					<Conventions>USD-6M-FRA-CONVENTIONS</Conventions>
+					<ProjectionCurve>USD6M</ProjectionCurve>
+				</Simple>
+				<TenorBasis>
+					<Type>Tenor Basis Swap</Type>
+					<Quotes>
+						<Quote>BASIS_SWAP/BASIS_SPREAD/3M/6M/USD/2Y</Quote>
+						<Quote>BASIS_SWAP/BASIS_SPREAD/3M/6M/USD/3Y</Quote>
+						<Quote>BASIS_SWAP/BASIS_SPREAD/3M/6M/USD/4Y</Quote>
+						<Quote>BASIS_SWAP/BASIS_SPREAD/3M/6M/USD/5Y</Quote>
+						<Quote>BASIS_SWAP/BASIS_SPREAD/3M/6M/USD/6Y</Quote>
+						<Quote>BASIS_SWAP/BASIS_SPREAD/3M/6M/USD/7Y</Quote>
+						<Quote>BASIS_SWAP/BASIS_SPREAD/3M/6M/USD/8Y</Quote>
+						<Quote>BASIS_SWAP/BASIS_SPREAD/3M/6M/USD/9Y</Quote>
+						<Quote>BASIS_SWAP/BASIS_SPREAD/3M/6M/USD/10Y</Quote>
+						<Quote>BASIS_SWAP/BASIS_SPREAD/3M/6M/USD/12Y</Quote>
+						<Quote>BASIS_SWAP/BASIS_SPREAD/3M/6M/USD/15Y</Quote>
+						<Quote>BASIS_SWAP/BASIS_SPREAD/3M/6M/USD/20Y</Quote>
+						<Quote>BASIS_SWAP/BASIS_SPREAD/3M/6M/USD/25Y</Quote>
+						<Quote>BASIS_SWAP/BASIS_SPREAD/3M/6M/USD/30Y</Quote>
+					</Quotes>
+					<Conventions>USD-LIBOR-3M-6M-BASIS-CONVENTIONS</Conventions>
+					<ProjectionCurvePay>USD6M</ProjectionCurvePay>
+					<ProjectionCurveReceive>USD3M</ProjectionCurveReceive>
+				</TenorBasis>
+			</Segments>
+		</YieldCurve>
+
+
+	<YieldCurve>
+      <CurveId>USD-IN-CNY</CurveId>
+      <CurveDescription>USD FX Fwd discount curve</CurveDescription>
+      <Currency>USD</Currency>
+      <DiscountCurve />
+      <Segments>
+        <CrossCurrency>
+          <Type>FX Forward</Type>
+            <Quotes>
+              <Quote>FXFWD/RATE/USD/CNY/1W</Quote>
+              <Quote>FXFWD/RATE/USD/CNY/2W</Quote>
+              <Quote>FXFWD/RATE/USD/CNY/3W</Quote>
+              <Quote>FXFWD/RATE/USD/CNY/1M</Quote>
+              <Quote>FXFWD/RATE/USD/CNY/2M</Quote>
+              <Quote>FXFWD/RATE/USD/CNY/3M</Quote>
+              <Quote>FXFWD/RATE/USD/CNY/4M</Quote>
+              <Quote>FXFWD/RATE/USD/CNY/5M</Quote>
+              <Quote>FXFWD/RATE/USD/CNY/6M</Quote>
+              <Quote>FXFWD/RATE/USD/CNY/7M</Quote>
+              <Quote>FXFWD/RATE/USD/CNY/8M</Quote>
+              <Quote>FXFWD/RATE/USD/CNY/9M</Quote>
+              <Quote>FXFWD/RATE/USD/CNY/10M</Quote>
+              <Quote>FXFWD/RATE/USD/CNY/11M</Quote>
+              <Quote>FXFWD/RATE/USD/CNY/12M</Quote>
+              <Quote>FXFWD/RATE/USD/CNY/18M</Quote>
+              <Quote>FXFWD/RATE/USD/CNY/2Y</Quote>
+            </Quotes>
+          <Conventions>USD-CNY-FX-CONVENTIONS</Conventions>
+          <DiscountCurve>CNY_REPO_7D</DiscountCurve>
+          <SpotRate>FX/RATE/USD/CNY</SpotRate>
+        </CrossCurrency>
+
+        
+      </Segments>
+      <InterpolationVariable>Discount</InterpolationVariable>
+      <InterpolationMethod>LogLinear</InterpolationMethod>
+      <YieldCurveDayCounter>A365</YieldCurveDayCounter>
+      <Tolerance>0.000000000001</Tolerance>
+    </YieldCurve>
+
+
+	<YieldCurve>
+        <CurveId>BENCHMARK_USD</CurveId>
+        <Currency>USD</Currency>
+		<CurveDescription>USD BENCHMARK curve</CurveDescription>
+        <DiscountCurve />
+        <Segments>
+            <Direct>
+              <Type>Zero</Type>
+              <Quotes>
+                <Quote>ZERO/RATE/USD/BENCHMARK_USD/A365/1Y</Quote>
+                <Quote>ZERO/RATE/USD/BENCHMARK_USD/A365/2Y</Quote>
+                <Quote>ZERO/RATE/USD/BENCHMARK_USD/A365/3Y</Quote>
+                <Quote>ZERO/RATE/USD/BENCHMARK_USD/A365/5Y</Quote>
+                <Quote>ZERO/RATE/USD/BENCHMARK_USD/A365/7Y</Quote>
+                <Quote>ZERO/RATE/USD/BENCHMARK_USD/A365/10Y</Quote>
+              </Quotes>
+              <Conventions>USD-ZERO-CONVENTIONS-TENOR-BASED</Conventions>
+            </Direct>
+          </Segments>
+    </YieldCurve>
+
+  </YieldCurves>
+<FXVolatilities>
+		<FXVolatility>
+      <CurveId>EURUSD</CurveId>
+      <CurveDescription />
+      <Dimension>ATM</Dimension>
+      <Expiries> 1M,3M,6M,1Y,2Y,3Y,10Y </Expiries>
+      <FXSpotID>FX/EUR/USD</FXSpotID>
+      <FXForeignCurveID>Yield/USD/USD1D</FXForeignCurveID>
+      <FXDomesticCurveID>Yield/EUR/EUR1D</FXDomesticCurveID>
+			<DayCounter>A365</DayCounter>
+      <Calendar>US,TARGET</Calendar>
+      <Conventions>FX-EUR-USD-OPTION-CONVENTIONS</Conventions>
+    </FXVolatility>
+        
+    <FXVolatility>
+      <CurveId>USDCNY</CurveId>
+      <CurveDescription />
+      <Dimension>ATM</Dimension>
+      <Expiries> 1M,3M,6M,1Y,2Y,3Y,10Y </Expiries>
+      <FXSpotID>FX/USD/CNY</FXSpotID>
+      <FXForeignCurveID>Yield/USD/USD1D</FXForeignCurveID>
+      <FXDomesticCurveID>Yield/CNY/CNY_REPO_7D</FXDomesticCurveID>
+			<DayCounter>A365</DayCounter>
+      <Calendar>US,TARGET</Calendar>
+      <Conventions>FX-USD-CNY-OPTION-CONVENTIONS</Conventions>
+      </FXVolatility>
+	</FXVolatilities>
+<CapFloorVolatilities>
+		<CapFloorVolatility>
+      <CurveId>USD_CF_LN</CurveId>
+      <CurveDescription>USD Lognormal cap floor volatilities</CurveDescription>
+      
+      <VolatilityType>Lognormal</VolatilityType>
+      
+      <Extrapolation>Linear</Extrapolation>
+      
+      <IncludeAtm>True</IncludeAtm>
+      
+      <DayCounter>Actual/365 (Fixed)</DayCounter>
+      
+      <Calendar>US</Calendar>
+      <BusinessDayConvention>Following</BusinessDayConvention>
+      <Tenors>1Y,2Y,3Y,5Y,7Y,10Y</Tenors>
+      <Strikes>0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08,0.09,0.10</Strikes>
+      <IborIndex>USD-LIBOR-3M</IborIndex>
+      <DiscountCurve>Yield/USD/USD1D</DiscountCurve>
+    </CapFloorVolatility>
+
+    <CapFloorVolatility>
+      <CurveId>CNY_CF_LN</CurveId>
+      <CurveDescription>CNY Lognormal cap floor volatilities</CurveDescription>
+      <VolatilityType>Lognormal</VolatilityType>
+      <Extrapolation>Linear</Extrapolation>
+      <IncludeAtm>True</IncludeAtm>
+      <DayCounter>Actual/365 (Fixed)</DayCounter>
+      <Calendar>CN</Calendar>
+      <BusinessDayConvention>Following</BusinessDayConvention>
+      <Tenors>1Y,2Y,3Y,5Y,7Y,10Y</Tenors>
+      <Strikes>0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08,0.09,0.10</Strikes>
+      <IborIndex>CNY-SHIBOR-3M</IborIndex>
+      <DiscountCurve>Yield/CNY/CNY_REPO_7D</DiscountCurve>
+    </CapFloorVolatility>
+    
+  </CapFloorVolatilities>
+<SwaptionVolatilities>
+		<SwaptionVolatility>
+      <CurveId>USD_SW_LN</CurveId>
+      <CurveDescription>USD Lognormal swaption volatilities</CurveDescription>
+      
+      <Dimension>ATM</Dimension>
+      
+      <VolatilityType>Lognormal</VolatilityType>
+      
+      <Extrapolation>Flat</Extrapolation>
+      
+      <DayCounter>Actual/365 (Fixed)</DayCounter>
+      
+      <Calendar>TARGET</Calendar>
+      <BusinessDayConvention>Following</BusinessDayConvention>
+      <OptionTenors>3M,6M,1Y,2Y,3Y,5Y,7Y,10Y</OptionTenors>
+      <SwapTenors> 1Y,2Y,3Y,4Y,5Y,7Y,10Y,15Y,20Y,25Y,30Y </SwapTenors>
+      <ShortSwapIndexBase>USD-CMS-1Y</ShortSwapIndexBase>
+      <SwapIndexBase>USD-CMS-10Y</SwapIndexBase>
+    </SwaptionVolatility>
+
+    <SwaptionVolatility>
+      <CurveId>CNY_SW_LN</CurveId>
+      <CurveDescription>CNY Lognormal swaption volatilities</CurveDescription>
+      <Dimension>ATM</Dimension>
+      <VolatilityType>Lognormal</VolatilityType>
+      <Extrapolation>Flat</Extrapolation>
+      <DayCounter>Actual/365 (Fixed)</DayCounter>
+      <Calendar>CNY</Calendar>
+      <BusinessDayConvention>Following</BusinessDayConvention>
+      <OptionTenors>3M,6M,1Y,2Y,3Y,5Y,7Y,10Y</OptionTenors>
+      <SwapTenors> 1Y,2Y,3Y,4Y,5Y,7Y,10Y,15Y,20Y,25Y,30Y </SwapTenors>
+      <ShortSwapIndexBase>CNY-CMS-1Y</ShortSwapIndexBase>
+      <SwapIndexBase>CNY-CMS-10Y</SwapIndexBase>
+    </SwaptionVolatility>
+
+  </SwaptionVolatilities>
+</CurveConfiguration>
+

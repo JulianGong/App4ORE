@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScriptLibrary>
+  
+  <!-- Accumulator
+       Inputs:
+       Strike                          option strike
+       FixingAmount                    unleveraged amount paid on each fixing date
+       LongShort                       1 for a long, -1 for a short position
+       Underlying                      underlying index
+       PayCcy                          payment currency
+       StartDate                       start date (only needed if AmericanKO = 1)
+       FixingDates                     fixing valuation dates
+       SettlementDates                 settlement dates
+       RangeUpperBounds                upper bounds of fixing ranges
+       RangeLowerBounds                lower bounds of fixing ranges
+       RangeLeverages                  leverage amounts of fixing ranges
+       KnockOutLevel                   knock out level
+       KnockOutType                    barrier type 3=DownOut, 4=UpOut
+       AmericanKO                      1 for American KO style, -1 for European KO style
+       GuaranteedFixings               the number of fixings guaranteed regardless of knockout level
+
+       Results:
+       value                           npv of the option
+       CurrentNotional                 current notional
+       notionalCurrency                notional currency
+  -->
+  <Script>
+    <Name>Accumulator</Name>
+    <!--<ProductTag>SingleAssetOption({AssetClass})</ProductTag>-->
+    <Script>
+      <Code><![CDATA[
+            REQUIRE KnockOutType == 3 OR KnockOutType == 4;
+            NUMBER Payoff, fix, d, r, Alive, CurrentNotional, Factor, ThisPayout, Fixing[SIZE(FixingDates)];
+            Alive = 1;
+            FOR d IN (1, SIZE(FixingDates), 1) DO
+                fix = Underlying(FixingDates[d]);
+                Fixing[d] = fix;
+                IF AmericanKO == 1 THEN
+                  IF KnockOutType == 4 THEN
+                    IF FixingDates[d] >= StartDate THEN
+                      IF d == 1 OR FixingDates[d-1] <= StartDate THEN
+                        Alive = Alive * (1 - ABOVEPROB(Underlying, StartDate, FixingDates[d], KnockOutLevel));
+		                  ELSE
+                        Alive = Alive * (1 - ABOVEPROB(Underlying, FixingDates[d-1], FixingDates[d], KnockOutLevel));
+		                  END;
+                    END;
+                  ELSE
+                    IF FixingDates[d] >= StartDate THEN
+                      IF d == 1 OR FixingDates[d-1] <= StartDate THEN
+                        Alive = Alive * (1 - BELOWPROB(Underlying, StartDate, FixingDates[d], KnockOutLevel));
+		                  ELSE
+                        Alive = Alive * (1 - BELOWPROB(Underlying, FixingDates[d-1], FixingDates[d], KnockOutLevel));
+		                  END;
+                    END;
+                  END;
+                ELSE
+                  IF {KnockOutType == 4 AND fix >= KnockOutLevel} OR {KnockOutType == 3 AND fix <= KnockOutLevel} THEN
+                    Alive = 0;
+                  END;
+                END;
+
+                IF d <= GuaranteedFixings THEN
+                  Factor = 1;
+                ELSE
+                  Factor = Alive;
+                END;
+
+                FOR r IN (1, SIZE(RangeUpperBounds), 1) DO
+                  IF fix > RangeLowerBounds[r] AND fix <= RangeUpperBounds[r] THEN
+                    ThisPayout = RangeLeverages[r] * FixingAmount * (fix - Strike) * Factor;
+                    IF d > GuaranteedFixings OR ThisPayout >= 0 THEN
+                      Payoff = Payoff + LOGPAY(RangeLeverages[r] * FixingAmount * (fix - Strike) * Factor, FixingDates[d], SettlementDates[d], PayCcy);
+                    END;
+                  END;
+                END;
+            END;
+            value = LongShort * Payoff;
+            CurrentNotional = FixingAmount * Strike;
+        ]]></Code>
+      <NPV>value</NPV>
+      <Results>
+        <Result>CurrentNotional</Result>
+        <Result rename="notionalCurrency">PayCcy</Result>
+        <Result>Alive</Result>
+        <Result>Fixing</Result>
+      </Results>
+      <CalibrationSpec>
+        <Calibration>
+          <Index>Underlying</Index>
+          <Strikes>
+            <Strike>Strike</Strike>
+            <Strike>KnockOutLevel</Strike>
+          </Strikes>
+        </Calibration>
+      </CalibrationSpec>
+    </Script>
+  </Script>
+  
+
+  <!--Script>
+    <Name>TripeRanges</Name>
+    <Script>
+      <Code><![CDATA[
+
+      ]]></Code>
+    </Script>
+  </Script-->
+  
+</ScriptLibrary>

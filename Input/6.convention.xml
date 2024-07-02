@@ -1,0 +1,250 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Conventions>
+	<IborIndex>
+    <Id>CNY-REPOFIX-7D</Id>
+    <DayCounter>A365</DayCounter>
+    <SettlementDays>2</SettlementDays>
+    <BusinessDayConvention>MF</BusinessDayConvention>
+    <EndOfMonth>true</EndOfMonth>
+  </IborIndex>
+
+  <IborIndex>
+    <Id>CNY-SHIBOR-3M</Id>
+    <DayCounter>A360</DayCounter>
+    <SettlementDays>2</SettlementDays>
+    <BusinessDayConvention>MF</BusinessDayConvention>
+    <EndOfMonth>true</EndOfMonth>
+  </IborIndex>
+
+  <IborIndex>
+    <Id>CNY-SHIBOR-1D</Id>
+    <DayCounter>A360</DayCounter>
+    <SettlementDays>2</SettlementDays>
+    <BusinessDayConvention>MF</BusinessDayConvention>
+    <EndOfMonth>true</EndOfMonth>
+  </IborIndex>
+
+  <Deposit>
+    <Id>CNY-REPOFIX-CONVENTIONS</Id>
+    <IndexBased>true</IndexBased>
+    <Index>CNY-REPOFIX</Index>
+  </Deposit>
+
+  <Deposit>
+    <Id>CNY-SHIBOR-CONVENTIONS</Id>
+    <IndexBased>true</IndexBased>
+    <Index>CNY-SHIBOR</Index>
+  </Deposit>
+
+  <Swap>
+    <Id>CNY-REPO7D-SWAP-CONVENTIONS</Id>
+    <FixedCalendar>CN</FixedCalendar>
+    <FixedFrequency>Semiannual</FixedFrequency>
+    <FixedConvention>MF</FixedConvention>
+    <FixedDayCounter>ACT/365</FixedDayCounter>
+    <Index>CNY-REPOFIX-7D</Index>
+  </Swap>
+  
+  <Swap>
+    <Id>CNY-SHIBOR3M-SWAP-CONVENTIONS</Id>
+    <FixedCalendar>CN</FixedCalendar>
+    <FixedFrequency>Semiannual</FixedFrequency>
+    <FixedConvention>MF</FixedConvention>
+    <FixedDayCounter>ACT/360</FixedDayCounter>
+    <Index>CNY-SHIBOR-3M</Index>
+  </Swap>
+
+  <Swap>
+    <Id>CNY-SHIBORON-SWAP-CONVENTIONS</Id>
+    <FixedCalendar>CN</FixedCalendar>
+    <FixedFrequency>Semiannual</FixedFrequency>
+    <FixedConvention>MF</FixedConvention>
+    <FixedDayCounter>ACT/360</FixedDayCounter>
+    <Index>CNY-SHIBOR-1D</Index>
+  </Swap>
+
+
+  
+  <SwapIndex>
+    <Id>CNY-CMS-1Y</Id>
+    <Conventions>CNY-SHIBOR3M-SWAP-CONVENTIONS</Conventions>
+  </SwapIndex>
+
+  <SwapIndex>
+    <Id>CNY-CMS-10Y</Id>
+    <Conventions>CNY-SHIBOR3M-SWAP-CONVENTIONS</Conventions>
+  </SwapIndex>
+
+
+
+  <Zero>
+    <Id>CNY-ZERO-CONVENTIONS-TENOR-BASED</Id>
+    <TenorBased>true</TenorBased>
+    <DayCounter>A365</DayCounter>
+    <Compounding>Continuous</Compounding>
+    <CompoundingFrequency>Daily</CompoundingFrequency>
+    <TenorCalendar>CN</TenorCalendar>
+    <SpotLag>2</SpotLag>
+    <SpotCalendar>CN</SpotCalendar>
+    <RollConvention>Following</RollConvention>
+    <EOM>false</EOM>
+  </Zero>
+
+
+<Deposit>
+    <Id>EUR-EONIA-CONVENTIONS</Id>
+    <IndexBased>true</IndexBased>
+    <Index>EUR-EONIA</Index>
+  </Deposit>
+
+  <OIS>
+    <Id>EUR-OIS-CONVENTIONS</Id>
+    <SpotLag>2</SpotLag>
+    <Index>EUR-EONIA</Index>
+    <FixedDayCounter>A360</FixedDayCounter>
+    <PaymentLag>1</PaymentLag>
+    <EOM>false</EOM>
+    <FixedFrequency>Annual</FixedFrequency>
+    <FixedConvention>Following</FixedConvention>
+    <FixedPaymentConvention>Following</FixedPaymentConvention>
+    <Rule>Backward</Rule>
+  </OIS>
+
+
+<FxOption> 
+    <Id>FX-EUR-USD-OPTION-CONVENTIONS</Id> 
+    <AtmType>AtmDeltaNeutral</AtmType> 
+    <DeltaType>Fwd</DeltaType> 
+  </FxOption>
+
+  <FxOption> 
+    <Id>FX-USD-CNY-OPTION-CONVENTIONS</Id> 
+    <AtmType>AtmDeltaNeutral</AtmType> 
+    <DeltaType>Fwd</DeltaType> 
+  </FxOption>
+
+  <FX>
+    <Id>USD-CNY-FX-CONVENTIONS</Id>
+    <SpotDays>0</SpotDays>
+    <SourceCurrency>USD</SourceCurrency>
+    <TargetCurrency>CNY</TargetCurrency>
+    <PointsFactor>10000</PointsFactor>
+    <AdvanceCalendar>CN,US</AdvanceCalendar>
+    <SpotRelative>true</SpotRelative>
+  </FX>
+
+  <CrossCurrencyBasis>
+    <Id>USD-CNY-XCCY-BASIS-CONVENTIONS</Id>
+    <SettlementDays>2</SettlementDays>
+    <SettlementCalendar>CN,US</SettlementCalendar>
+    <RollConvention>MF</RollConvention>
+    <FlatIndex>CNY-SHIBOR-3M</FlatIndex>
+    <SpreadIndex>USD-LIBOR-3M</SpreadIndex>
+  </CrossCurrencyBasis>
+
+<Zero>
+    <Id>USD-ZERO-CONVENTIONS</Id>
+    <TenorBased>false</TenorBased>
+    <DayCounter>A365</DayCounter>
+    <CompoundingFrequency>Daily</CompoundingFrequency>
+  </Zero>
+
+
+  <Zero>
+    <Id>USD-ZERO-CONVENTIONS-TENOR-BASED</Id>
+    <TenorBased>true</TenorBased>
+    <DayCounter>A365</DayCounter>
+    <Compounding>Continuous</Compounding>
+    <CompoundingFrequency>Daily</CompoundingFrequency>
+    <TenorCalendar>TARGET</TenorCalendar>
+    <SpotLag>2</SpotLag>
+    <SpotCalendar>TARGET</SpotCalendar>
+    <RollConvention>Following</RollConvention>
+    <EOM>false</EOM>
+  </Zero>
+
+  
+  
+  <Deposit>
+    <Id>USD-LIBOR-CONVENTIONS</Id>
+    <IndexBased>true</IndexBased>
+    <Index>USD-LIBOR</Index>
+  </Deposit>
+
+  <Deposit>
+    <Id>USD-FED-FUNDS-CONVENTIONS</Id>
+    <IndexBased>true</IndexBased>
+    <Index>USD-FedFunds</Index>
+  </Deposit>
+
+  
+  <Future>
+    <Id>USD-LIBOR-3M-FUTURES-CONVENTIONS</Id>
+    <Index>USD-LIBOR-3M</Index>
+  </Future>
+
+  
+  <FRA>
+    <Id>USD-3M-FRA-CONVENTIONS</Id>
+    <Index>USD-LIBOR-3M</Index>
+  </FRA>
+   <FRA>
+    <Id>USD-6M-FRA-CONVENTIONS</Id>
+    <Index>USD-LIBOR-6M</Index>
+  </FRA>
+  
+
+  <Swap>
+    <Id>USD-1M-SWAP-CONVENTIONS</Id>
+    <FixedCalendar>US,UK</FixedCalendar>
+    <FixedFrequency>Annual</FixedFrequency>
+    <FixedConvention>MF</FixedConvention>
+    <FixedDayCounter>30/360</FixedDayCounter>
+    <Index>USD-LIBOR-1M</Index>
+  </Swap>
+  <Swap>
+    <Id>USD-3M-SWAP-CONVENTIONS</Id>
+    <FixedCalendar>US,UK</FixedCalendar>
+    <FixedFrequency>Semiannual</FixedFrequency>
+    <FixedConvention>MF</FixedConvention>
+    <FixedDayCounter>30/360</FixedDayCounter>
+    <Index>USD-LIBOR-3M</Index>
+  </Swap>
+
+  
+  <OIS>
+    <Id>USD-OIS-CONVENTIONS</Id>
+    <SpotLag>2</SpotLag>
+    <Index>USD-FedFunds</Index>
+    <FixedDayCounter>A360</FixedDayCounter>
+    <PaymentLag>2</PaymentLag>
+    <EOM>false</EOM>
+    <FixedFrequency>Annual</FixedFrequency>
+    <FixedConvention>Following</FixedConvention>
+    <FixedPaymentConvention>Following</FixedPaymentConvention>
+    <Rule>Backward</Rule>
+  </OIS>
+
+  <TenorBasisSwap>
+    <Id>USD-LIBOR-3M-6M-BASIS-CONVENTIONS</Id>
+    <PayIndex>USD-LIBOR-6M</PayIndex>
+    <ReceiveIndex>USD-LIBOR-3M</ReceiveIndex>
+    <ReceiveFrequency>6M</ReceiveFrequency>
+    <SpreadOnRec>true</SpreadOnRec>
+    <IncludeSpread>false</IncludeSpread>
+    <SubPeriodsCouponType>Compounding</SubPeriodsCouponType>
+  </TenorBasisSwap>
+
+  <SwapIndex>
+    <Id>USD-CMS-1Y</Id>
+    <Conventions>USD-3M-SWAP-CONVENTIONS</Conventions>
+  </SwapIndex>
+
+  <SwapIndex>
+    <Id>USD-CMS-10Y</Id>
+    <Conventions>USD-3M-SWAP-CONVENTIONS</Conventions>
+  </SwapIndex>
+
+
+</Conventions>
+

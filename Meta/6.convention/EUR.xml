@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Conventions>
+  
+  <Deposit>
+    <Id>EUR-EONIA-CONVENTIONS</Id>
+    <IndexBased>true</IndexBased>
+    <Index>EUR-EONIA</Index>
+  </Deposit>
+
+  <OIS>
+    <Id>EUR-OIS-CONVENTIONS</Id>
+    <SpotLag>2</SpotLag>
+    <Index>EUR-EONIA</Index>
+    <FixedDayCounter>A360</FixedDayCounter>
+    <PaymentLag>1</PaymentLag>
+    <EOM>false</EOM>
+    <FixedFrequency>Annual</FixedFrequency>
+    <FixedConvention>Following</FixedConvention>
+    <FixedPaymentConvention>Following</FixedPaymentConvention>
+    <Rule>Backward</Rule>
+  </OIS>
+
+
+</Conventions>

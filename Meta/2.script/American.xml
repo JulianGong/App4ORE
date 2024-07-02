@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<ScriptLibrary>
+  
+  <Script>
+    <Name>SingleAmericanOption</Name>
+    <!-- default script -->
+    <Script>
+      <Code><![CDATA[
+      NUMBER i, Payoff, EstimatedPayoff,CurrentNotional;
+      FOR i IN (SIZE(ExerciseDates), 1, -1) DO
+        IF ExerciseDates[i] > TODAY THEN
+          Payoff = max(PutCall * (Underlying(ExerciseDates[i]) - Strike), 0);
+          Payoff = PAY(Payoff, ExerciseDates[i], SettlementDates[i], PayCcy);
+        
+          EstimatedPayoff = NPV( Option, ExerciseDates[i], Payoff> 0);
+          IF Payoff > 0 AND Payoff > EstimatedPayoff THEN
+            Option = Payoff;
+          END;
+        END;
+      END;
+      Option =Notional* Option * LongShort;
+      CurrentNotional = Notional * Strike;
+      ]]></Code>
+      <NPV>Option</NPV>
+      <Results>
+        <Result>CurrentNotional</Result>
+        <Result rename="notionalCurrency">PayCcy</Result>
+      </Results>
+    </Script>
+
+  </Script>
+  
+</ScriptLibrary>

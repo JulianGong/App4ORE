@@ -1,0 +1,856 @@
+NOTICE   [2024-Jul-01 15:42:03.059371]    (OREAnalytics\orea\app\parameters.cpp:133) : Parameters:
+NOTICE   [2024-Jul-01 15:42:03.059371]    (OREAnalytics\orea\app\parameters.cpp:136) : group = cashflow : active = Y
+NOTICE   [2024-Jul-01 15:42:03.060371]    (OREAnalytics\orea\app\parameters.cpp:136) : group = cashflow : outputFileName = flows.csv
+NOTICE   [2024-Jul-01 15:42:03.060371]    (OREAnalytics\orea\app\parameters.cpp:136) : group = curves : active = Y
+NOTICE   [2024-Jul-01 15:42:03.061371]    (OREAnalytics\orea\app\parameters.cpp:136) : group = curves : configuration = default
+NOTICE   [2024-Jul-01 15:42:03.061371]    (OREAnalytics\orea\app\parameters.cpp:136) : group = curves : grid = 240,1M
+NOTICE   [2024-Jul-01 15:42:03.061371]    (OREAnalytics\orea\app\parameters.cpp:136) : group = curves : outputFileName = curves.csv
+NOTICE   [2024-Jul-01 15:42:03.062371]    (OREAnalytics\orea\app\parameters.cpp:136) : group = initialMargin : active = N
+NOTICE   [2024-Jul-01 15:42:03.062371]    (OREAnalytics\orea\app\parameters.cpp:136) : group = initialMargin : method = 
+NOTICE   [2024-Jul-01 15:42:03.063371]    (OREAnalytics\orea\app\parameters.cpp:136) : group = markets : fxcalibration = default
+NOTICE   [2024-Jul-01 15:42:03.063371]    (OREAnalytics\orea\app\parameters.cpp:136) : group = markets : lgmcalibration = default
+NOTICE   [2024-Jul-01 15:42:03.063371]    (OREAnalytics\orea\app\parameters.cpp:136) : group = markets : pricing = default
+NOTICE   [2024-Jul-01 15:42:03.063371]    (OREAnalytics\orea\app\parameters.cpp:136) : group = markets : simulation = default
+NOTICE   [2024-Jul-01 15:42:03.064379]    (OREAnalytics\orea\app\parameters.cpp:136) : group = npv : active = Y
+NOTICE   [2024-Jul-01 15:42:03.064379]    (OREAnalytics\orea\app\parameters.cpp:136) : group = npv : baseCurrency = EUR
+NOTICE   [2024-Jul-01 15:42:03.064379]    (OREAnalytics\orea\app\parameters.cpp:136) : group = npv : outputFileName = npv.csv
+NOTICE   [2024-Jul-01 15:42:03.064379]    (OREAnalytics\orea\app\parameters.cpp:136) : group = setup : asofDate = 2016-02-05
+NOTICE   [2024-Jul-01 15:42:03.064379]    (OREAnalytics\orea\app\parameters.cpp:136) : group = setup : conventionsFile = conventions.xml
+NOTICE   [2024-Jul-01 15:42:03.064379]    (OREAnalytics\orea\app\parameters.cpp:136) : group = setup : curveConfigFile = curveconfig.xml
+NOTICE   [2024-Jul-01 15:42:03.065379]    (OREAnalytics\orea\app\parameters.cpp:136) : group = setup : fixingDataFile = fixings_20160205.txt
+NOTICE   [2024-Jul-01 15:42:03.065379]    (OREAnalytics\orea\app\parameters.cpp:136) : group = setup : implyTodaysFixings = Y
+NOTICE   [2024-Jul-01 15:42:03.065379]    (OREAnalytics\orea\app\parameters.cpp:136) : group = setup : inputPath = example/example14/Input
+NOTICE   [2024-Jul-01 15:42:03.065379]    (OREAnalytics\orea\app\parameters.cpp:136) : group = setup : logFile = log.txt
+NOTICE   [2024-Jul-01 15:42:03.065379]    (OREAnalytics\orea\app\parameters.cpp:136) : group = setup : logMask = 255
+NOTICE   [2024-Jul-01 15:42:03.066373]    (OREAnalytics\orea\app\parameters.cpp:136) : group = setup : marketConfigFile = todaysmarket.xml
+NOTICE   [2024-Jul-01 15:42:03.066373]    (OREAnalytics\orea\app\parameters.cpp:136) : group = setup : marketDataFile = market_20160205_flat.txt
+NOTICE   [2024-Jul-01 15:42:03.066373]    (OREAnalytics\orea\app\parameters.cpp:136) : group = setup : observationModel = Disable
+NOTICE   [2024-Jul-01 15:42:03.067372]    (OREAnalytics\orea\app\parameters.cpp:136) : group = setup : outputPath = example/example14/Output
+NOTICE   [2024-Jul-01 15:42:03.067372]    (OREAnalytics\orea\app\parameters.cpp:136) : group = setup : portfolioFile = portfolio_swap.xml
+NOTICE   [2024-Jul-01 15:42:03.067372]    (OREAnalytics\orea\app\parameters.cpp:136) : group = setup : pricingEnginesFile = pricingengine.xml
+NOTICE   [2024-Jul-01 15:42:03.067372]    (OREAnalytics\orea\app\parameters.cpp:136) : group = simulation : active = N
+NOTICE   [2024-Jul-01 15:42:03.067372]    (OREAnalytics\orea\app\parameters.cpp:136) : group = simulation : aggregationScenarioDataFileName = scenariodata.csv.gz
+NOTICE   [2024-Jul-01 15:42:03.067372]    (OREAnalytics\orea\app\parameters.cpp:136) : group = simulation : baseCurrency = EUR
+NOTICE   [2024-Jul-01 15:42:03.068380]    (OREAnalytics\orea\app\parameters.cpp:136) : group = simulation : cubeFile = cube.csv.gz
+NOTICE   [2024-Jul-01 15:42:03.068380]    (OREAnalytics\orea\app\parameters.cpp:136) : group = simulation : pricingEnginesFile = pricingengine.xml
+NOTICE   [2024-Jul-01 15:42:03.068380]    (OREAnalytics\orea\app\parameters.cpp:136) : group = simulation : simulationConfigFile = simulation.xml
+NOTICE   [2024-Jul-01 15:42:03.068380]    (OREAnalytics\orea\app\parameters.cpp:136) : group = xva : active = N
+NOTICE   [2024-Jul-01 15:42:03.068380]    (OREAnalytics\orea\app\parameters.cpp:136) : group = xva : allocationMethod = None
+NOTICE   [2024-Jul-01 15:42:03.069379]    (OREAnalytics\orea\app\parameters.cpp:136) : group = xva : baseCurrency = EUR
+NOTICE   [2024-Jul-01 15:42:03.069379]    (OREAnalytics\orea\app\parameters.cpp:136) : group = xva : calculationType = Symmetric
+NOTICE   [2024-Jul-01 15:42:03.069379]    (OREAnalytics\orea\app\parameters.cpp:136) : group = xva : collateralFloor = N
+NOTICE   [2024-Jul-01 15:42:03.069379]    (OREAnalytics\orea\app\parameters.cpp:136) : group = xva : colva = N
+NOTICE   [2024-Jul-01 15:42:03.069379]    (OREAnalytics\orea\app\parameters.cpp:136) : group = xva : csaFile = netting.xml
+NOTICE   [2024-Jul-01 15:42:03.070379]    (OREAnalytics\orea\app\parameters.cpp:136) : group = xva : cubeFile = cube.csv.gz
+NOTICE   [2024-Jul-01 15:42:03.070379]    (OREAnalytics\orea\app\parameters.cpp:136) : group = xva : cva = Y
+NOTICE   [2024-Jul-01 15:42:03.070379]    (OREAnalytics\orea\app\parameters.cpp:136) : group = xva : dva = N
+NOTICE   [2024-Jul-01 15:42:03.070379]    (OREAnalytics\orea\app\parameters.cpp:136) : group = xva : dvaName = BANK
+NOTICE   [2024-Jul-01 15:42:03.070379]    (OREAnalytics\orea\app\parameters.cpp:136) : group = xva : exerciseNextBreak = N
+NOTICE   [2024-Jul-01 15:42:03.070379]    (OREAnalytics\orea\app\parameters.cpp:136) : group = xva : exposureProfiles = Y
+NOTICE   [2024-Jul-01 15:42:03.071379]    (OREAnalytics\orea\app\parameters.cpp:136) : group = xva : exposureProfilesByTrade = Y
+NOTICE   [2024-Jul-01 15:42:03.071379]    (OREAnalytics\orea\app\parameters.cpp:136) : group = xva : fva = N
+NOTICE   [2024-Jul-01 15:42:03.071379]    (OREAnalytics\orea\app\parameters.cpp:136) : group = xva : fvaBorrowingCurve = BANK_EUR_BORROW
+NOTICE   [2024-Jul-01 15:42:03.071379]    (OREAnalytics\orea\app\parameters.cpp:136) : group = xva : fvaLendingCurve = BANK_EUR_LEND
+NOTICE   [2024-Jul-01 15:42:03.071379]    (OREAnalytics\orea\app\parameters.cpp:136) : group = xva : marginalAllocationLimit = 1.0
+NOTICE   [2024-Jul-01 15:42:03.071379]    (OREAnalytics\orea\app\parameters.cpp:136) : group = xva : netCubeOutputFile = netcube.csv
+NOTICE   [2024-Jul-01 15:42:03.072475]    (OREAnalytics\orea\app\parameters.cpp:136) : group = xva : quantile = 0.95
+NOTICE   [2024-Jul-01 15:42:03.072475]    (OREAnalytics\orea\app\parameters.cpp:136) : group = xva : rawCubeOutputFile = rawcube.csv
+NOTICE   [2024-Jul-01 15:42:03.072475]    (OREAnalytics\orea\app\parameters.cpp:136) : group = xva : scenarioFile = scenariodata.csv.gz
+NOTICE   [2024-Jul-01 15:42:03.072475]        (OREAnalytics\orea\app\oreapp.cpp:567) : load OREAppInputParameters called
+WARNING  [2024-Jul-01 15:42:03.072475]        (OREAnalytics\orea\app\oreapp.cpp:589) : Calendar adjustments not found, using defaults
+WARNING  [2024-Jul-01 15:42:03.073487]        (OREAnalytics\orea\app\oreapp.cpp:600) : Currency configurations not found, using defaults
+NOTICE   [2024-Jul-01 15:42:03.073487]        (OREAnalytics\orea\app\oreapp.cpp:664) : Observation Mode is Disable
+WARNING  [2024-Jul-01 15:42:03.073487]        (OREAnalytics\orea\app\oreapp.cpp:677) : Reference data not found
+WARNING  [2024-Jul-01 15:42:03.073487]        (OREAnalytics\orea\app\oreapp.cpp:687) : Script library not loaded
+NOTICE   [2024-Jul-01 15:42:03.073487]        (OREAnalytics\orea\app\oreapp.cpp:692) : Loading conventions from file: "example/example14/Input\\conventions.xml"
+DEBUG    [2024-Jul-01 15:42:03.074475]  (...ored\configuration\conventions.cpp:2535) : Reading Convention EUR-ZERO-CONVENTIONS
+DEBUG    [2024-Jul-01 15:42:03.074475]  (...ored\configuration\conventions.cpp:2535) : Reading Convention EUR-ZERO-CONVENTIONS-TENOR-BASED
+DEBUG    [2024-Jul-01 15:42:03.074475]  (...ored\configuration\conventions.cpp:2535) : Reading Convention GBP-ZERO-CONVENTIONS-TENOR-BASED
+DEBUG    [2024-Jul-01 15:42:03.074475]  (...ored\configuration\conventions.cpp:2535) : Reading Convention CDS-STANDARD-CONVENTIONS
+DEBUG    [2024-Jul-01 15:42:03.074475]  (...ored\configuration\conventions.cpp:2535) : Reading Convention EUR-EURIBOR-CONVENTIONS
+DEBUG    [2024-Jul-01 15:42:03.075477]  (...ored\configuration\conventions.cpp:2535) : Reading Convention EUR-DEPOSIT
+DEBUG    [2024-Jul-01 15:42:03.075477]  (...ored\configuration\conventions.cpp:2535) : Reading Convention GBP-DEPOSIT
+DEBUG    [2024-Jul-01 15:42:03.075477]  (...ored\configuration\conventions.cpp:2535) : Reading Convention EURIBOR-3M-FUTURES-CONVENTIONS
+DEBUG    [2024-Jul-01 15:42:03.075477]  (...ored\configuration\conventions.cpp:2535) : Reading Convention EUR-12M-FRA-CONVENTIONS
+DEBUG    [2024-Jul-01 15:42:03.075477]  (...ored\configuration\conventions.cpp:2535) : Reading Convention EUR-6M-FRA-CONVENTIONS
+DEBUG    [2024-Jul-01 15:42:03.076476]  (...ored\configuration\conventions.cpp:2535) : Reading Convention EUR-3M-FRA-CONVENTIONS
+DEBUG    [2024-Jul-01 15:42:03.076476]  (...ored\configuration\conventions.cpp:2535) : Reading Convention GBP-3M-FRA
+DEBUG    [2024-Jul-01 15:42:03.076476]  (...ored\configuration\conventions.cpp:2535) : Reading Convention GBP-6M-FRA
+DEBUG    [2024-Jul-01 15:42:03.076476]  (...ored\configuration\conventions.cpp:2535) : Reading Convention EUR-CMS-1Y
+DEBUG    [2024-Jul-01 15:42:03.076476]  (...ored\configuration\conventions.cpp:2535) : Reading Convention EUR-CMS-30Y
+DEBUG    [2024-Jul-01 15:42:03.076476]  (...ored\configuration\conventions.cpp:2535) : Reading Convention GBP-CMS-1Y
+DEBUG    [2024-Jul-01 15:42:03.077491]  (...ored\configuration\conventions.cpp:2535) : Reading Convention GBP-CMS-30Y
+DEBUG    [2024-Jul-01 15:42:03.077491]  (...ored\configuration\conventions.cpp:2535) : Reading Convention EUR-6M-SWAP-CONVENTIONS
+DEBUG    [2024-Jul-01 15:42:03.077491]  (...ored\configuration\conventions.cpp:2535) : Reading Convention EUR-1M-SWAP-CONVENTIONS
+DEBUG    [2024-Jul-01 15:42:03.077491]  (...ored\configuration\conventions.cpp:2535) : Reading Convention EUR-3M-SWAP-CONVENTIONS
+DEBUG    [2024-Jul-01 15:42:03.077491]  (...ored\configuration\conventions.cpp:2535) : Reading Convention EUR-12M-SWAP-CONVENTIONS
+DEBUG    [2024-Jul-01 15:42:03.078475]  (...ored\configuration\conventions.cpp:2535) : Reading Convention GBP-6M-SWAP-CONVENTIONS
+DEBUG    [2024-Jul-01 15:42:03.078475]  (...ored\configuration\conventions.cpp:2535) : Reading Convention GBP-3M-SWAP-CONVENTIONS
+DEBUG    [2024-Jul-01 15:42:03.078475]  (...ored\configuration\conventions.cpp:2535) : Reading Convention EUR-OIS-CONVENTIONS
+DEBUG    [2024-Jul-01 15:42:03.078475]  (...ored\configuration\conventions.cpp:2535) : Reading Convention GBP-OIS-CONVENTIONS
+DEBUG    [2024-Jul-01 15:42:03.078475]  (...ored\configuration\conventions.cpp:2535) : Reading Convention EURIBOR-3M-6M-BASIS-CONVENTIONS
+DEBUG    [2024-Jul-01 15:42:03.078475]  (...ored\configuration\conventions.cpp:2535) : Reading Convention EUR-EURIBOR-6M-12M-BASIS-CONVENTIONS
+DEBUG    [2024-Jul-01 15:42:03.079475]  (...ored\configuration\conventions.cpp:2535) : Reading Convention GBP-LIBOR-3M-6M-BASIS-CONVENTIONS
+DEBUG    [2024-Jul-01 15:42:03.079475]  (...ored\configuration\conventions.cpp:2525) : Building Convention EUR-GBP-FX-CONVENTIONS
+DEBUG    [2024-Jul-01 15:42:03.079475]  (...ored\configuration\conventions.cpp:2535) : Reading Convention EUR-GBP-XCCY-BASIS-CONVENTIONS
+WARNING  [2024-Jul-01 15:42:03.079475]        (OREAnalytics\orea\app\oreapp.cpp:703) : Using default Ibor fallback config
+NOTICE   [2024-Jul-01 15:42:03.079475]        (OREAnalytics\orea\app\oreapp.cpp:708) : Load curve configurations from file: 
+NOTICE   [2024-Jul-01 15:42:03.080474]        (OREAnalytics\orea\app\oreapp.cpp:717) : Load pricing engine data from file: "example/example14/Input\\pricingengine.xml"
+DEBUG    [2024-Jul-01 15:42:03.080474]    (OREData\ored\portfolio\enginedata.cpp:50) : EngineData product=Swap model=DiscountedCashflows
+DEBUG    [2024-Jul-01 15:42:03.080474]    (OREData\ored\portfolio\enginedata.cpp:64) : EngineData product=Swap engine=DiscountingSwapEngineOptimised
+DEBUG    [2024-Jul-01 15:42:03.080474]    (OREData\ored\portfolio\enginedata.cpp:50) : EngineData product=CrossCurrencySwap model=DiscountedCashflows
+DEBUG    [2024-Jul-01 15:42:03.081460]    (OREData\ored\portfolio\enginedata.cpp:64) : EngineData product=CrossCurrencySwap engine=DiscountingCrossCurrencySwapEngine
+DEBUG    [2024-Jul-01 15:42:03.081460]    (OREData\ored\portfolio\enginedata.cpp:50) : EngineData product=FxForward model=DiscountedCashflows
+DEBUG    [2024-Jul-01 15:42:03.081460]    (OREData\ored\portfolio\enginedata.cpp:64) : EngineData product=FxForward engine=DiscountingFxForwardEngine
+DEBUG    [2024-Jul-01 15:42:03.081460]    (OREData\ored\portfolio\enginedata.cpp:50) : EngineData product=FxOption model=GarmanKohlhagen
+DEBUG    [2024-Jul-01 15:42:03.081460]    (OREData\ored\portfolio\enginedata.cpp:64) : EngineData product=FxOption engine=AnalyticEuropeanEngine
+DEBUG    [2024-Jul-01 15:42:03.082443]    (OREData\ored\portfolio\enginedata.cpp:50) : EngineData product=EuropeanSwaption model=BlackBachelier
+DEBUG    [2024-Jul-01 15:42:03.082443]    (OREData\ored\portfolio\enginedata.cpp:64) : EngineData product=EuropeanSwaption engine=BlackBachelierSwaptionEngine
+DEBUG    [2024-Jul-01 15:42:03.082443]    (OREData\ored\portfolio\enginedata.cpp:50) : EngineData product=BermudanSwaption model=LGM
+DEBUG    [2024-Jul-01 15:42:03.082443]    (OREData\ored\portfolio\enginedata.cpp:59) : EngineData product=BermudanSwaption paramName=Calibration paramValue=Bootstrap
+DEBUG    [2024-Jul-01 15:42:03.082443]    (OREData\ored\portfolio\enginedata.cpp:59) : EngineData product=BermudanSwaption paramName=CalibrationStrategy paramValue=CoterminalATM
+DEBUG    [2024-Jul-01 15:42:03.083452]    (OREData\ored\portfolio\enginedata.cpp:59) : EngineData product=BermudanSwaption paramName=Reversion paramValue=0.03
+DEBUG    [2024-Jul-01 15:42:03.083452]    (OREData\ored\portfolio\enginedata.cpp:59) : EngineData product=BermudanSwaption paramName=ReversionType paramValue=HullWhite
+DEBUG    [2024-Jul-01 15:42:03.083452]    (OREData\ored\portfolio\enginedata.cpp:59) : EngineData product=BermudanSwaption paramName=Volatility paramValue=0.01
+DEBUG    [2024-Jul-01 15:42:03.083452]    (OREData\ored\portfolio\enginedata.cpp:59) : EngineData product=BermudanSwaption paramName=VolatilityType paramValue=Hagan
+DEBUG    [2024-Jul-01 15:42:03.083452]    (OREData\ored\portfolio\enginedata.cpp:59) : EngineData product=BermudanSwaption paramName=Tolerance paramValue=0.0001
+DEBUG    [2024-Jul-01 15:42:03.083452]    (OREData\ored\portfolio\enginedata.cpp:64) : EngineData product=BermudanSwaption engine=Grid
+DEBUG    [2024-Jul-01 15:42:03.084438]    (OREData\ored\portfolio\enginedata.cpp:73) : EngineData product=BermudanSwaption paramName=sy paramValue=3.0
+DEBUG    [2024-Jul-01 15:42:03.084438]    (OREData\ored\portfolio\enginedata.cpp:73) : EngineData product=BermudanSwaption paramName=ny paramValue=10
+DEBUG    [2024-Jul-01 15:42:03.084438]    (OREData\ored\portfolio\enginedata.cpp:73) : EngineData product=BermudanSwaption paramName=sx paramValue=3.0
+DEBUG    [2024-Jul-01 15:42:03.084438]    (OREData\ored\portfolio\enginedata.cpp:73) : EngineData product=BermudanSwaption paramName=nx paramValue=10
+DEBUG    [2024-Jul-01 15:42:03.084438]    (OREData\ored\portfolio\enginedata.cpp:50) : EngineData product=CapFloor model=IborCapModel
+DEBUG    [2024-Jul-01 15:42:03.085440]    (OREData\ored\portfolio\enginedata.cpp:64) : EngineData product=CapFloor engine=IborCapEngine
+DEBUG    [2024-Jul-01 15:42:03.085440]    (OREData\ored\portfolio\enginedata.cpp:50) : EngineData product=CapFlooredIborLeg model=BlackOrBachelier
+DEBUG    [2024-Jul-01 15:42:03.085440]    (OREData\ored\portfolio\enginedata.cpp:64) : EngineData product=CapFlooredIborLeg engine=BlackIborCouponPricer
+NOTICE   [2024-Jul-01 15:42:03.085440]        (OREAnalytics\orea\app\oreapp.cpp:726) : Loading today's market parameters from file"example/example14/Input\\todaysmarket.xml"
+DEBUG    [2024-Jul-01 15:42:03.085440]  (...rketdata\todaysmarketparameters.cpp:322) : TodaysMarketParameters, add market objects of type YieldCurve: default BANK_EUR_BORROW Yield/EUR/EUR1D
+DEBUG    [2024-Jul-01 15:42:03.086427]  (...rketdata\todaysmarketparameters.cpp:322) : TodaysMarketParameters, add market objects of type YieldCurve: default BANK_EUR_LEND Yield/EUR/EUR1D
+DEBUG    [2024-Jul-01 15:42:03.086427]  (...rketdata\todaysmarketparameters.cpp:322) : TodaysMarketParameters, add market objects of type DiscountCurve: default EUR Yield/EUR/EUR1D
+DEBUG    [2024-Jul-01 15:42:03.086427]  (...rketdata\todaysmarketparameters.cpp:322) : TodaysMarketParameters, add market objects of type DiscountCurve: default GBP Yield/GBP/GBP1D
+DEBUG    [2024-Jul-01 15:42:03.086427]  (...rketdata\todaysmarketparameters.cpp:322) : TodaysMarketParameters, add market objects of type IndexCurve: default EUR-EONIA Yield/EUR/EUR1D
+DEBUG    [2024-Jul-01 15:42:03.086427]  (...rketdata\todaysmarketparameters.cpp:322) : TodaysMarketParameters, add market objects of type IndexCurve: default EUR-EURIBOR-6M Yield/EUR/EUR6M
+DEBUG    [2024-Jul-01 15:42:03.086427]  (...rketdata\todaysmarketparameters.cpp:322) : TodaysMarketParameters, add market objects of type IndexCurve: default GBP-LIBOR-3M Yield/GBP/GBP6M
+DEBUG    [2024-Jul-01 15:42:03.087439]  (...rketdata\todaysmarketparameters.cpp:322) : TodaysMarketParameters, add market objects of type IndexCurve: default GBP-LIBOR-6M Yield/GBP/GBP6M
+DEBUG    [2024-Jul-01 15:42:03.087439]  (...rketdata\todaysmarketparameters.cpp:322) : TodaysMarketParameters, add market objects of type IndexCurve: default GBP-SONIA Yield/GBP/GBP1D
+DEBUG    [2024-Jul-01 15:42:03.087439]  (...rketdata\todaysmarketparameters.cpp:322) : TodaysMarketParameters, add market objects of type SwapIndexCurve: default EUR-CMS-1Y EUR-EONIA
+DEBUG    [2024-Jul-01 15:42:03.087439]  (...rketdata\todaysmarketparameters.cpp:322) : TodaysMarketParameters, add market objects of type SwapIndexCurve: default EUR-CMS-30Y EUR-EONIA
+DEBUG    [2024-Jul-01 15:42:03.087439]  (...rketdata\todaysmarketparameters.cpp:322) : TodaysMarketParameters, add market objects of type SwapIndexCurve: default GBP-CMS-1Y GBP-SONIA
+DEBUG    [2024-Jul-01 15:42:03.088446]  (...rketdata\todaysmarketparameters.cpp:322) : TodaysMarketParameters, add market objects of type SwapIndexCurve: default GBP-CMS-30Y GBP-SONIA
+DEBUG    [2024-Jul-01 15:42:03.088446]  (...rketdata\todaysmarketparameters.cpp:322) : TodaysMarketParameters, add market objects of type FXSpot: default EURGBP FX/EUR/GBP
+DEBUG    [2024-Jul-01 15:42:03.088446]  (...rketdata\todaysmarketparameters.cpp:322) : TodaysMarketParameters, add market objects of type FXVol: default EURGBP FXVolatility/EUR/GBP/EURGBP
+WARNING  [2024-Jul-01 15:42:03.088446]  (...rketdata\todaysmarketparameters.cpp:190) : TodaysMarketParameters: the attribute 'currency' is deprecated for 'SwaptionVolatilities', use 'key' instead.
+DEBUG    [2024-Jul-01 15:42:03.088446]  (...rketdata\todaysmarketparameters.cpp:322) : TodaysMarketParameters, add market objects of type SwaptionVol: default EUR SwaptionVolatility/EUR/EUR_SWPTN
+DEBUG    [2024-Jul-01 15:42:03.089440]  (...rketdata\todaysmarketparameters.cpp:322) : TodaysMarketParameters, add market objects of type SwaptionVol: default GBP SwaptionVolatility/GBP/GBP_SWPTN
+DEBUG    [2024-Jul-01 15:42:03.089440]  (...rketdata\todaysmarketparameters.cpp:322) : TodaysMarketParameters, add market objects of type DefaultCurve: default BANK Default/EUR/BANK_SR_EUR
+DEBUG    [2024-Jul-01 15:42:03.089440]  (...rketdata\todaysmarketparameters.cpp:322) : TodaysMarketParameters, add market objects of type DefaultCurve: default CPTY_A Default/EUR/CPTY_A_SR_EUR
+DEBUG    [2024-Jul-01 15:42:03.089440]  (...rketdata\todaysmarketparameters.cpp:322) : TodaysMarketParameters, add market objects of type DefaultCurve: default CPTY_B Default/EUR/CPTY_A_SR_EUR
+NOTICE   [2024-Jul-01 15:42:03.089440]  (...lytics\orea\app\inputparameters.cpp:147) : Loading portfolio from file: example/example14/Input/portfolio_swap.xml
+DEBUG    [2024-Jul-01 15:42:03.090439]     (OREData\ored\portfolio\portfolio.cpp:59) : Parsing trade id:Swap_20y
+DEBUG    [2024-Jul-01 15:42:03.090439]     (OREData\ored\portfolio\portfolio.cpp:69) : Added Trade Swap_20y (Swap_20y) type:Swap
+NOTICE   [2024-Jul-01 15:42:03.090439]     (OREData\ored\portfolio\portfolio.cpp:96) : Finished Parsing XML doc
+NOTICE   [2024-Jul-01 15:42:03.090439]        (OREAnalytics\orea\app\oreapp.cpp:745) : MarketContext::fxcalibration = default
+NOTICE   [2024-Jul-01 15:42:03.090439]        (OREAnalytics\orea\app\oreapp.cpp:745) : MarketContext::lgmcalibration = default
+NOTICE   [2024-Jul-01 15:42:03.091444]        (OREAnalytics\orea\app\oreapp.cpp:745) : MarketContext::pricing = default
+NOTICE   [2024-Jul-01 15:42:03.091444]        (OREAnalytics\orea\app\oreapp.cpp:745) : MarketContext::simulation = default
+NOTICE   [2024-Jul-01 15:42:03.091444]       (OREAnalytics\orea\app\oreapp.cpp:1274) : SIMM
+NOTICE   [2024-Jul-01 15:42:03.091444]       (OREAnalytics\orea\app\oreapp.cpp:1338) : IM SCHEDULE
+NOTICE   [2024-Jul-01 15:42:03.091444]       (OREAnalytics\orea\app\oreapp.cpp:2030) : analytics: 2
+NOTICE   [2024-Jul-01 15:42:03.092439]       (OREAnalytics\orea\app\oreapp.cpp:2032) : analytic: CASHFLOW
+NOTICE   [2024-Jul-01 15:42:03.092439]       (OREAnalytics\orea\app\oreapp.cpp:2032) : analytic: NPV
+NOTICE   [2024-Jul-01 15:42:03.092439]       (OREAnalytics\orea\app\oreapp.cpp:2034) : buildInputParameters done
+NOTICE   [2024-Jul-01 15:42:03.092439]  (...lytics\orea\app\inputparameters.cpp:592) : OutputFileNameMap called
+NOTICE   [2024-Jul-01 15:42:03.092439]  (...lytics\orea\app\inputparameters.cpp:671) : OutputFileNameMap complete
+NOTICE   [2024-Jul-01 15:42:03.093446]        (OREAnalytics\orea\app\oreapp.cpp:376) : initFromParameters done, requested analytics:CASHFLOW,NPV
+NOTICE   [2024-Jul-01 15:42:03.093446]        (OREAnalytics\orea\app\oreapp.cpp:221) : ORE analytics starting
+WARNING  [2024-Jul-01 15:42:03.093446]        (OREAnalytics\orea\app\oreapp.cpp:222) : 7991296|7987200
+DEBUG    [2024-Jul-01 15:42:03.093446]       (OREData\ored\marketdata\market.cpp:99) : Building default PseudoCurrencyMarketParameters
+DEBUG    [2024-Jul-01 15:42:03.093446]      (OREData\ored\marketdata\market.cpp:101) : PseudoCurrencyMarketParameters { TreatAsFX:True, BaseCurrency:}
+DEBUG    [2024-Jul-01 15:42:03.093446]       (OREData\ored\marketdata\market.cpp:99) : Building default PseudoCurrencyMarketParameters
+DEBUG    [2024-Jul-01 15:42:03.094443]      (OREData\ored\marketdata\market.cpp:101) : PseudoCurrencyMarketParameters { TreatAsFX:True, BaseCurrency:}
+WARNING  [2024-Jul-01 15:42:03.094443]        (OREAnalytics\orea\app\oreapp.cpp:202) : dividend data file not found
+WARNING  [2024-Jul-01 15:42:03.094443]        (OREAnalytics\orea\app\oreapp.cpp:210) : fixing cutoff date not set
+NOTICE   [2024-Jul-01 15:42:03.094443]   (OREData\ored\marketdata\csvloader.cpp:101) : CSVLoader loading from example/example14/Input/market_20160205_flat.txt
+NOTICE   [2024-Jul-01 15:42:03.094443]   (OREData\ored\marketdata\csvloader.cpp:152) : Added MarketDatum ZERO/RATE/EUR/EUR1D/A360/1Y
+NOTICE   [2024-Jul-01 15:42:03.095448]   (OREData\ored\marketdata\csvloader.cpp:152) : Added MarketDatum ZERO/RATE/EUR/EUR6M/A360/1Y
+NOTICE   [2024-Jul-01 15:42:03.095448]   (OREData\ored\marketdata\csvloader.cpp:152) : Added MarketDatum ZERO/RATE/GBP/GBP1D/A365F/1Y
+NOTICE   [2024-Jul-01 15:42:03.095448]   (OREData\ored\marketdata\csvloader.cpp:152) : Added MarketDatum ZERO/RATE/GBP/GBP6M/A365F/1Y
+NOTICE   [2024-Jul-01 15:42:03.095448]   (OREData\ored\marketdata\csvloader.cpp:152) : Added MarketDatum SWAPTION/RATE_LNVOL/EUR/1Y/1Y/ATM
+NOTICE   [2024-Jul-01 15:42:03.095448]   (OREData\ored\marketdata\csvloader.cpp:152) : Added MarketDatum SWAPTION/RATE_NVOL/GBP/1Y/1Y/ATM
+NOTICE   [2024-Jul-01 15:42:03.096440]   (OREData\ored\marketdata\csvloader.cpp:152) : Added MarketDatum FX/RATE/EUR/GBP
+NOTICE   [2024-Jul-01 15:42:03.096440]   (OREData\ored\marketdata\csvloader.cpp:152) : Added MarketDatum FX_OPTION/RATE_LNVOL/EUR/GBP/1Y/ATM
+NOTICE   [2024-Jul-01 15:42:03.096440]   (OREData\ored\marketdata\csvloader.cpp:152) : Added MarketDatum FX_OPTION/RATE_LNVOL/EUR/GBP/10Y/ATM
+NOTICE   [2024-Jul-01 15:42:03.097445]   (OREData\ored\marketdata\csvloader.cpp:152) : Added MarketDatum RECOVERY_RATE/RATE/BANK/SR/EUR
+NOTICE   [2024-Jul-01 15:42:03.097445]   (OREData\ored\marketdata\csvloader.cpp:152) : Added MarketDatum CDS/CREDIT_SPREAD/BANK/SR/EUR/1Y
+NOTICE   [2024-Jul-01 15:42:03.097445]   (OREData\ored\marketdata\csvloader.cpp:152) : Added MarketDatum RECOVERY_RATE/RATE/CPTY_A/SR/EUR
+NOTICE   [2024-Jul-01 15:42:03.097445]   (OREData\ored\marketdata\csvloader.cpp:152) : Added MarketDatum HAZARD_RATE/RATE/CPTY_A/SR/EUR/1Y
+NOTICE   [2024-Jul-01 15:42:03.097445]   (OREData\ored\marketdata\csvloader.cpp:189) : CSVLoader completed processing example/example14/Input/market_20160205_flat.txt
+NOTICE   [2024-Jul-01 15:42:03.098442]    (OREData\ored\marketdata\csvloader.cpp:80) : CSVLoader loaded 13 market data points for February 5th, 2016
+NOTICE   [2024-Jul-01 15:42:03.098442]   (OREData\ored\marketdata\csvloader.cpp:101) : CSVLoader loading from example/example14/Input/fixings_20160205.txt
+NOTICE   [2024-Jul-01 15:42:03.098442]   (OREData\ored\marketdata\csvloader.cpp:189) : CSVLoader completed processing example/example14/Input/fixings_20160205.txt
+NOTICE   [2024-Jul-01 15:42:03.098442]    (OREData\ored\marketdata\csvloader.cpp:85) : CSVLoader loaded 0 fixings
+NOTICE   [2024-Jul-01 15:42:03.098442]    (OREData\ored\marketdata\csvloader.cpp:90) : CSVLoader loaded 0 dividends
+NOTICE   [2024-Jul-01 15:42:03.099420]    (OREData\ored\marketdata\csvloader.cpp:92) : CSVLoader complete.
+NOTICE   [2024-Jul-01 15:42:03.099420]  (...lytics\orea\app\analyticsmanager.cpp:69) : register analytic with label 'PRICING' and sub-analytics CASHFLOW,CASHFLOWNPV,NPV,SENSITIVITY
+NOTICE   [2024-Jul-01 15:42:03.099420]  (...lytics\orea\app\analyticsmanager.cpp:69) : register analytic with label 'PRICING' and sub-analytics CASHFLOW,CASHFLOWNPV,NPV,SENSITIVITY
+NOTICE   [2024-Jul-01 15:42:03.099420]        (OREAnalytics\orea\app\oreapp.cpp:239) : Available analytics: CASHFLOW,CASHFLOWNPV,NPV,SENSITIVITY
+NOTICE   [2024-Jul-01 15:42:03.099420]        (OREAnalytics\orea\app\oreapp.cpp:242) : Requested analytics: CASHFLOW,NPV
+NOTICE   [2024-Jul-01 15:42:03.100413]  (...ytics\orea\app\analyticsmanager.cpp:130) : AnalyticsManager::runAnalytics: requireMarketData Y
+NOTICE   [2024-Jul-01 15:42:03.100413]  (...ytics\orea\app\analyticsmanager.cpp:135) : AnalyticsManager::runAnalytics: populate loader for dates: February 5th, 2016
+NOTICE   [2024-Jul-01 15:42:03.100413]  (...ics\orea\app\marketdatacsvloader.cpp:78) : MarketDataCsvLoader::retrieveFixings called: all fixings ? Y
+NOTICE   [2024-Jul-01 15:42:03.100413]  (...ytics\orea\app\marketdataloader.cpp:261) : Adding the loaded fixings to the IndexManager
+NOTICE   [2024-Jul-01 15:42:03.100413]      (OREData\ored\marketdata\fixings.cpp:68) : Added 0 of 0 fixings in 0.000002 seconds
+NOTICE   [2024-Jul-01 15:42:03.101407]  (...ytics\orea\app\marketdataloader.cpp:265) : Generating market datum set
+DEBUG    [2024-Jul-01 15:42:03.101407]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec Yield/EUR/EUR1D
+DEBUG    [2024-Jul-01 15:42:03.101407]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec Yield/EUR/EUR1D
+DEBUG    [2024-Jul-01 15:42:03.101407]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec Yield/EUR/EUR1D
+DEBUG    [2024-Jul-01 15:42:03.101407]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec Yield/GBP/GBP1D
+DEBUG    [2024-Jul-01 15:42:03.102402]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec Yield/EUR/EUR1D
+DEBUG    [2024-Jul-01 15:42:03.102402]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec Yield/EUR/EUR6M
+DEBUG    [2024-Jul-01 15:42:03.102402]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec Yield/GBP/GBP6M
+DEBUG    [2024-Jul-01 15:42:03.102402]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec Yield/GBP/GBP6M
+DEBUG    [2024-Jul-01 15:42:03.102402]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec Yield/GBP/GBP1D
+DEBUG    [2024-Jul-01 15:42:03.103371]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec FX/EUR/GBP
+DEBUG    [2024-Jul-01 15:42:03.103371]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec FXVolatility/EUR/GBP/EURGBP
+DEBUG    [2024-Jul-01 15:42:03.103371]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec SwaptionVolatility/EUR/EUR_SWPTN
+DEBUG    [2024-Jul-01 15:42:03.103371]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec SwaptionVolatility/GBP/GBP_SWPTN
+DEBUG    [2024-Jul-01 15:42:03.103371]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec Default/EUR/BANK_SR_EUR
+DEBUG    [2024-Jul-01 15:42:03.104411]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec Default/EUR/CPTY_A_SR_EUR
+DEBUG    [2024-Jul-01 15:42:03.104411]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec Default/EUR/CPTY_A_SR_EUR
+DEBUG    [2024-Jul-01 15:42:03.104411]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec Yield/EUR/EUR1D
+DEBUG    [2024-Jul-01 15:42:03.104411]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec Yield/EUR/EUR1D
+DEBUG    [2024-Jul-01 15:42:03.105440]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec Yield/EUR/EUR1D
+DEBUG    [2024-Jul-01 15:42:03.105440]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec Yield/GBP/GBP1D
+DEBUG    [2024-Jul-01 15:42:03.105440]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec Yield/EUR/EUR1D
+DEBUG    [2024-Jul-01 15:42:03.105440]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec Yield/EUR/EUR6M
+DEBUG    [2024-Jul-01 15:42:03.105440]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec Yield/GBP/GBP6M
+DEBUG    [2024-Jul-01 15:42:03.105440]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec Yield/GBP/GBP6M
+DEBUG    [2024-Jul-01 15:42:03.106458]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec Yield/GBP/GBP1D
+DEBUG    [2024-Jul-01 15:42:03.106458]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec FX/EUR/GBP
+DEBUG    [2024-Jul-01 15:42:03.106458]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec FXVolatility/EUR/GBP/EURGBP
+DEBUG    [2024-Jul-01 15:42:03.106458]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec SwaptionVolatility/EUR/EUR_SWPTN
+DEBUG    [2024-Jul-01 15:42:03.106458]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec SwaptionVolatility/GBP/GBP_SWPTN
+DEBUG    [2024-Jul-01 15:42:03.107440]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec Default/EUR/BANK_SR_EUR
+DEBUG    [2024-Jul-01 15:42:03.107440]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec Default/EUR/CPTY_A_SR_EUR
+DEBUG    [2024-Jul-01 15:42:03.107440]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec Default/EUR/CPTY_A_SR_EUR
+NOTICE   [2024-Jul-01 15:42:03.107440]  (...ytics\orea\app\marketdataloader.cpp:283) : CurveConfigs require 12 quotes
+DATA     [2024-Jul-01 15:42:03.107440]  (...\ored\marketdata\inmemoryloader.cpp:124) : Added MarketDatum CDS/CREDIT_SPREAD/BANK/SR/EUR/1Y
+DATA     [2024-Jul-01 15:42:03.108441]  (...\ored\marketdata\inmemoryloader.cpp:124) : Added MarketDatum FX/RATE/EUR/GBP
+DATA     [2024-Jul-01 15:42:03.108441]  (...\ored\marketdata\inmemoryloader.cpp:124) : Added MarketDatum FX_OPTION/RATE_LNVOL/EUR/GBP/1Y/ATM
+DATA     [2024-Jul-01 15:42:03.108441]  (...\ored\marketdata\inmemoryloader.cpp:124) : Added MarketDatum HAZARD_RATE/RATE/CPTY_A/SR/EUR/1Y
+DATA     [2024-Jul-01 15:42:03.108441]  (...\ored\marketdata\inmemoryloader.cpp:124) : Added MarketDatum RECOVERY_RATE/RATE/BANK/SR/EUR
+DATA     [2024-Jul-01 15:42:03.108441]  (...\ored\marketdata\inmemoryloader.cpp:124) : Added MarketDatum RECOVERY_RATE/RATE/CPTY_A/SR/EUR
+DATA     [2024-Jul-01 15:42:03.109448]  (...\ored\marketdata\inmemoryloader.cpp:124) : Added MarketDatum SWAPTION/RATE_LNVOL/EUR/1Y/1Y/ATM
+DATA     [2024-Jul-01 15:42:03.109448]  (...\ored\marketdata\inmemoryloader.cpp:124) : Added MarketDatum SWAPTION/RATE_NVOL/GBP/1Y/1Y/ATM
+DATA     [2024-Jul-01 15:42:03.109448]  (...\ored\marketdata\inmemoryloader.cpp:124) : Added MarketDatum ZERO/RATE/EUR/EUR1D/A360/1Y
+DATA     [2024-Jul-01 15:42:03.109448]  (...\ored\marketdata\inmemoryloader.cpp:124) : Added MarketDatum ZERO/RATE/EUR/EUR6M/A360/1Y
+DATA     [2024-Jul-01 15:42:03.109448]  (...\ored\marketdata\inmemoryloader.cpp:124) : Added MarketDatum ZERO/RATE/GBP/GBP1D/A365F/1Y
+DATA     [2024-Jul-01 15:42:03.110442]  (...\ored\marketdata\inmemoryloader.cpp:124) : Added MarketDatum ZERO/RATE/GBP/GBP6M/A365F/1Y
+NOTICE   [2024-Jul-01 15:42:03.110442]  (...ytics\orea\app\marketdataloader.cpp:290) : Got market data
+NOTICE   [2024-Jul-01 15:42:03.110442]  (...nalytics\orea\app\reportwriter.cpp:1400) : Writing MarketData report
+NOTICE   [2024-Jul-01 15:42:03.110442]  (...nalytics\orea\app\reportwriter.cpp:1444) : Writing Fixings report
+NOTICE   [2024-Jul-01 15:42:03.110442]  (...nalytics\orea\app\reportwriter.cpp:1453) : Fixings report written
+NOTICE   [2024-Jul-01 15:42:03.111440]  (...nalytics\orea\app\reportwriter.cpp:1458) : Writing Dividends report
+NOTICE   [2024-Jul-01 15:42:03.111440]  (...nalytics\orea\app\reportwriter.cpp:1470) : Dividends report written
+NOTICE   [2024-Jul-01 15:42:03.111440]  (...ytics\orea\app\analyticsmanager.cpp:159) : run analytic with label 'PRICING'
+WARNING  [2024-Jul-01 15:42:03.111440]       (OREAnalytics\orea\app\analytic.cpp:85) : 9338880|9334784
+NOTICE   [2024-Jul-01 15:42:03.111440]      (OREAnalytics\orea\app\analytic.cpp:180) : Analytic::buildMarket called
+NOTICE   [2024-Jul-01 15:42:03.111440]  (...\ored\marketdata\bondspreadimply.cpp:48) : identify securities that require a spread imply for configuration default
+DEBUG    [2024-Jul-01 15:42:03.112465]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec Yield/EUR/EUR1D
+DEBUG    [2024-Jul-01 15:42:03.112465]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec Yield/EUR/EUR1D
+DEBUG    [2024-Jul-01 15:42:03.112465]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec Yield/EUR/EUR1D
+DEBUG    [2024-Jul-01 15:42:03.112465]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec Yield/GBP/GBP1D
+DEBUG    [2024-Jul-01 15:42:03.112465]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec Yield/EUR/EUR1D
+DEBUG    [2024-Jul-01 15:42:03.113441]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec Yield/EUR/EUR6M
+DEBUG    [2024-Jul-01 15:42:03.113441]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec Yield/GBP/GBP6M
+DEBUG    [2024-Jul-01 15:42:03.113441]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec Yield/GBP/GBP6M
+DEBUG    [2024-Jul-01 15:42:03.113441]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec Yield/GBP/GBP1D
+DEBUG    [2024-Jul-01 15:42:03.113441]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec FX/EUR/GBP
+DEBUG    [2024-Jul-01 15:42:03.114441]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec FXVolatility/EUR/GBP/EURGBP
+DEBUG    [2024-Jul-01 15:42:03.114441]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec SwaptionVolatility/EUR/EUR_SWPTN
+DEBUG    [2024-Jul-01 15:42:03.114441]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec SwaptionVolatility/GBP/GBP_SWPTN
+DEBUG    [2024-Jul-01 15:42:03.114441]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec Default/EUR/BANK_SR_EUR
+DEBUG    [2024-Jul-01 15:42:03.114441]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec Default/EUR/CPTY_A_SR_EUR
+DEBUG    [2024-Jul-01 15:42:03.115402]  (...rketdata\todaysmarketparameters.cpp:262) : Add spec Default/EUR/CPTY_A_SR_EUR
+NOTICE   [2024-Jul-01 15:42:03.115402]  (...ored\marketdata\bondspreadimply.cpp:105) : got 0 securities
+NOTICE   [2024-Jul-01 15:42:03.115402]  (...ta\ored\marketdata\todaysmarket.cpp:115) : Todays Market Loading Fixings
+NOTICE   [2024-Jul-01 15:42:03.115402]      (OREData\ored\marketdata\fixings.cpp:68) : Added 0 of 0 fixings in 0.000000 seconds
+NOTICE   [2024-Jul-01 15:42:03.115402]  (...ta\ored\marketdata\todaysmarket.cpp:119) : Todays Market Loading Fixing done.
+NOTICE   [2024-Jul-01 15:42:03.116373]  (...ta\ored\marketdata\todaysmarket.cpp:124) : Todays Market Loading Dividends
+NOTICE   [2024-Jul-01 15:42:03.116373]  (...ta\ored\marketdata\todaysmarket.cpp:128) : Todays Market Loading Dividends done.
+NOTICE   [2024-Jul-01 15:42:03.116373]  (...\ored\marketdata\fxtriangulation.cpp:65) : FXTriangulation: initializing
+DATA     [2024-Jul-01 15:42:03.116373]  (...\ored\marketdata\fxtriangulation.cpp:74) : FXTriangulation: adding quote EURGBP
+NOTICE   [2024-Jul-01 15:42:03.116373]  (...ored\marketdata\fxtriangulation.cpp:112) : FXTriangulation: initialized with 1 quotes, 2 currencies.
+NOTICE   [2024-Jul-01 15:42:03.117372]  (...\ored\marketdata\dependencygraph.cpp:40) : Build dependency graph for TodaysMarket configuration default
+WARNING  [2024-Jul-01 15:42:03.117372]  (...a\ored\configuration\conventions.cpp:87) : InstrumentConventions: Could not find conventions for February 5th, 2016, using conventions from null date
+DATA     [2024-Jul-01 15:42:03.117372]  (...\ored\marketdata\dependencygraph.cpp:59) : add vertex # 0: DiscountCurve(EUR,Yield/EUR/EUR1D)
+DATA     [2024-Jul-01 15:42:03.117372]  (...\ored\marketdata\dependencygraph.cpp:59) : add vertex # 1: DiscountCurve(GBP,Yield/GBP/GBP1D)
+DATA     [2024-Jul-01 15:42:03.117372]  (...\ored\marketdata\dependencygraph.cpp:59) : add vertex # 2: YieldCurve(BANK_EUR_BORROW,Yield/EUR/EUR1D)
+DATA     [2024-Jul-01 15:42:03.118372]  (...\ored\marketdata\dependencygraph.cpp:59) : add vertex # 3: YieldCurve(BANK_EUR_LEND,Yield/EUR/EUR1D)
+DATA     [2024-Jul-01 15:42:03.118372]  (...\ored\marketdata\dependencygraph.cpp:59) : add vertex # 4: IndexCurve(EUR-EONIA,Yield/EUR/EUR1D)
+DATA     [2024-Jul-01 15:42:03.118372]  (...\ored\marketdata\dependencygraph.cpp:59) : add vertex # 5: IndexCurve(EUR-EURIBOR-6M,Yield/EUR/EUR6M)
+DATA     [2024-Jul-01 15:42:03.118372]  (...\ored\marketdata\dependencygraph.cpp:59) : add vertex # 6: IndexCurve(GBP-LIBOR-3M,Yield/GBP/GBP6M)
+DATA     [2024-Jul-01 15:42:03.118372]  (...\ored\marketdata\dependencygraph.cpp:59) : add vertex # 7: IndexCurve(GBP-LIBOR-6M,Yield/GBP/GBP6M)
+DATA     [2024-Jul-01 15:42:03.119381]  (...\ored\marketdata\dependencygraph.cpp:59) : add vertex # 8: IndexCurve(GBP-SONIA,Yield/GBP/GBP1D)
+DATA     [2024-Jul-01 15:42:03.119381]  (...\ored\marketdata\dependencygraph.cpp:59) : add vertex # 9: SwapIndexCurve(EUR-CMS-1Y,EUR-EONIA)
+DATA     [2024-Jul-01 15:42:03.119381]  (...\ored\marketdata\dependencygraph.cpp:59) : add vertex # 10: SwapIndexCurve(EUR-CMS-30Y,EUR-EONIA)
+DATA     [2024-Jul-01 15:42:03.119381]  (...\ored\marketdata\dependencygraph.cpp:59) : add vertex # 11: SwapIndexCurve(GBP-CMS-1Y,GBP-SONIA)
+DATA     [2024-Jul-01 15:42:03.119381]  (...\ored\marketdata\dependencygraph.cpp:59) : add vertex # 12: SwapIndexCurve(GBP-CMS-30Y,GBP-SONIA)
+DATA     [2024-Jul-01 15:42:03.119381]  (...\ored\marketdata\dependencygraph.cpp:59) : add vertex # 13: FXSpot(EURGBP,FX/EUR/GBP)
+DATA     [2024-Jul-01 15:42:03.120378]  (...\ored\marketdata\dependencygraph.cpp:59) : add vertex # 14: FXVol(EURGBP,FXVolatility/EUR/GBP/EURGBP)
+DATA     [2024-Jul-01 15:42:03.120378]  (...\ored\marketdata\dependencygraph.cpp:59) : add vertex # 15: SwaptionVol(EUR,SwaptionVolatility/EUR/EUR_SWPTN)
+DATA     [2024-Jul-01 15:42:03.120378]  (...\ored\marketdata\dependencygraph.cpp:59) : add vertex # 16: SwaptionVol(GBP,SwaptionVolatility/GBP/GBP_SWPTN)
+DATA     [2024-Jul-01 15:42:03.120378]  (...\ored\marketdata\dependencygraph.cpp:59) : add vertex # 17: DefaultCurve(BANK,Default/EUR/BANK_SR_EUR)
+DATA     [2024-Jul-01 15:42:03.120378]  (...\ored\marketdata\dependencygraph.cpp:59) : add vertex # 18: DefaultCurve(CPTY_A,Default/EUR/CPTY_A_SR_EUR)
+DATA     [2024-Jul-01 15:42:03.121378]  (...\ored\marketdata\dependencygraph.cpp:59) : add vertex # 19: DefaultCurve(CPTY_B,Default/EUR/CPTY_A_SR_EUR)
+DATA     [2024-Jul-01 15:42:03.121378]  (...\ored\marketdata\dependencygraph.cpp:83) : add edge from vertex #17 DefaultCurve(BANK,Default/EUR/BANK_SR_EUR) to #5 IndexCurve(EUR-EURIBOR-6M,Yield/EUR/EUR6M)
+DEBUG    [2024-Jul-01 15:42:03.121378]  (...ored\configuration\conventions.cpp:2663) : Building Convention EUR-CMS-1Y
+DEBUG    [2024-Jul-01 15:42:03.121378]  (...ored\configuration\conventions.cpp:2663) : Building Convention EUR-6M-SWAP-CONVENTIONS
+WARNING  [2024-Jul-01 15:42:03.121378]  (...a\ored\configuration\conventions.cpp:87) : InstrumentConventions: Could not find conventions for February 5th, 2016, using conventions from null date
+DATA     [2024-Jul-01 15:42:03.122378]  (...ed\utilities\indexnametranslator.cpp:46) : IndexNameTranslator: adding 'Euribor6M Actual/360' <-> 'EUR-EURIBOR-6M'
+DATA     [2024-Jul-01 15:42:03.122378]  (...ored\marketdata\dependencygraph.cpp:247) : add edge from vertex #9 SwapIndexCurve(EUR-CMS-1Y,EUR-EONIA) to #4 IndexCurve(EUR-EONIA,Yield/EUR/EUR1D)
+DATA     [2024-Jul-01 15:42:03.122378]  (...ored\marketdata\dependencygraph.cpp:253) : add edge from vertex #9 SwapIndexCurve(EUR-CMS-1Y,EUR-EONIA) to #5 IndexCurve(EUR-EURIBOR-6M,Yield/EUR/EUR6M)
+DEBUG    [2024-Jul-01 15:42:03.123378]  (...ored\configuration\conventions.cpp:2663) : Building Convention EUR-CMS-30Y
+DATA     [2024-Jul-01 15:42:03.123378]  (...ored\marketdata\dependencygraph.cpp:247) : add edge from vertex #10 SwapIndexCurve(EUR-CMS-30Y,EUR-EONIA) to #4 IndexCurve(EUR-EONIA,Yield/EUR/EUR1D)
+DATA     [2024-Jul-01 15:42:03.123378]  (...ored\marketdata\dependencygraph.cpp:253) : add edge from vertex #10 SwapIndexCurve(EUR-CMS-30Y,EUR-EONIA) to #5 IndexCurve(EUR-EURIBOR-6M,Yield/EUR/EUR6M)
+DEBUG    [2024-Jul-01 15:42:03.123378]  (...ored\configuration\conventions.cpp:2663) : Building Convention GBP-CMS-1Y
+DEBUG    [2024-Jul-01 15:42:03.123378]  (...ored\configuration\conventions.cpp:2663) : Building Convention GBP-3M-SWAP-CONVENTIONS
+WARNING  [2024-Jul-01 15:42:03.124379]  (...a\ored\configuration\conventions.cpp:87) : InstrumentConventions: Could not find conventions for February 5th, 2016, using conventions from null date
+DATA     [2024-Jul-01 15:42:03.124379]  (...ed\utilities\indexnametranslator.cpp:46) : IndexNameTranslator: adding 'GBPLibor3M Actual/365 (Fixed)' <-> 'GBP-LIBOR-3M'
+DATA     [2024-Jul-01 15:42:03.124379]  (...ored\marketdata\dependencygraph.cpp:253) : add edge from vertex #11 SwapIndexCurve(GBP-CMS-1Y,GBP-SONIA) to #6 IndexCurve(GBP-LIBOR-3M,Yield/GBP/GBP6M)
+DATA     [2024-Jul-01 15:42:03.124379]  (...ored\marketdata\dependencygraph.cpp:247) : add edge from vertex #11 SwapIndexCurve(GBP-CMS-1Y,GBP-SONIA) to #8 IndexCurve(GBP-SONIA,Yield/GBP/GBP1D)
+DEBUG    [2024-Jul-01 15:42:03.124379]  (...ored\configuration\conventions.cpp:2663) : Building Convention GBP-CMS-30Y
+DEBUG    [2024-Jul-01 15:42:03.125378]  (...ored\configuration\conventions.cpp:2663) : Building Convention GBP-6M-SWAP-CONVENTIONS
+WARNING  [2024-Jul-01 15:42:03.125378]  (...a\ored\configuration\conventions.cpp:87) : InstrumentConventions: Could not find conventions for February 5th, 2016, using conventions from null date
+DATA     [2024-Jul-01 15:42:03.125378]  (...ed\utilities\indexnametranslator.cpp:46) : IndexNameTranslator: adding 'GBPLibor6M Actual/365 (Fixed)' <-> 'GBP-LIBOR-6M'
+DATA     [2024-Jul-01 15:42:03.125378]  (...ored\marketdata\dependencygraph.cpp:253) : add edge from vertex #12 SwapIndexCurve(GBP-CMS-30Y,GBP-SONIA) to #7 IndexCurve(GBP-LIBOR-6M,Yield/GBP/GBP6M)
+DATA     [2024-Jul-01 15:42:03.125378]  (...ored\marketdata\dependencygraph.cpp:247) : add edge from vertex #12 SwapIndexCurve(GBP-CMS-30Y,GBP-SONIA) to #8 IndexCurve(GBP-SONIA,Yield/GBP/GBP1D)
+DATA     [2024-Jul-01 15:42:03.126378]  (...ored\marketdata\dependencygraph.cpp:420) : add edge from vertex #13 FXSpot(EURGBP,FX/EUR/GBP) to #0 DiscountCurve(EUR,Yield/EUR/EUR1D)
+DATA     [2024-Jul-01 15:42:03.126378]  (...ored\marketdata\dependencygraph.cpp:420) : add edge from vertex #13 FXSpot(EURGBP,FX/EUR/GBP) to #1 DiscountCurve(GBP,Yield/GBP/GBP1D)
+DATA     [2024-Jul-01 15:42:03.126378]  (...ored\marketdata\dependencygraph.cpp:199) : add edge from vertex #15 SwaptionVol(EUR,SwaptionVolatility/EUR/EUR_SWPTN) to #9 SwapIndexCurve(EUR-CMS-1Y,EUR-EONIA)
+DATA     [2024-Jul-01 15:42:03.126378]  (...ored\marketdata\dependencygraph.cpp:199) : add edge from vertex #15 SwaptionVol(EUR,SwaptionVolatility/EUR/EUR_SWPTN) to #10 SwapIndexCurve(EUR-CMS-30Y,EUR-EONIA)
+DATA     [2024-Jul-01 15:42:03.126378]  (...ored\marketdata\dependencygraph.cpp:199) : add edge from vertex #16 SwaptionVol(GBP,SwaptionVolatility/GBP/GBP_SWPTN) to #11 SwapIndexCurve(GBP-CMS-1Y,GBP-SONIA)
+DATA     [2024-Jul-01 15:42:03.126378]  (...ored\marketdata\dependencygraph.cpp:199) : add edge from vertex #16 SwaptionVol(GBP,SwaptionVolatility/GBP/GBP_SWPTN) to #12 SwapIndexCurve(GBP-CMS-30Y,GBP-SONIA)
+DEBUG    [2024-Jul-01 15:42:03.127378]  (...ored\marketdata\dependencygraph.cpp:438) : Dependency graph built with 20 vertices, 15 edges.
+NOTICE   [2024-Jul-01 15:42:03.127378]  (...ta\ored\marketdata\todaysmarket.cpp:229) : Build objects in TodaysMarket lazily, i.e. when requested.
+NOTICE   [2024-Jul-01 15:42:03.127378]  (...ta\ored\marketdata\todaysmarket.cpp:234) : TodaysMarket build stats:
+NOTICE   [2024-Jul-01 15:42:03.127378]  (...ta\ored\marketdata\todaysmarket.cpp:240) : 1 load fixings                    :           0.199 ms         1          0.199 ms
+NOTICE   [2024-Jul-01 15:42:03.127378]  (...ta\ored\marketdata\todaysmarket.cpp:240) : 2 load dividends                  :          0.0008 ms         1         0.0008 ms
+NOTICE   [2024-Jul-01 15:42:03.128378]  (...ta\ored\marketdata\todaysmarket.cpp:240) : 3 add all fx quotes               :           0.683 ms         1          0.683 ms
+NOTICE   [2024-Jul-01 15:42:03.128378]  (...ta\ored\marketdata\todaysmarket.cpp:240) : 4 build dep graphs                :            10.2 ms         1           10.2 ms
+NOTICE   [2024-Jul-01 15:42:03.128378]  (...ta\ored\marketdata\todaysmarket.cpp:243) : Total build time              :          11.064 ms
+NOTICE   [2024-Jul-01 15:42:03.128378]      (OREAnalytics\orea\app\analytic.cpp:214) : Market Build time 0.016583 sec
+NOTICE   [2024-Jul-01 15:42:03.128378]     (OREData\ored\portfolio\portfolio.cpp:45) : Reset portfolio of size 1
+NOTICE   [2024-Jul-01 15:42:03.128378]      (OREAnalytics\orea\app\analytic.cpp:237) : Build the portfolio
+NOTICE   [2024-Jul-01 15:42:03.129470]      (OREAnalytics\orea\app\analytic.cpp:162) : Analytic::engineFactory() called
+NOTICE   [2024-Jul-01 15:42:03.129470]      (OREAnalytics\orea\app\analytic.cpp:172) : MarketContext::pricing = default
+NOTICE   [2024-Jul-01 15:42:03.129470]  (...ta\ored\portfolio\enginefactory.cpp:184) : Building EngineFactory
+NOTICE   [2024-Jul-01 15:42:03.129470]    (OREData\ored\portfolio\portfolio.cpp:124) : Building Portfolio of size 1 for context = 'analytic/PRICING'
+DEBUG    [2024-Jul-01 15:42:03.130481]          (OREData\ored\portfolio\swap.cpp:46) : Swap::build() called for trade Swap_20y
+DEBUG    [2024-Jul-01 15:42:03.130481]         (OREData\ored\portfolio\swap.cpp:149) : Notional is 1e+07 EUR
+DEBUG    [2024-Jul-01 15:42:03.130481]         (OREData\ored\portfolio\swap.cpp:153) : npv currency is EUR
+DEBUG    [2024-Jul-01 15:42:03.130481]      (OREData\ored\utilities\parsers.hpp:428) : tryParse: attempting to parse 
+DATA     [2024-Jul-01 15:42:03.131484]      (OREData\ored\utilities\parsers.hpp:432) : String  could not be parsed
+DEBUG    [2024-Jul-01 15:42:03.131484]      (OREData\ored\utilities\parsers.hpp:428) : tryParse: attempting to parse 
+DATA     [2024-Jul-01 15:42:03.131484]      (OREData\ored\utilities\parsers.hpp:432) : String  could not be parsed
+DEBUG    [2024-Jul-01 15:42:03.131484]         (OREData\ored\portfolio\swap.cpp:164) : Swap::build(): currency[0] = EUR
+DEBUG    [2024-Jul-01 15:42:03.131484]  (...ta\ored\marketdata\todaysmarket.cpp:825) : market object IndexCurve(EUR-EURIBOR-6M) required for configuration 'default'
+DATA     [2024-Jul-01 15:42:03.132475]  (...ta\ored\marketdata\todaysmarket.cpp:906) : Can build objects in the following order:
+DATA     [2024-Jul-01 15:42:03.132475]  (...ta\ored\marketdata\todaysmarket.cpp:908) : vertex #5: IndexCurve(EUR-EURIBOR-6M,Yield/EUR/EUR6M) (not yet built)
+WARNING  [2024-Jul-01 15:42:03.132475]  (...a\ored\configuration\conventions.cpp:87) : InstrumentConventions: Could not find conventions for February 5th, 2016, using conventions from null date
+DEBUG    [2024-Jul-01 15:42:03.132475]  (...ta\ored\marketdata\todaysmarket.cpp:298) : Building YieldCurve for asof February 5th, 2016
+DEBUG    [2024-Jul-01 15:42:03.133485]  (OREData\ored\marketdata\yieldcurve.cpp:323) : Building ZeroCurve Yield/EUR/EUR6M
+WARNING  [2024-Jul-01 15:42:03.133485]  (...a\ored\configuration\conventions.cpp:87) : InstrumentConventions: Could not find conventions for February 5th, 2016, using conventions from null date
+DEBUG    [2024-Jul-01 15:42:03.133485]  (...ored\configuration\conventions.cpp:2663) : Building Convention EUR-ZERO-CONVENTIONS-TENOR-BASED
+DEBUG    [2024-Jul-01 15:42:03.133485]  (OREData\ored\marketdata\yieldcurve.cpp:904) : Insert zero curve point at time zero for Yield/EUR/EUR6M: date 2016-02-05, zero 0.0210
+DEBUG    [2024-Jul-01 15:42:03.133485]  (OREData\ored\marketdata\yieldcurve.cpp:932) : Add zero curve point for Yield/EUR/EUR6M: 2017-02-09 0.0208 / 0.9789
+DEBUG    [2024-Jul-01 15:42:03.134474]  (OREData\ored\marketdata\yieldcurve.cpp:386) : Yield curve Yield/EUR/EUR6M built
+DEBUG    [2024-Jul-01 15:42:03.134474]  (...ta\ored\marketdata\todaysmarket.cpp:304) : Added YieldCurve "Yield/EUR/EUR6M" to requiredYieldCurves map
+DEBUG    [2024-Jul-01 15:42:03.134474]  (...ta\ored\marketdata\todaysmarket.cpp:323) : Adding Index(EUR-EURIBOR-6M) with spec Yield/EUR/EUR6M to configuration default
+WARNING  [2024-Jul-01 15:42:03.134474]  (...a\ored\configuration\conventions.cpp:87) : InstrumentConventions: Could not find conventions for February 5th, 2016, using conventions from null date
+DATA     [2024-Jul-01 15:42:03.134474]  (...ed\utilities\indexnametranslator.cpp:46) : IndexNameTranslator: adding 'Euribor6M Actual/360' <-> 'EUR-EURIBOR-6M'
+DEBUG    [2024-Jul-01 15:42:03.135474]  (...ta\ored\marketdata\todaysmarket.cpp:918) : built node IndexCurve(EUR-EURIBOR-6M,Yield/EUR/EUR6M) in configuration default
+DEBUG    [2024-Jul-01 15:42:03.135474]  (...ta\ored\marketdata\todaysmarket.cpp:930) : Loaded CurvesSpecs: success: 1, error: 0
+DEBUG    [2024-Jul-01 15:42:03.135474]      (OREData\ored\utilities\parsers.hpp:428) : tryParse: attempting to parse 
+DATA     [2024-Jul-01 15:42:03.135474]      (OREData\ored\utilities\parsers.hpp:432) : String  could not be parsed
+DEBUG    [2024-Jul-01 15:42:03.135474]      (OREData\ored\utilities\parsers.hpp:428) : tryParse: attempting to parse 
+DATA     [2024-Jul-01 15:42:03.136476]      (OREData\ored\utilities\parsers.hpp:432) : String  could not be parsed
+DEBUG    [2024-Jul-01 15:42:03.136476]         (OREData\ored\portfolio\swap.cpp:164) : Swap::build(): currency[1] = EUR
+DEBUG    [2024-Jul-01 15:42:03.136476]  (...ta\ored\marketdata\todaysmarket.cpp:825) : market object DiscountCurve(EUR) required for configuration 'default'
+DATA     [2024-Jul-01 15:42:03.136476]  (...ta\ored\marketdata\todaysmarket.cpp:906) : Can build objects in the following order:
+DATA     [2024-Jul-01 15:42:03.136476]  (...ta\ored\marketdata\todaysmarket.cpp:908) : vertex #0: DiscountCurve(EUR,Yield/EUR/EUR1D) (not yet built)
+WARNING  [2024-Jul-01 15:42:03.137474]  (...a\ored\configuration\conventions.cpp:87) : InstrumentConventions: Could not find conventions for February 5th, 2016, using conventions from null date
+DEBUG    [2024-Jul-01 15:42:03.137474]  (...ta\ored\marketdata\todaysmarket.cpp:298) : Building YieldCurve for asof February 5th, 2016
+DEBUG    [2024-Jul-01 15:42:03.137474]  (OREData\ored\marketdata\yieldcurve.cpp:323) : Building ZeroCurve Yield/EUR/EUR1D
+WARNING  [2024-Jul-01 15:42:03.137474]  (...a\ored\configuration\conventions.cpp:87) : InstrumentConventions: Could not find conventions for February 5th, 2016, using conventions from null date
+DEBUG    [2024-Jul-01 15:42:03.137474]  (OREData\ored\marketdata\yieldcurve.cpp:904) : Insert zero curve point at time zero for Yield/EUR/EUR1D: date 2016-02-05, zero 0.0200
+DEBUG    [2024-Jul-01 15:42:03.138473]  (OREData\ored\marketdata\yieldcurve.cpp:932) : Add zero curve point for Yield/EUR/EUR1D: 2017-02-09 0.0198 / 0.9799
+DEBUG    [2024-Jul-01 15:42:03.138473]  (OREData\ored\marketdata\yieldcurve.cpp:386) : Yield curve Yield/EUR/EUR1D built
+DEBUG    [2024-Jul-01 15:42:03.138473]  (...ta\ored\marketdata\todaysmarket.cpp:304) : Added YieldCurve "Yield/EUR/EUR1D" to requiredYieldCurves map
+DEBUG    [2024-Jul-01 15:42:03.138473]  (...ta\ored\marketdata\todaysmarket.cpp:313) : Adding DiscountCurve(EUR) with spec Yield/EUR/EUR1D to configuration default
+DEBUG    [2024-Jul-01 15:42:03.138473]  (...ta\ored\marketdata\todaysmarket.cpp:918) : built node DiscountCurve(EUR,Yield/EUR/EUR1D) in configuration default
+DEBUG    [2024-Jul-01 15:42:03.139475]  (...ta\ored\marketdata\todaysmarket.cpp:930) : Loaded CurvesSpecs: success: 1, error: 0
+DEBUG    [2024-Jul-01 15:42:03.139475]         (OREData\ored\portfolio\swap.cpp:197) : Set instrument wrapper
+DATA     [2024-Jul-01 15:42:03.139475]    (OREData\ored\portfolio\portfolio.cpp:276) : Required Fixings for trade Swap_20y:
+DATA     [2024-Jul-01 15:42:03.141474]    (OREData\ored\portfolio\portfolio.cpp:277) : IndexName FixingDate PayDate AlwaysAddIfPaysOnSettlement
+DATA     [2024-Jul-01 15:42:03.141474]    (OREData\ored\portfolio\portfolio.cpp:277) : EUR-EURIBOR-6M 2016-02-26 2016-09-01 true true
+DATA     [2024-Jul-01 15:42:03.141474]    (OREData\ored\portfolio\portfolio.cpp:277) : EUR-EURIBOR-6M 2016-08-30 2017-03-01 true true
+DATA     [2024-Jul-01 15:42:03.141474]    (OREData\ored\portfolio\portfolio.cpp:277) : EUR-EURIBOR-6M 2017-02-27 2017-09-01 true true
+DATA     [2024-Jul-01 15:42:03.141474]    (OREData\ored\portfolio\portfolio.cpp:277) : EUR-EURIBOR-6M 2017-08-30 2018-03-01 true true
+DATA     [2024-Jul-01 15:42:03.141474]    (OREData\ored\portfolio\portfolio.cpp:277) : EUR-EURIBOR-6M 2018-02-27 2018-09-03 true true
+DATA     [2024-Jul-01 15:42:03.142475]    (OREData\ored\portfolio\portfolio.cpp:277) : EUR-EURIBOR-6M 2018-08-30 2019-03-01 true true
+DATA     [2024-Jul-01 15:42:03.142475]    (OREData\ored\portfolio\portfolio.cpp:277) : EUR-EURIBOR-6M 2019-02-27 2019-09-02 true true
+DATA     [2024-Jul-01 15:42:03.142475]    (OREData\ored\portfolio\portfolio.cpp:277) : EUR-EURIBOR-6M 2019-08-29 2020-03-02 true true
+DATA     [2024-Jul-01 15:42:03.142475]    (OREData\ored\portfolio\portfolio.cpp:277) : EUR-EURIBOR-6M 2020-02-27 2020-09-01 true true
+DATA     [2024-Jul-01 15:42:03.142475]    (OREData\ored\portfolio\portfolio.cpp:277) : EUR-EURIBOR-6M 2020-08-28 2021-03-01 true true
+DATA     [2024-Jul-01 15:42:03.143475]    (OREData\ored\portfolio\portfolio.cpp:277) : EUR-EURIBOR-6M 2021-02-25 2021-09-01 true true
+DATA     [2024-Jul-01 15:42:03.143475]    (OREData\ored\portfolio\portfolio.cpp:277) : EUR-EURIBOR-6M 2021-08-30 2022-03-01 true true
+DATA     [2024-Jul-01 15:42:03.143475]    (OREData\ored\portfolio\portfolio.cpp:277) : EUR-EURIBOR-6M 2022-02-25 2022-09-01 true true
+DATA     [2024-Jul-01 15:42:03.143475]    (OREData\ored\portfolio\portfolio.cpp:277) : EUR-EURIBOR-6M 2022-08-30 2023-03-01 true true
+DATA     [2024-Jul-01 15:42:03.143475]    (OREData\ored\portfolio\portfolio.cpp:277) : EUR-EURIBOR-6M 2023-02-27 2023-09-01 true true
+DATA     [2024-Jul-01 15:42:03.143475]    (OREData\ored\portfolio\portfolio.cpp:277) : EUR-EURIBOR-6M 2023-08-30 2024-03-01 true true
+DATA     [2024-Jul-01 15:42:03.144475]    (OREData\ored\portfolio\portfolio.cpp:277) : EUR-EURIBOR-6M 2024-02-28 2024-09-02 true true
+DATA     [2024-Jul-01 15:42:03.144475]    (OREData\ored\portfolio\portfolio.cpp:277) : EUR-EURIBOR-6M 2024-08-29 2025-03-03 true true
+DATA     [2024-Jul-01 15:42:03.144475]    (OREData\ored\portfolio\portfolio.cpp:277) : EUR-EURIBOR-6M 2025-02-27 2025-09-01 true true
+DATA     [2024-Jul-01 15:42:03.144475]    (OREData\ored\portfolio\portfolio.cpp:277) : EUR-EURIBOR-6M 2025-08-28 2026-03-02 true true
+DATA     [2024-Jul-01 15:42:03.144475]    (OREData\ored\portfolio\portfolio.cpp:277) : EUR-EURIBOR-6M 2026-02-26 2026-09-01 true true
+DATA     [2024-Jul-01 15:42:03.145478]    (OREData\ored\portfolio\portfolio.cpp:277) : EUR-EURIBOR-6M 2026-08-28 2027-03-01 true true
+DATA     [2024-Jul-01 15:42:03.145478]    (OREData\ored\portfolio\portfolio.cpp:277) : EUR-EURIBOR-6M 2027-02-25 2027-09-01 true true
+DATA     [2024-Jul-01 15:42:03.145478]    (OREData\ored\portfolio\portfolio.cpp:277) : EUR-EURIBOR-6M 2027-08-30 2028-03-01 true true
+DATA     [2024-Jul-01 15:42:03.145478]    (OREData\ored\portfolio\portfolio.cpp:277) : EUR-EURIBOR-6M 2028-02-28 2028-09-01 true true
+DATA     [2024-Jul-01 15:42:03.145478]    (OREData\ored\portfolio\portfolio.cpp:277) : EUR-EURIBOR-6M 2028-08-30 2029-03-01 true true
+DATA     [2024-Jul-01 15:42:03.146405]    (OREData\ored\portfolio\portfolio.cpp:277) : EUR-EURIBOR-6M 2029-02-27 2029-09-03 true true
+DATA     [2024-Jul-01 15:42:03.146405]    (OREData\ored\portfolio\portfolio.cpp:277) : EUR-EURIBOR-6M 2029-08-30 2030-03-01 true true
+DATA     [2024-Jul-01 15:42:03.146405]    (OREData\ored\portfolio\portfolio.cpp:277) : EUR-EURIBOR-6M 2030-02-27 2030-09-02 true true
+DATA     [2024-Jul-01 15:42:03.146405]    (OREData\ored\portfolio\portfolio.cpp:277) : EUR-EURIBOR-6M 2030-08-29 2031-03-03 true true
+DATA     [2024-Jul-01 15:42:03.146405]    (OREData\ored\portfolio\portfolio.cpp:277) : EUR-EURIBOR-6M 2031-02-27 2031-09-01 true true
+DATA     [2024-Jul-01 15:42:03.146405]    (OREData\ored\portfolio\portfolio.cpp:277) : EUR-EURIBOR-6M 2031-08-28 2032-03-01 true true
+DATA     [2024-Jul-01 15:42:03.147401]    (OREData\ored\portfolio\portfolio.cpp:277) : EUR-EURIBOR-6M 2032-02-26 2032-09-01 true true
+DATA     [2024-Jul-01 15:42:03.147401]    (OREData\ored\portfolio\portfolio.cpp:277) : EUR-EURIBOR-6M 2032-08-30 2033-03-01 true true
+DATA     [2024-Jul-01 15:42:03.147401]    (OREData\ored\portfolio\portfolio.cpp:277) : EUR-EURIBOR-6M 2033-02-25 2033-09-01 true true
+DATA     [2024-Jul-01 15:42:03.147401]    (OREData\ored\portfolio\portfolio.cpp:277) : EUR-EURIBOR-6M 2033-08-30 2034-03-01 true true
+DATA     [2024-Jul-01 15:42:03.147401]    (OREData\ored\portfolio\portfolio.cpp:277) : EUR-EURIBOR-6M 2034-02-27 2034-09-01 true true
+DATA     [2024-Jul-01 15:42:03.148406]    (OREData\ored\portfolio\portfolio.cpp:277) : EUR-EURIBOR-6M 2034-08-30 2035-03-01 true true
+DATA     [2024-Jul-01 15:42:03.148406]    (OREData\ored\portfolio\portfolio.cpp:277) : EUR-EURIBOR-6M 2035-02-27 2035-09-03 true true
+DATA     [2024-Jul-01 15:42:03.148406]    (OREData\ored\portfolio\portfolio.cpp:277) : EUR-EURIBOR-6M 2035-08-30 2036-03-03 true true
+NOTICE   [2024-Jul-01 15:42:03.148406]    (OREData\ored\portfolio\portfolio.cpp:142) : Built Portfolio. Initial size = 1, size now 1, built 0 failed trades, context is analytic/PRICING
+NOTICE   [2024-Jul-01 15:42:03.148406]      (OREAnalytics\orea\app\analytic.cpp:246) : Filter trades that expire before February 5th, 2016
+NOTICE   [2024-Jul-01 15:42:03.149423]  (OREAnalytics\orea\app\reportwriter.cpp:156) : Writing cashflow report for February 5th, 2016
+DEBUG    [2024-Jul-01 15:42:03.149423]  (...ta\ored\marketdata\todaysmarket.cpp:825) : market object DiscountCurve(EUR) required for configuration 'default'
+DEBUG    [2024-Jul-01 15:42:03.149423]  (...ta\ored\marketdata\todaysmarket.cpp:885) : node already built, do nothing.
+DEBUG    [2024-Jul-01 15:42:03.149423]  (...ta\ored\marketdata\todaysmarket.cpp:825) : market object DiscountCurve(EUR) required for configuration 'default'
+DEBUG    [2024-Jul-01 15:42:03.150402]  (...ta\ored\marketdata\todaysmarket.cpp:885) : node already built, do nothing.
+NOTICE   [2024-Jul-01 15:42:03.150402]  (OREAnalytics\orea\app\reportwriter.cpp:653) : Cashflow report written
+NOTICE   [2024-Jul-01 15:42:03.150402]   (OREAnalytics\orea\app\reportwriter.cpp:83) : portfolio valuation
+WARNING  [2024-Jul-01 15:42:03.150402]         (OREData\ored\portfolio\swap.cpp:272) : swap engine does not provide current notional: currentNotional not provided, using fallback
+WARNING  [2024-Jul-01 15:42:03.151402]         (OREData\ored\portfolio\swap.cpp:272) : swap engine does not provide current notional: currentNotional not provided, using fallback
+WARNING  [2024-Jul-01 15:42:03.151402]         (OREData\ored\portfolio\swap.cpp:272) : swap engine does not provide current notional: currentNotional not provided, using fallback
+NOTICE   [2024-Jul-01 15:42:03.151402]  (OREAnalytics\orea\app\reportwriter.cpp:146) : NPV file written
+NOTICE   [2024-Jul-01 15:42:03.151402]  (...a\app\analytics\pricinganalytic.cpp:106) : Write curves report
+DEBUG    [2024-Jul-01 15:42:03.151402]     (OREData\ored\utilities\dategrid.cpp:173) : DateGrid constructed, size = 240
+DEBUG    [2024-Jul-01 15:42:03.152397]     (OREData\ored\utilities\dategrid.cpp:176) : [ 0] Tenor:1M, Date:2016-03-07, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.152397]     (OREData\ored\utilities\dategrid.cpp:176) : [ 1] Tenor:2M, Date:2016-04-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.152397]     (OREData\ored\utilities\dategrid.cpp:176) : [ 2] Tenor:3M, Date:2016-05-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.152397]     (OREData\ored\utilities\dategrid.cpp:176) : [ 3] Tenor:4M, Date:2016-06-06, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.152397]     (OREData\ored\utilities\dategrid.cpp:176) : [ 4] Tenor:5M, Date:2016-07-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.153408]     (OREData\ored\utilities\dategrid.cpp:176) : [ 5] Tenor:6M, Date:2016-08-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.153408]     (OREData\ored\utilities\dategrid.cpp:176) : [ 6] Tenor:7M, Date:2016-09-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.153408]     (OREData\ored\utilities\dategrid.cpp:176) : [ 7] Tenor:8M, Date:2016-10-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.153408]     (OREData\ored\utilities\dategrid.cpp:176) : [ 8] Tenor:9M, Date:2016-11-07, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.153408]     (OREData\ored\utilities\dategrid.cpp:176) : [ 9] Tenor:10M, Date:2016-12-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.154406]     (OREData\ored\utilities\dategrid.cpp:176) : [10] Tenor:11M, Date:2017-01-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.154406]     (OREData\ored\utilities\dategrid.cpp:176) : [11] Tenor:12M, Date:2017-02-06, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.154406]     (OREData\ored\utilities\dategrid.cpp:176) : [12] Tenor:13M, Date:2017-03-06, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.154406]     (OREData\ored\utilities\dategrid.cpp:176) : [13] Tenor:14M, Date:2017-04-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.154406]     (OREData\ored\utilities\dategrid.cpp:176) : [14] Tenor:15M, Date:2017-05-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.155472]     (OREData\ored\utilities\dategrid.cpp:176) : [15] Tenor:16M, Date:2017-06-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.155472]     (OREData\ored\utilities\dategrid.cpp:176) : [16] Tenor:17M, Date:2017-07-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.155472]     (OREData\ored\utilities\dategrid.cpp:176) : [17] Tenor:18M, Date:2017-08-07, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.155472]     (OREData\ored\utilities\dategrid.cpp:176) : [18] Tenor:19M, Date:2017-09-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.156371]     (OREData\ored\utilities\dategrid.cpp:176) : [19] Tenor:20M, Date:2017-10-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.156371]     (OREData\ored\utilities\dategrid.cpp:176) : [20] Tenor:21M, Date:2017-11-06, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.156371]     (OREData\ored\utilities\dategrid.cpp:176) : [21] Tenor:22M, Date:2017-12-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.156371]     (OREData\ored\utilities\dategrid.cpp:176) : [22] Tenor:23M, Date:2018-01-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.156371]     (OREData\ored\utilities\dategrid.cpp:176) : [23] Tenor:24M, Date:2018-02-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.157482]     (OREData\ored\utilities\dategrid.cpp:176) : [24] Tenor:25M, Date:2018-03-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.157482]     (OREData\ored\utilities\dategrid.cpp:176) : [25] Tenor:26M, Date:2018-04-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.157482]     (OREData\ored\utilities\dategrid.cpp:176) : [26] Tenor:27M, Date:2018-05-07, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.157482]     (OREData\ored\utilities\dategrid.cpp:176) : [27] Tenor:28M, Date:2018-06-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.157482]     (OREData\ored\utilities\dategrid.cpp:176) : [28] Tenor:29M, Date:2018-07-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.158484]     (OREData\ored\utilities\dategrid.cpp:176) : [29] Tenor:30M, Date:2018-08-06, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.158484]     (OREData\ored\utilities\dategrid.cpp:176) : [30] Tenor:31M, Date:2018-09-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.158484]     (OREData\ored\utilities\dategrid.cpp:176) : [31] Tenor:32M, Date:2018-10-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.158484]     (OREData\ored\utilities\dategrid.cpp:176) : [32] Tenor:33M, Date:2018-11-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.158484]     (OREData\ored\utilities\dategrid.cpp:176) : [33] Tenor:34M, Date:2018-12-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.159479]     (OREData\ored\utilities\dategrid.cpp:176) : [34] Tenor:35M, Date:2019-01-07, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.159479]     (OREData\ored\utilities\dategrid.cpp:176) : [35] Tenor:36M, Date:2019-02-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.159479]     (OREData\ored\utilities\dategrid.cpp:176) : [36] Tenor:37M, Date:2019-03-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.159479]     (OREData\ored\utilities\dategrid.cpp:176) : [37] Tenor:38M, Date:2019-04-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.159479]     (OREData\ored\utilities\dategrid.cpp:176) : [38] Tenor:39M, Date:2019-05-06, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.160478]     (OREData\ored\utilities\dategrid.cpp:176) : [39] Tenor:40M, Date:2019-06-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.160478]     (OREData\ored\utilities\dategrid.cpp:176) : [40] Tenor:41M, Date:2019-07-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.160478]     (OREData\ored\utilities\dategrid.cpp:176) : [41] Tenor:42M, Date:2019-08-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.160478]     (OREData\ored\utilities\dategrid.cpp:176) : [42] Tenor:43M, Date:2019-09-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.160478]     (OREData\ored\utilities\dategrid.cpp:176) : [43] Tenor:44M, Date:2019-10-07, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.161479]     (OREData\ored\utilities\dategrid.cpp:176) : [44] Tenor:45M, Date:2019-11-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.161479]     (OREData\ored\utilities\dategrid.cpp:176) : [45] Tenor:46M, Date:2019-12-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.161479]     (OREData\ored\utilities\dategrid.cpp:176) : [46] Tenor:47M, Date:2020-01-06, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.161479]     (OREData\ored\utilities\dategrid.cpp:176) : [47] Tenor:48M, Date:2020-02-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.161479]     (OREData\ored\utilities\dategrid.cpp:176) : [48] Tenor:49M, Date:2020-03-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.162478]     (OREData\ored\utilities\dategrid.cpp:176) : [49] Tenor:50M, Date:2020-04-06, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.162478]     (OREData\ored\utilities\dategrid.cpp:176) : [50] Tenor:51M, Date:2020-05-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.162478]     (OREData\ored\utilities\dategrid.cpp:176) : [51] Tenor:52M, Date:2020-06-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.162478]     (OREData\ored\utilities\dategrid.cpp:176) : [52] Tenor:53M, Date:2020-07-06, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.162478]     (OREData\ored\utilities\dategrid.cpp:176) : [53] Tenor:54M, Date:2020-08-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.163477]     (OREData\ored\utilities\dategrid.cpp:176) : [54] Tenor:55M, Date:2020-09-07, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.163477]     (OREData\ored\utilities\dategrid.cpp:176) : [55] Tenor:56M, Date:2020-10-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.163477]     (OREData\ored\utilities\dategrid.cpp:176) : [56] Tenor:57M, Date:2020-11-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.163477]     (OREData\ored\utilities\dategrid.cpp:176) : [57] Tenor:58M, Date:2020-12-07, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.163477]     (OREData\ored\utilities\dategrid.cpp:176) : [58] Tenor:59M, Date:2021-01-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.164488]     (OREData\ored\utilities\dategrid.cpp:176) : [59] Tenor:60M, Date:2021-02-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.164488]     (OREData\ored\utilities\dategrid.cpp:176) : [60] Tenor:61M, Date:2021-03-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.164488]     (OREData\ored\utilities\dategrid.cpp:176) : [61] Tenor:62M, Date:2021-04-06, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.164488]     (OREData\ored\utilities\dategrid.cpp:176) : [62] Tenor:63M, Date:2021-05-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.164488]     (OREData\ored\utilities\dategrid.cpp:176) : [63] Tenor:64M, Date:2021-06-07, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.165480]     (OREData\ored\utilities\dategrid.cpp:176) : [64] Tenor:65M, Date:2021-07-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.165480]     (OREData\ored\utilities\dategrid.cpp:176) : [65] Tenor:66M, Date:2021-08-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.165480]     (OREData\ored\utilities\dategrid.cpp:176) : [66] Tenor:67M, Date:2021-09-06, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.165480]     (OREData\ored\utilities\dategrid.cpp:176) : [67] Tenor:68M, Date:2021-10-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.166408]     (OREData\ored\utilities\dategrid.cpp:176) : [68] Tenor:69M, Date:2021-11-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.166408]     (OREData\ored\utilities\dategrid.cpp:176) : [69] Tenor:70M, Date:2021-12-06, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.166408]     (OREData\ored\utilities\dategrid.cpp:176) : [70] Tenor:71M, Date:2022-01-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.166408]     (OREData\ored\utilities\dategrid.cpp:176) : [71] Tenor:72M, Date:2022-02-07, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.166408]     (OREData\ored\utilities\dategrid.cpp:176) : [72] Tenor:73M, Date:2022-03-07, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.167429]     (OREData\ored\utilities\dategrid.cpp:176) : [73] Tenor:74M, Date:2022-04-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.167429]     (OREData\ored\utilities\dategrid.cpp:176) : [74] Tenor:75M, Date:2022-05-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.167429]     (OREData\ored\utilities\dategrid.cpp:176) : [75] Tenor:76M, Date:2022-06-06, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.167429]     (OREData\ored\utilities\dategrid.cpp:176) : [76] Tenor:77M, Date:2022-07-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.167429]     (OREData\ored\utilities\dategrid.cpp:176) : [77] Tenor:78M, Date:2022-08-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.168410]     (OREData\ored\utilities\dategrid.cpp:176) : [78] Tenor:79M, Date:2022-09-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.168410]     (OREData\ored\utilities\dategrid.cpp:176) : [79] Tenor:80M, Date:2022-10-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.168410]     (OREData\ored\utilities\dategrid.cpp:176) : [80] Tenor:81M, Date:2022-11-07, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.168410]     (OREData\ored\utilities\dategrid.cpp:176) : [81] Tenor:82M, Date:2022-12-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.168410]     (OREData\ored\utilities\dategrid.cpp:176) : [82] Tenor:83M, Date:2023-01-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.169453]     (OREData\ored\utilities\dategrid.cpp:176) : [83] Tenor:84M, Date:2023-02-06, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.169453]     (OREData\ored\utilities\dategrid.cpp:176) : [84] Tenor:85M, Date:2023-03-06, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.169453]     (OREData\ored\utilities\dategrid.cpp:176) : [85] Tenor:86M, Date:2023-04-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.169453]     (OREData\ored\utilities\dategrid.cpp:176) : [86] Tenor:87M, Date:2023-05-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.169453]     (OREData\ored\utilities\dategrid.cpp:176) : [87] Tenor:88M, Date:2023-06-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.170447]     (OREData\ored\utilities\dategrid.cpp:176) : [88] Tenor:89M, Date:2023-07-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.170447]     (OREData\ored\utilities\dategrid.cpp:176) : [89] Tenor:90M, Date:2023-08-07, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.170447]     (OREData\ored\utilities\dategrid.cpp:176) : [90] Tenor:91M, Date:2023-09-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.170447]     (OREData\ored\utilities\dategrid.cpp:176) : [91] Tenor:92M, Date:2023-10-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.170447]     (OREData\ored\utilities\dategrid.cpp:176) : [92] Tenor:93M, Date:2023-11-06, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.171453]     (OREData\ored\utilities\dategrid.cpp:176) : [93] Tenor:94M, Date:2023-12-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.171453]     (OREData\ored\utilities\dategrid.cpp:176) : [94] Tenor:95M, Date:2024-01-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.171453]     (OREData\ored\utilities\dategrid.cpp:176) : [95] Tenor:96M, Date:2024-02-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.171453]     (OREData\ored\utilities\dategrid.cpp:176) : [96] Tenor:97M, Date:2024-03-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.171453]     (OREData\ored\utilities\dategrid.cpp:176) : [97] Tenor:98M, Date:2024-04-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.172452]     (OREData\ored\utilities\dategrid.cpp:176) : [98] Tenor:99M, Date:2024-05-06, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.172452]     (OREData\ored\utilities\dategrid.cpp:176) : [99] Tenor:100M, Date:2024-06-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.172452]     (OREData\ored\utilities\dategrid.cpp:176) : [100] Tenor:101M, Date:2024-07-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.172452]     (OREData\ored\utilities\dategrid.cpp:176) : [101] Tenor:102M, Date:2024-08-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.172452]     (OREData\ored\utilities\dategrid.cpp:176) : [102] Tenor:103M, Date:2024-09-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.173453]     (OREData\ored\utilities\dategrid.cpp:176) : [103] Tenor:104M, Date:2024-10-07, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.173453]     (OREData\ored\utilities\dategrid.cpp:176) : [104] Tenor:105M, Date:2024-11-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.173453]     (OREData\ored\utilities\dategrid.cpp:176) : [105] Tenor:106M, Date:2024-12-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.173453]     (OREData\ored\utilities\dategrid.cpp:176) : [106] Tenor:107M, Date:2025-01-06, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.173453]     (OREData\ored\utilities\dategrid.cpp:176) : [107] Tenor:108M, Date:2025-02-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.174447]     (OREData\ored\utilities\dategrid.cpp:176) : [108] Tenor:109M, Date:2025-03-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.174447]     (OREData\ored\utilities\dategrid.cpp:176) : [109] Tenor:110M, Date:2025-04-07, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.174447]     (OREData\ored\utilities\dategrid.cpp:176) : [110] Tenor:111M, Date:2025-05-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.174447]     (OREData\ored\utilities\dategrid.cpp:176) : [111] Tenor:112M, Date:2025-06-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.174447]     (OREData\ored\utilities\dategrid.cpp:176) : [112] Tenor:113M, Date:2025-07-07, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.175449]     (OREData\ored\utilities\dategrid.cpp:176) : [113] Tenor:114M, Date:2025-08-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.175449]     (OREData\ored\utilities\dategrid.cpp:176) : [114] Tenor:115M, Date:2025-09-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.175449]     (OREData\ored\utilities\dategrid.cpp:176) : [115] Tenor:116M, Date:2025-10-06, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.175449]     (OREData\ored\utilities\dategrid.cpp:176) : [116] Tenor:117M, Date:2025-11-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.175449]     (OREData\ored\utilities\dategrid.cpp:176) : [117] Tenor:118M, Date:2025-12-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.176446]     (OREData\ored\utilities\dategrid.cpp:176) : [118] Tenor:119M, Date:2026-01-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.176446]     (OREData\ored\utilities\dategrid.cpp:176) : [119] Tenor:120M, Date:2026-02-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.176446]     (OREData\ored\utilities\dategrid.cpp:176) : [120] Tenor:121M, Date:2026-03-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.176446]     (OREData\ored\utilities\dategrid.cpp:176) : [121] Tenor:122M, Date:2026-04-07, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.176446]     (OREData\ored\utilities\dategrid.cpp:176) : [122] Tenor:123M, Date:2026-05-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.177445]     (OREData\ored\utilities\dategrid.cpp:176) : [123] Tenor:124M, Date:2026-06-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.177445]     (OREData\ored\utilities\dategrid.cpp:176) : [124] Tenor:125M, Date:2026-07-06, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.177445]     (OREData\ored\utilities\dategrid.cpp:176) : [125] Tenor:126M, Date:2026-08-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.177445]     (OREData\ored\utilities\dategrid.cpp:176) : [126] Tenor:127M, Date:2026-09-07, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.177445]     (OREData\ored\utilities\dategrid.cpp:176) : [127] Tenor:128M, Date:2026-10-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.178446]     (OREData\ored\utilities\dategrid.cpp:176) : [128] Tenor:129M, Date:2026-11-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.178446]     (OREData\ored\utilities\dategrid.cpp:176) : [129] Tenor:130M, Date:2026-12-07, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.178446]     (OREData\ored\utilities\dategrid.cpp:176) : [130] Tenor:131M, Date:2027-01-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.178446]     (OREData\ored\utilities\dategrid.cpp:176) : [131] Tenor:132M, Date:2027-02-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.179370]     (OREData\ored\utilities\dategrid.cpp:176) : [132] Tenor:133M, Date:2027-03-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.179370]     (OREData\ored\utilities\dategrid.cpp:176) : [133] Tenor:134M, Date:2027-04-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.179370]     (OREData\ored\utilities\dategrid.cpp:176) : [134] Tenor:135M, Date:2027-05-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.179370]     (OREData\ored\utilities\dategrid.cpp:176) : [135] Tenor:136M, Date:2027-06-07, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.179370]     (OREData\ored\utilities\dategrid.cpp:176) : [136] Tenor:137M, Date:2027-07-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.180406]     (OREData\ored\utilities\dategrid.cpp:176) : [137] Tenor:138M, Date:2027-08-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.180406]     (OREData\ored\utilities\dategrid.cpp:176) : [138] Tenor:139M, Date:2027-09-06, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.180406]     (OREData\ored\utilities\dategrid.cpp:176) : [139] Tenor:140M, Date:2027-10-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.180406]     (OREData\ored\utilities\dategrid.cpp:176) : [140] Tenor:141M, Date:2027-11-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.180406]     (OREData\ored\utilities\dategrid.cpp:176) : [141] Tenor:142M, Date:2027-12-06, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.181451]     (OREData\ored\utilities\dategrid.cpp:176) : [142] Tenor:143M, Date:2028-01-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.181451]     (OREData\ored\utilities\dategrid.cpp:176) : [143] Tenor:144M, Date:2028-02-07, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.181451]     (OREData\ored\utilities\dategrid.cpp:176) : [144] Tenor:145M, Date:2028-03-06, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.181451]     (OREData\ored\utilities\dategrid.cpp:176) : [145] Tenor:146M, Date:2028-04-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.181451]     (OREData\ored\utilities\dategrid.cpp:176) : [146] Tenor:147M, Date:2028-05-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.182447]     (OREData\ored\utilities\dategrid.cpp:176) : [147] Tenor:148M, Date:2028-06-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.182447]     (OREData\ored\utilities\dategrid.cpp:176) : [148] Tenor:149M, Date:2028-07-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.182447]     (OREData\ored\utilities\dategrid.cpp:176) : [149] Tenor:150M, Date:2028-08-07, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.182447]     (OREData\ored\utilities\dategrid.cpp:176) : [150] Tenor:151M, Date:2028-09-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.182447]     (OREData\ored\utilities\dategrid.cpp:176) : [151] Tenor:152M, Date:2028-10-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.183422]     (OREData\ored\utilities\dategrid.cpp:176) : [152] Tenor:153M, Date:2028-11-06, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.183422]     (OREData\ored\utilities\dategrid.cpp:176) : [153] Tenor:154M, Date:2028-12-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.183422]     (OREData\ored\utilities\dategrid.cpp:176) : [154] Tenor:155M, Date:2029-01-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.183422]     (OREData\ored\utilities\dategrid.cpp:176) : [155] Tenor:156M, Date:2029-02-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.183422]     (OREData\ored\utilities\dategrid.cpp:176) : [156] Tenor:157M, Date:2029-03-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.184448]     (OREData\ored\utilities\dategrid.cpp:176) : [157] Tenor:158M, Date:2029-04-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.184448]     (OREData\ored\utilities\dategrid.cpp:176) : [158] Tenor:159M, Date:2029-05-07, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.184448]     (OREData\ored\utilities\dategrid.cpp:176) : [159] Tenor:160M, Date:2029-06-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.184448]     (OREData\ored\utilities\dategrid.cpp:176) : [160] Tenor:161M, Date:2029-07-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.184448]     (OREData\ored\utilities\dategrid.cpp:176) : [161] Tenor:162M, Date:2029-08-06, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.185452]     (OREData\ored\utilities\dategrid.cpp:176) : [162] Tenor:163M, Date:2029-09-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.185452]     (OREData\ored\utilities\dategrid.cpp:176) : [163] Tenor:164M, Date:2029-10-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.185452]     (OREData\ored\utilities\dategrid.cpp:176) : [164] Tenor:165M, Date:2029-11-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.185452]     (OREData\ored\utilities\dategrid.cpp:176) : [165] Tenor:166M, Date:2029-12-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.185452]     (OREData\ored\utilities\dategrid.cpp:176) : [166] Tenor:167M, Date:2030-01-07, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.186446]     (OREData\ored\utilities\dategrid.cpp:176) : [167] Tenor:168M, Date:2030-02-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.186446]     (OREData\ored\utilities\dategrid.cpp:176) : [168] Tenor:169M, Date:2030-03-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.186446]     (OREData\ored\utilities\dategrid.cpp:176) : [169] Tenor:170M, Date:2030-04-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.186446]     (OREData\ored\utilities\dategrid.cpp:176) : [170] Tenor:171M, Date:2030-05-06, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.186446]     (OREData\ored\utilities\dategrid.cpp:176) : [171] Tenor:172M, Date:2030-06-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.187449]     (OREData\ored\utilities\dategrid.cpp:176) : [172] Tenor:173M, Date:2030-07-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.187449]     (OREData\ored\utilities\dategrid.cpp:176) : [173] Tenor:174M, Date:2030-08-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.187449]     (OREData\ored\utilities\dategrid.cpp:176) : [174] Tenor:175M, Date:2030-09-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.187449]     (OREData\ored\utilities\dategrid.cpp:176) : [175] Tenor:176M, Date:2030-10-07, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.187449]     (OREData\ored\utilities\dategrid.cpp:176) : [176] Tenor:177M, Date:2030-11-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.188447]     (OREData\ored\utilities\dategrid.cpp:176) : [177] Tenor:178M, Date:2030-12-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.188447]     (OREData\ored\utilities\dategrid.cpp:176) : [178] Tenor:179M, Date:2031-01-06, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.188447]     (OREData\ored\utilities\dategrid.cpp:176) : [179] Tenor:180M, Date:2031-02-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.188447]     (OREData\ored\utilities\dategrid.cpp:176) : [180] Tenor:181M, Date:2031-03-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.188447]     (OREData\ored\utilities\dategrid.cpp:176) : [181] Tenor:182M, Date:2031-04-07, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.189450]     (OREData\ored\utilities\dategrid.cpp:176) : [182] Tenor:183M, Date:2031-05-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.189450]     (OREData\ored\utilities\dategrid.cpp:176) : [183] Tenor:184M, Date:2031-06-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.189450]     (OREData\ored\utilities\dategrid.cpp:176) : [184] Tenor:185M, Date:2031-07-07, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.189450]     (OREData\ored\utilities\dategrid.cpp:176) : [185] Tenor:186M, Date:2031-08-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.189450]     (OREData\ored\utilities\dategrid.cpp:176) : [186] Tenor:187M, Date:2031-09-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.190449]     (OREData\ored\utilities\dategrid.cpp:176) : [187] Tenor:188M, Date:2031-10-06, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.190449]     (OREData\ored\utilities\dategrid.cpp:176) : [188] Tenor:189M, Date:2031-11-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.190449]     (OREData\ored\utilities\dategrid.cpp:176) : [189] Tenor:190M, Date:2031-12-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.190449]     (OREData\ored\utilities\dategrid.cpp:176) : [190] Tenor:191M, Date:2032-01-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.190449]     (OREData\ored\utilities\dategrid.cpp:176) : [191] Tenor:192M, Date:2032-02-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.191446]     (OREData\ored\utilities\dategrid.cpp:176) : [192] Tenor:193M, Date:2032-03-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.191446]     (OREData\ored\utilities\dategrid.cpp:176) : [193] Tenor:194M, Date:2032-04-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.191446]     (OREData\ored\utilities\dategrid.cpp:176) : [194] Tenor:195M, Date:2032-05-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.191446]     (OREData\ored\utilities\dategrid.cpp:176) : [195] Tenor:196M, Date:2032-06-07, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.191446]     (OREData\ored\utilities\dategrid.cpp:176) : [196] Tenor:197M, Date:2032-07-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.192445]     (OREData\ored\utilities\dategrid.cpp:176) : [197] Tenor:198M, Date:2032-08-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.192445]     (OREData\ored\utilities\dategrid.cpp:176) : [198] Tenor:199M, Date:2032-09-06, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.192445]     (OREData\ored\utilities\dategrid.cpp:176) : [199] Tenor:200M, Date:2032-10-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.192445]     (OREData\ored\utilities\dategrid.cpp:176) : [200] Tenor:201M, Date:2032-11-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.192445]     (OREData\ored\utilities\dategrid.cpp:176) : [201] Tenor:202M, Date:2032-12-06, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.193447]     (OREData\ored\utilities\dategrid.cpp:176) : [202] Tenor:203M, Date:2033-01-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.193447]     (OREData\ored\utilities\dategrid.cpp:176) : [203] Tenor:204M, Date:2033-02-07, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.193447]     (OREData\ored\utilities\dategrid.cpp:176) : [204] Tenor:205M, Date:2033-03-07, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.193447]     (OREData\ored\utilities\dategrid.cpp:176) : [205] Tenor:206M, Date:2033-04-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.193447]     (OREData\ored\utilities\dategrid.cpp:176) : [206] Tenor:207M, Date:2033-05-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.194452]     (OREData\ored\utilities\dategrid.cpp:176) : [207] Tenor:208M, Date:2033-06-06, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.194452]     (OREData\ored\utilities\dategrid.cpp:176) : [208] Tenor:209M, Date:2033-07-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.194452]     (OREData\ored\utilities\dategrid.cpp:176) : [209] Tenor:210M, Date:2033-08-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.194452]     (OREData\ored\utilities\dategrid.cpp:176) : [210] Tenor:211M, Date:2033-09-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.195372]     (OREData\ored\utilities\dategrid.cpp:176) : [211] Tenor:212M, Date:2033-10-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.195372]     (OREData\ored\utilities\dategrid.cpp:176) : [212] Tenor:213M, Date:2033-11-07, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.195372]     (OREData\ored\utilities\dategrid.cpp:176) : [213] Tenor:214M, Date:2033-12-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.195372]     (OREData\ored\utilities\dategrid.cpp:176) : [214] Tenor:215M, Date:2034-01-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.195372]     (OREData\ored\utilities\dategrid.cpp:176) : [215] Tenor:216M, Date:2034-02-06, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.195372]     (OREData\ored\utilities\dategrid.cpp:176) : [216] Tenor:217M, Date:2034-03-06, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.196458]     (OREData\ored\utilities\dategrid.cpp:176) : [217] Tenor:218M, Date:2034-04-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.196458]     (OREData\ored\utilities\dategrid.cpp:176) : [218] Tenor:219M, Date:2034-05-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.196458]     (OREData\ored\utilities\dategrid.cpp:176) : [219] Tenor:220M, Date:2034-06-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.196458]     (OREData\ored\utilities\dategrid.cpp:176) : [220] Tenor:221M, Date:2034-07-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.196458]     (OREData\ored\utilities\dategrid.cpp:176) : [221] Tenor:222M, Date:2034-08-07, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.197447]     (OREData\ored\utilities\dategrid.cpp:176) : [222] Tenor:223M, Date:2034-09-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.197447]     (OREData\ored\utilities\dategrid.cpp:176) : [223] Tenor:224M, Date:2034-10-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.197447]     (OREData\ored\utilities\dategrid.cpp:176) : [224] Tenor:225M, Date:2034-11-06, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.197447]     (OREData\ored\utilities\dategrid.cpp:176) : [225] Tenor:226M, Date:2034-12-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.197447]     (OREData\ored\utilities\dategrid.cpp:176) : [226] Tenor:227M, Date:2035-01-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.198449]     (OREData\ored\utilities\dategrid.cpp:176) : [227] Tenor:228M, Date:2035-02-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.198449]     (OREData\ored\utilities\dategrid.cpp:176) : [228] Tenor:229M, Date:2035-03-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.198449]     (OREData\ored\utilities\dategrid.cpp:176) : [229] Tenor:230M, Date:2035-04-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.198449]     (OREData\ored\utilities\dategrid.cpp:176) : [230] Tenor:231M, Date:2035-05-07, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.199402]     (OREData\ored\utilities\dategrid.cpp:176) : [231] Tenor:232M, Date:2035-06-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.199402]     (OREData\ored\utilities\dategrid.cpp:176) : [232] Tenor:233M, Date:2035-07-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.199402]     (OREData\ored\utilities\dategrid.cpp:176) : [233] Tenor:234M, Date:2035-08-06, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.199402]     (OREData\ored\utilities\dategrid.cpp:176) : [234] Tenor:235M, Date:2035-09-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.199402]     (OREData\ored\utilities\dategrid.cpp:176) : [235] Tenor:236M, Date:2035-10-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.199402]     (OREData\ored\utilities\dategrid.cpp:176) : [236] Tenor:237M, Date:2035-11-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.200452]     (OREData\ored\utilities\dategrid.cpp:176) : [237] Tenor:238M, Date:2035-12-05, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.200452]     (OREData\ored\utilities\dategrid.cpp:176) : [238] Tenor:239M, Date:2036-01-07, Valuation:1, CloseOut:0
+DEBUG    [2024-Jul-01 15:42:03.200452]     (OREData\ored\utilities\dategrid.cpp:176) : [239] Tenor:240M, Date:2036-02-05, Valuation:1, CloseOut:0
+NOTICE   [2024-Jul-01 15:42:03.200452]  (OREAnalytics\orea\app\reportwriter.cpp:720) : Write curves... 
+DEBUG    [2024-Jul-01 15:42:03.200452]  (OREAnalytics\orea\app\reportwriter.cpp:740) : discount curve - EUR
+DEBUG    [2024-Jul-01 15:42:03.201452]  (...ta\ored\marketdata\todaysmarket.cpp:825) : market object DiscountCurve(EUR) required for configuration 'default'
+DEBUG    [2024-Jul-01 15:42:03.201452]  (...ta\ored\marketdata\todaysmarket.cpp:885) : node already built, do nothing.
+DEBUG    [2024-Jul-01 15:42:03.201452]  (OREAnalytics\orea\app\reportwriter.cpp:740) : discount curve - GBP
+DEBUG    [2024-Jul-01 15:42:03.201452]  (...ta\ored\marketdata\todaysmarket.cpp:825) : market object DiscountCurve(GBP) required for configuration 'default'
+DATA     [2024-Jul-01 15:42:03.201452]  (...ta\ored\marketdata\todaysmarket.cpp:906) : Can build objects in the following order:
+DATA     [2024-Jul-01 15:42:03.202453]  (...ta\ored\marketdata\todaysmarket.cpp:908) : vertex #1: DiscountCurve(GBP,Yield/GBP/GBP1D) (not yet built)
+WARNING  [2024-Jul-01 15:42:03.202453]  (...a\ored\configuration\conventions.cpp:87) : InstrumentConventions: Could not find conventions for February 5th, 2016, using conventions from null date (no more warnings of this type will be emitted)
+DEBUG    [2024-Jul-01 15:42:03.202453]  (...ta\ored\marketdata\todaysmarket.cpp:298) : Building YieldCurve for asof February 5th, 2016
+DEBUG    [2024-Jul-01 15:42:03.202453]  (OREData\ored\marketdata\yieldcurve.cpp:323) : Building ZeroCurve Yield/GBP/GBP1D
+DEBUG    [2024-Jul-01 15:42:03.202453]  (...ored\configuration\conventions.cpp:2663) : Building Convention GBP-ZERO-CONVENTIONS-TENOR-BASED
+DEBUG    [2024-Jul-01 15:42:03.203401]  (OREData\ored\marketdata\yieldcurve.cpp:904) : Insert zero curve point at time zero for Yield/GBP/GBP1D: date 2016-02-05, zero 0.0250
+DEBUG    [2024-Jul-01 15:42:03.203401]  (OREData\ored\marketdata\yieldcurve.cpp:932) : Add zero curve point for Yield/GBP/GBP1D: 2017-02-06 0.0250 / 0.9752
+DEBUG    [2024-Jul-01 15:42:03.203401]  (OREData\ored\marketdata\yieldcurve.cpp:386) : Yield curve Yield/GBP/GBP1D built
+DEBUG    [2024-Jul-01 15:42:03.203401]  (...ta\ored\marketdata\todaysmarket.cpp:304) : Added YieldCurve "Yield/GBP/GBP1D" to requiredYieldCurves map
+DEBUG    [2024-Jul-01 15:42:03.204401]  (...ta\ored\marketdata\todaysmarket.cpp:313) : Adding DiscountCurve(GBP) with spec Yield/GBP/GBP1D to configuration default
+DEBUG    [2024-Jul-01 15:42:03.204401]  (...ta\ored\marketdata\todaysmarket.cpp:918) : built node DiscountCurve(GBP,Yield/GBP/GBP1D) in configuration default
+DEBUG    [2024-Jul-01 15:42:03.204401]  (...ta\ored\marketdata\todaysmarket.cpp:930) : Loaded CurvesSpecs: success: 1, error: 0
+DEBUG    [2024-Jul-01 15:42:03.204401]  (OREAnalytics\orea\app\reportwriter.cpp:753) : yield curve - BANK_EUR_BORROW
+DEBUG    [2024-Jul-01 15:42:03.204401]  (...ta\ored\marketdata\todaysmarket.cpp:825) : market object YieldCurve(BANK_EUR_BORROW) required for configuration 'default'
+DATA     [2024-Jul-01 15:42:03.204401]  (...ta\ored\marketdata\todaysmarket.cpp:906) : Can build objects in the following order:
+DATA     [2024-Jul-01 15:42:03.205448]  (...ta\ored\marketdata\todaysmarket.cpp:908) : vertex #2: YieldCurve(BANK_EUR_BORROW,Yield/EUR/EUR1D) (not yet built)
+DEBUG    [2024-Jul-01 15:42:03.205448]  (...ta\ored\marketdata\todaysmarket.cpp:318) : Adding YieldCurve(BANK_EUR_BORROW) with spec Yield/EUR/EUR1D to configuration default
+DEBUG    [2024-Jul-01 15:42:03.205448]  (...ta\ored\marketdata\todaysmarket.cpp:918) : built node YieldCurve(BANK_EUR_BORROW,Yield/EUR/EUR1D) in configuration default
+DEBUG    [2024-Jul-01 15:42:03.205448]  (...ta\ored\marketdata\todaysmarket.cpp:930) : Loaded CurvesSpecs: success: 1, error: 0
+DEBUG    [2024-Jul-01 15:42:03.205448]  (OREData\ored\utilities\indexparser.cpp:248) : tryParseIborIndex(BANK_EUR_BORROW) failed: Two or three tokens required in BANK_EUR_BORROW: CCY-INDEX or CCY-INDEX-TERM
+DEBUG    [2024-Jul-01 15:42:03.206451]   (OREData\ored\marketdata\marketimpl.cpp:83) : no ibor index found under 'BANK_EUR_BORROW' - look for a genuine yield curve
+DEBUG    [2024-Jul-01 15:42:03.206451]  (...ta\ored\marketdata\todaysmarket.cpp:825) : market object YieldCurve(BANK_EUR_BORROW) required for configuration 'default'
+DEBUG    [2024-Jul-01 15:42:03.206451]  (...ta\ored\marketdata\todaysmarket.cpp:885) : node already built, do nothing.
+DEBUG    [2024-Jul-01 15:42:03.206451]  (OREAnalytics\orea\app\reportwriter.cpp:753) : yield curve - BANK_EUR_LEND
+DEBUG    [2024-Jul-01 15:42:03.206451]  (...ta\ored\marketdata\todaysmarket.cpp:825) : market object YieldCurve(BANK_EUR_LEND) required for configuration 'default'
+DATA     [2024-Jul-01 15:42:03.206451]  (...ta\ored\marketdata\todaysmarket.cpp:906) : Can build objects in the following order:
+DATA     [2024-Jul-01 15:42:03.207447]  (...ta\ored\marketdata\todaysmarket.cpp:908) : vertex #3: YieldCurve(BANK_EUR_LEND,Yield/EUR/EUR1D) (not yet built)
+DEBUG    [2024-Jul-01 15:42:03.207447]  (...ta\ored\marketdata\todaysmarket.cpp:318) : Adding YieldCurve(BANK_EUR_LEND) with spec Yield/EUR/EUR1D to configuration default
+DEBUG    [2024-Jul-01 15:42:03.207447]  (...ta\ored\marketdata\todaysmarket.cpp:918) : built node YieldCurve(BANK_EUR_LEND,Yield/EUR/EUR1D) in configuration default
+DEBUG    [2024-Jul-01 15:42:03.207447]  (...ta\ored\marketdata\todaysmarket.cpp:930) : Loaded CurvesSpecs: success: 1, error: 0
+DEBUG    [2024-Jul-01 15:42:03.207447]  (OREData\ored\utilities\indexparser.cpp:248) : tryParseIborIndex(BANK_EUR_LEND) failed: Two or three tokens required in BANK_EUR_LEND: CCY-INDEX or CCY-INDEX-TERM
+DEBUG    [2024-Jul-01 15:42:03.208447]   (OREData\ored\marketdata\marketimpl.cpp:83) : no ibor index found under 'BANK_EUR_LEND' - look for a genuine yield curve
+DEBUG    [2024-Jul-01 15:42:03.208447]  (...ta\ored\marketdata\todaysmarket.cpp:825) : market object YieldCurve(BANK_EUR_LEND) required for configuration 'default'
+DEBUG    [2024-Jul-01 15:42:03.208447]  (...ta\ored\marketdata\todaysmarket.cpp:885) : node already built, do nothing.
+DEBUG    [2024-Jul-01 15:42:03.208447]  (OREAnalytics\orea\app\reportwriter.cpp:766) : index curve - EUR-EONIA
+DEBUG    [2024-Jul-01 15:42:03.208447]  (...ta\ored\marketdata\todaysmarket.cpp:825) : market object IndexCurve(EUR-EONIA) required for configuration 'default'
+DATA     [2024-Jul-01 15:42:03.208447]  (...ta\ored\marketdata\todaysmarket.cpp:906) : Can build objects in the following order:
+DATA     [2024-Jul-01 15:42:03.209448]  (...ta\ored\marketdata\todaysmarket.cpp:908) : vertex #4: IndexCurve(EUR-EONIA,Yield/EUR/EUR1D) (not yet built)
+DEBUG    [2024-Jul-01 15:42:03.209448]  (...ta\ored\marketdata\todaysmarket.cpp:323) : Adding Index(EUR-EONIA) with spec Yield/EUR/EUR1D to configuration default
+DATA     [2024-Jul-01 15:42:03.209448]  (...ed\utilities\indexnametranslator.cpp:46) : IndexNameTranslator: adding 'EoniaON Actual/360' <-> 'EUR-EONIA'
+DEBUG    [2024-Jul-01 15:42:03.209448]  (...ta\ored\marketdata\todaysmarket.cpp:918) : built node IndexCurve(EUR-EONIA,Yield/EUR/EUR1D) in configuration default
+DEBUG    [2024-Jul-01 15:42:03.209448]  (...ta\ored\marketdata\todaysmarket.cpp:930) : Loaded CurvesSpecs: success: 1, error: 0
+DEBUG    [2024-Jul-01 15:42:03.210452]  (OREAnalytics\orea\app\reportwriter.cpp:766) : index curve - EUR-EURIBOR-6M
+DEBUG    [2024-Jul-01 15:42:03.210452]  (...ta\ored\marketdata\todaysmarket.cpp:825) : market object IndexCurve(EUR-EURIBOR-6M) required for configuration 'default'
+DEBUG    [2024-Jul-01 15:42:03.210452]  (...ta\ored\marketdata\todaysmarket.cpp:885) : node already built, do nothing.
+DEBUG    [2024-Jul-01 15:42:03.210452]  (OREAnalytics\orea\app\reportwriter.cpp:766) : index curve - GBP-LIBOR-3M
+DEBUG    [2024-Jul-01 15:42:03.210452]  (...ta\ored\marketdata\todaysmarket.cpp:825) : market object IndexCurve(GBP-LIBOR-3M) required for configuration 'default'
+DATA     [2024-Jul-01 15:42:03.211406]  (...ta\ored\marketdata\todaysmarket.cpp:906) : Can build objects in the following order:
+DATA     [2024-Jul-01 15:42:03.211406]  (...ta\ored\marketdata\todaysmarket.cpp:908) : vertex #6: IndexCurve(GBP-LIBOR-3M,Yield/GBP/GBP6M) (not yet built)
+DEBUG    [2024-Jul-01 15:42:03.211406]  (...ta\ored\marketdata\todaysmarket.cpp:298) : Building YieldCurve for asof February 5th, 2016
+DEBUG    [2024-Jul-01 15:42:03.211406]  (OREData\ored\marketdata\yieldcurve.cpp:323) : Building ZeroCurve Yield/GBP/GBP6M
+DEBUG    [2024-Jul-01 15:42:03.211406]  (OREData\ored\marketdata\yieldcurve.cpp:904) : Insert zero curve point at time zero for Yield/GBP/GBP6M: date 2016-02-05, zero 0.0260
+DEBUG    [2024-Jul-01 15:42:03.212445]  (OREData\ored\marketdata\yieldcurve.cpp:932) : Add zero curve point for Yield/GBP/GBP6M: 2017-02-06 0.0260 / 0.9742
+DEBUG    [2024-Jul-01 15:42:03.212445]  (OREData\ored\marketdata\yieldcurve.cpp:386) : Yield curve Yield/GBP/GBP6M built
+DEBUG    [2024-Jul-01 15:42:03.212445]  (...ta\ored\marketdata\todaysmarket.cpp:304) : Added YieldCurve "Yield/GBP/GBP6M" to requiredYieldCurves map
+DEBUG    [2024-Jul-01 15:42:03.212445]  (...ta\ored\marketdata\todaysmarket.cpp:323) : Adding Index(GBP-LIBOR-3M) with spec Yield/GBP/GBP6M to configuration default
+DATA     [2024-Jul-01 15:42:03.212445]  (...ed\utilities\indexnametranslator.cpp:46) : IndexNameTranslator: adding 'GBPLibor3M Actual/365 (Fixed)' <-> 'GBP-LIBOR-3M'
+DEBUG    [2024-Jul-01 15:42:03.213446]  (...ta\ored\marketdata\todaysmarket.cpp:918) : built node IndexCurve(GBP-LIBOR-3M,Yield/GBP/GBP6M) in configuration default
+DEBUG    [2024-Jul-01 15:42:03.213446]  (...ta\ored\marketdata\todaysmarket.cpp:930) : Loaded CurvesSpecs: success: 1, error: 0
+DEBUG    [2024-Jul-01 15:42:03.213446]  (OREAnalytics\orea\app\reportwriter.cpp:766) : index curve - GBP-LIBOR-6M
+DEBUG    [2024-Jul-01 15:42:03.213446]  (...ta\ored\marketdata\todaysmarket.cpp:825) : market object IndexCurve(GBP-LIBOR-6M) required for configuration 'default'
+DATA     [2024-Jul-01 15:42:03.213446]  (...ta\ored\marketdata\todaysmarket.cpp:906) : Can build objects in the following order:
+DATA     [2024-Jul-01 15:42:03.213446]  (...ta\ored\marketdata\todaysmarket.cpp:908) : vertex #7: IndexCurve(GBP-LIBOR-6M,Yield/GBP/GBP6M) (not yet built)
+DEBUG    [2024-Jul-01 15:42:03.214447]  (...ta\ored\marketdata\todaysmarket.cpp:323) : Adding Index(GBP-LIBOR-6M) with spec Yield/GBP/GBP6M to configuration default
+DATA     [2024-Jul-01 15:42:03.214447]  (...ed\utilities\indexnametranslator.cpp:46) : IndexNameTranslator: adding 'GBPLibor6M Actual/365 (Fixed)' <-> 'GBP-LIBOR-6M'
+DEBUG    [2024-Jul-01 15:42:03.214447]  (...ta\ored\marketdata\todaysmarket.cpp:918) : built node IndexCurve(GBP-LIBOR-6M,Yield/GBP/GBP6M) in configuration default
+DEBUG    [2024-Jul-01 15:42:03.214447]  (...ta\ored\marketdata\todaysmarket.cpp:930) : Loaded CurvesSpecs: success: 1, error: 0
+DEBUG    [2024-Jul-01 15:42:03.214447]  (OREAnalytics\orea\app\reportwriter.cpp:766) : index curve - GBP-SONIA
+DEBUG    [2024-Jul-01 15:42:03.215447]  (...ta\ored\marketdata\todaysmarket.cpp:825) : market object IndexCurve(GBP-SONIA) required for configuration 'default'
+DATA     [2024-Jul-01 15:42:03.215447]  (...ta\ored\marketdata\todaysmarket.cpp:906) : Can build objects in the following order:
+DATA     [2024-Jul-01 15:42:03.215447]  (...ta\ored\marketdata\todaysmarket.cpp:908) : vertex #8: IndexCurve(GBP-SONIA,Yield/GBP/GBP1D) (not yet built)
+DEBUG    [2024-Jul-01 15:42:03.215447]  (...ta\ored\marketdata\todaysmarket.cpp:323) : Adding Index(GBP-SONIA) with spec Yield/GBP/GBP1D to configuration default
+DATA     [2024-Jul-01 15:42:03.215447]  (...ed\utilities\indexnametranslator.cpp:46) : IndexNameTranslator: adding 'SoniaON Actual/365 (Fixed)' <-> 'GBP-SONIA'
+DEBUG    [2024-Jul-01 15:42:03.216406]  (...ta\ored\marketdata\todaysmarket.cpp:918) : built node IndexCurve(GBP-SONIA,Yield/GBP/GBP1D) in configuration default
+DEBUG    [2024-Jul-01 15:42:03.216406]  (...ta\ored\marketdata\todaysmarket.cpp:930) : Loaded CurvesSpecs: success: 1, error: 0
+DEBUG    [2024-Jul-01 15:42:03.216406]  (OREAnalytics\orea\app\reportwriter.cpp:792) : default curve - BANK
+DEBUG    [2024-Jul-01 15:42:03.216406]  (...ta\ored\marketdata\todaysmarket.cpp:825) : market object DefaultCurve(BANK) required for configuration 'default'
+DATA     [2024-Jul-01 15:42:03.216406]  (...ta\ored\marketdata\todaysmarket.cpp:906) : Can build objects in the following order:
+DATA     [2024-Jul-01 15:42:03.217402]  (...ta\ored\marketdata\todaysmarket.cpp:908) : vertex #5: IndexCurve(EUR-EURIBOR-6M,Yield/EUR/EUR6M) (already built)
+DATA     [2024-Jul-01 15:42:03.217402]  (...ta\ored\marketdata\todaysmarket.cpp:908) : vertex #17: DefaultCurve(BANK,Default/EUR/BANK_SR_EUR) (not yet built)
+DEBUG    [2024-Jul-01 15:42:03.217402]  (...ta\ored\marketdata\todaysmarket.cpp:511) : Building DefaultCurve for asof February 5th, 2016
+NOTICE   [2024-Jul-01 15:42:03.217402]  (...ta\ored\marketdata\defaultcurve.cpp:301) : Start building default curve of type SpreadCDS for curve BANK_SR_EUR
+DEBUG    [2024-Jul-01 15:42:03.217402]  (...ored\configuration\conventions.cpp:2663) : Building Convention CDS-STANDARD-CONVENTIONS
+NOTICE   [2024-Jul-01 15:42:03.218428]  (...ta\ored\marketdata\defaultcurve.cpp:168) : Loading explicit quotes for default curve BANK_SR_EUR
+DATA     [2024-Jul-01 15:42:03.218428]  (...ata\ored\marketdata\defaultcurve.cpp:72) : Loaded quote CDS/CREDIT_SPREAD/BANK/SR/EUR/1Y for default curve BANK_SR_EUR
+NOTICE   [2024-Jul-01 15:42:03.218428]  (...ta\ored\marketdata\defaultcurve.cpp:194) : DefaultCurve BANK_SR_EUR using 1 default quotes of 1 requested quotes.
+DATA     [2024-Jul-01 15:42:03.218428]  (...ta\ored\marketdata\defaultcurve.cpp:517) : 2017-03-20,0.981244695
+DEBUG    [2024-Jul-01 15:42:03.219420]  (...ta\ored\marketdata\defaultcurve.cpp:532) : DefaultCurve: Enabled Extrapolation
+NOTICE   [2024-Jul-01 15:42:03.219420]  (...ta\ored\marketdata\defaultcurve.cpp:539) : Finished building default curve of type SpreadCDS for curve BANK_SR_EUR
+DEBUG    [2024-Jul-01 15:42:03.219420]  (...ta\ored\marketdata\todaysmarket.cpp:517) : Adding DefaultCurve (BANK) with spec Default/EUR/BANK_SR_EUR to configuration default
+DEBUG    [2024-Jul-01 15:42:03.219420]  (...ta\ored\marketdata\todaysmarket.cpp:918) : built node DefaultCurve(BANK,Default/EUR/BANK_SR_EUR) in configuration default
+DEBUG    [2024-Jul-01 15:42:03.219420]  (...ta\ored\marketdata\todaysmarket.cpp:930) : Loaded CurvesSpecs: success: 1, error: 0
+DEBUG    [2024-Jul-01 15:42:03.220400]  (OREAnalytics\orea\app\reportwriter.cpp:792) : default curve - CPTY_A
+DEBUG    [2024-Jul-01 15:42:03.220400]  (...ta\ored\marketdata\todaysmarket.cpp:825) : market object DefaultCurve(CPTY_A) required for configuration 'default'
+DATA     [2024-Jul-01 15:42:03.220400]  (...ta\ored\marketdata\todaysmarket.cpp:906) : Can build objects in the following order:
+DATA     [2024-Jul-01 15:42:03.220400]  (...ta\ored\marketdata\todaysmarket.cpp:908) : vertex #18: DefaultCurve(CPTY_A,Default/EUR/CPTY_A_SR_EUR) (not yet built)
+DEBUG    [2024-Jul-01 15:42:03.220400]  (...ta\ored\marketdata\todaysmarket.cpp:511) : Building DefaultCurve for asof February 5th, 2016
+NOTICE   [2024-Jul-01 15:42:03.221382]  (...ta\ored\marketdata\defaultcurve.cpp:545) : Start building default curve of type HazardRate for curve CPTY_A_SR_EUR
+NOTICE   [2024-Jul-01 15:42:03.221382]  (...ta\ored\marketdata\defaultcurve.cpp:168) : Loading explicit quotes for default curve CPTY_A_SR_EUR
+DATA     [2024-Jul-01 15:42:03.221382]  (...ata\ored\marketdata\defaultcurve.cpp:72) : Loaded quote HAZARD_RATE/RATE/CPTY_A/SR/EUR/1Y for default curve CPTY_A_SR_EUR
+NOTICE   [2024-Jul-01 15:42:03.221382]  (...ta\ored\marketdata\defaultcurve.cpp:194) : DefaultCurve CPTY_A_SR_EUR using 1 default quotes of 1 requested quotes.
+NOTICE   [2024-Jul-01 15:42:03.221382]  (...ta\ored\marketdata\defaultcurve.cpp:567) : DefaultCurve: add asof (February 5th, 2016), hazard rate 0.01, as not given
+NOTICE   [2024-Jul-01 15:42:03.221382]  (...ta\ored\marketdata\defaultcurve.cpp:577) : DefaultCurve: set up interpolated hazard rate curve
+DEBUG    [2024-Jul-01 15:42:03.222378]  (...ta\ored\marketdata\defaultcurve.cpp:584) : DefaultCurve: Enabled Extrapolation
+NOTICE   [2024-Jul-01 15:42:03.222378]  (...ta\ored\marketdata\defaultcurve.cpp:595) : Finished building default curve of type HazardRate for curve CPTY_A_SR_EUR
+DEBUG    [2024-Jul-01 15:42:03.222378]  (...ta\ored\marketdata\todaysmarket.cpp:517) : Adding DefaultCurve (CPTY_A) with spec Default/EUR/CPTY_A_SR_EUR to configuration default
+DEBUG    [2024-Jul-01 15:42:03.222378]  (...ta\ored\marketdata\todaysmarket.cpp:918) : built node DefaultCurve(CPTY_A,Default/EUR/CPTY_A_SR_EUR) in configuration default
+DEBUG    [2024-Jul-01 15:42:03.222378]  (...ta\ored\marketdata\todaysmarket.cpp:930) : Loaded CurvesSpecs: success: 1, error: 0
+DEBUG    [2024-Jul-01 15:42:03.223449]  (OREAnalytics\orea\app\reportwriter.cpp:792) : default curve - CPTY_B
+DEBUG    [2024-Jul-01 15:42:03.223449]  (...ta\ored\marketdata\todaysmarket.cpp:825) : market object DefaultCurve(CPTY_B) required for configuration 'default'
+DATA     [2024-Jul-01 15:42:03.223449]  (...ta\ored\marketdata\todaysmarket.cpp:906) : Can build objects in the following order:
+DATA     [2024-Jul-01 15:42:03.223449]  (...ta\ored\marketdata\todaysmarket.cpp:908) : vertex #19: DefaultCurve(CPTY_B,Default/EUR/CPTY_A_SR_EUR) (not yet built)
+DEBUG    [2024-Jul-01 15:42:03.223449]  (...ta\ored\marketdata\todaysmarket.cpp:517) : Adding DefaultCurve (CPTY_B) with spec Default/EUR/CPTY_A_SR_EUR to configuration default
+DEBUG    [2024-Jul-01 15:42:03.223449]  (...ta\ored\marketdata\todaysmarket.cpp:918) : built node DefaultCurve(CPTY_B,Default/EUR/CPTY_A_SR_EUR) in configuration default
+DEBUG    [2024-Jul-01 15:42:03.224448]  (...ta\ored\marketdata\todaysmarket.cpp:930) : Loaded CurvesSpecs: success: 1, error: 0
+WARNING  [2024-Jul-01 15:42:03.224448]       (OREAnalytics\orea\app\analytic.cpp:88) : 12263424|12259328
+NOTICE   [2024-Jul-01 15:42:03.224448]  (...ytics\orea\app\analyticsmanager.cpp:161) : run analytic with label 'PRICING' finished.
+DEBUG    [2024-Jul-01 15:42:03.225448]  (...rea\app\marketcalibrationreport.cpp:182) : Skipping curve EUR1D for label  as it has already been added
+DEBUG    [2024-Jul-01 15:42:03.225448]  (...rea\app\marketcalibrationreport.cpp:182) : Skipping curve EUR1D for label  as it has already been added
+DEBUG    [2024-Jul-01 15:42:03.225448]  (...rea\app\marketcalibrationreport.cpp:182) : Skipping curve EUR1D for label  as it has already been added
+DEBUG    [2024-Jul-01 15:42:03.225448]  (...rea\app\marketcalibrationreport.cpp:182) : Skipping curve GBP6M for label  as it has already been added
+DEBUG    [2024-Jul-01 15:42:03.225448]  (...rea\app\marketcalibrationreport.cpp:182) : Skipping curve GBP1D for label  as it has already been added
+NOTICE   [2024-Jul-01 15:42:03.226445]  (...nalytics\orea\app\reportwriter.cpp:1475) : Writing Pricing stats report
+NOTICE   [2024-Jul-01 15:42:03.226445]  (...nalytics\orea\app\reportwriter.cpp:1491) : Pricing stats report written
+NOTICE   [2024-Jul-01 15:42:03.226445]  (...ytics\orea\app\analyticsmanager.cpp:234) : report name cashflow occurs 1 times
+NOTICE   [2024-Jul-01 15:42:03.226445]  (...ytics\orea\app\analyticsmanager.cpp:234) : report name curves occurs 1 times
+NOTICE   [2024-Jul-01 15:42:03.226445]  (...ytics\orea\app\analyticsmanager.cpp:234) : report name dividends occurs 1 times
+NOTICE   [2024-Jul-01 15:42:03.227416]  (...ytics\orea\app\analyticsmanager.cpp:234) : report name fixings occurs 1 times
+NOTICE   [2024-Jul-01 15:42:03.227416]  (...ytics\orea\app\analyticsmanager.cpp:234) : report name marketdata occurs 1 times
+NOTICE   [2024-Jul-01 15:42:03.227416]  (...ytics\orea\app\analyticsmanager.cpp:234) : report name npv occurs 1 times
+NOTICE   [2024-Jul-01 15:42:03.227416]  (...ytics\orea\app\analyticsmanager.cpp:234) : report name pricingstats occurs 1 times
+NOTICE   [2024-Jul-01 15:42:03.227416]  (...ytics\orea\app\analyticsmanager.cpp:234) : report name todaysmarketcalibration occurs 1 times
+NOTICE   [2024-Jul-01 15:42:03.228377]       (OREData\ored\report\csvreport.cpp:110) : Opening CSV file report 'example/example14/Output/flows.csv'
+NOTICE   [2024-Jul-01 15:42:03.228377]       (OREData\ored\report\csvreport.cpp:199) : CSV file report 'example/example14/Output/flows.csv' closed.
+NOTICE   [2024-Jul-01 15:42:03.228377]  (...ytics\orea\app\analyticsmanager.cpp:277) : report cashflow written to example/example14/Output/flows.csv
+NOTICE   [2024-Jul-01 15:42:03.229417]       (OREData\ored\report\csvreport.cpp:110) : Opening CSV file report 'example/example14/Output/dividends.csv'
+NOTICE   [2024-Jul-01 15:42:03.229417]       (OREData\ored\report\csvreport.cpp:199) : CSV file report 'example/example14/Output/dividends.csv' closed.
+NOTICE   [2024-Jul-01 15:42:03.229417]  (...ytics\orea\app\analyticsmanager.cpp:277) : report dividends written to example/example14/Output/dividends.csv
+NOTICE   [2024-Jul-01 15:42:03.229417]       (OREData\ored\report\csvreport.cpp:110) : Opening CSV file report 'example/example14/Output/fixings.csv'
+NOTICE   [2024-Jul-01 15:42:03.230371]       (OREData\ored\report\csvreport.cpp:199) : CSV file report 'example/example14/Output/fixings.csv' closed.
+NOTICE   [2024-Jul-01 15:42:03.230371]  (...ytics\orea\app\analyticsmanager.cpp:277) : report fixings written to example/example14/Output/fixings.csv
+NOTICE   [2024-Jul-01 15:42:03.230371]       (OREData\ored\report\csvreport.cpp:110) : Opening CSV file report 'example/example14/Output/todaysmarketcalibration.csv'
+NOTICE   [2024-Jul-01 15:42:03.230371]       (OREData\ored\report\csvreport.cpp:199) : CSV file report 'example/example14/Output/todaysmarketcalibration.csv' closed.
+NOTICE   [2024-Jul-01 15:42:03.231371]  (...ytics\orea\app\analyticsmanager.cpp:277) : report todaysmarketcalibration written to example/example14/Output/todaysmarketcalibration.csv
+NOTICE   [2024-Jul-01 15:42:03.231371]       (OREData\ored\report\csvreport.cpp:110) : Opening CSV file report 'example/example14/Output/marketdata.csv'
+NOTICE   [2024-Jul-01 15:42:03.231371]       (OREData\ored\report\csvreport.cpp:199) : CSV file report 'example/example14/Output/marketdata.csv' closed.
+NOTICE   [2024-Jul-01 15:42:03.231371]  (...ytics\orea\app\analyticsmanager.cpp:277) : report marketdata written to example/example14/Output/marketdata.csv
+NOTICE   [2024-Jul-01 15:42:03.231371]       (OREData\ored\report\csvreport.cpp:110) : Opening CSV file report 'example/example14/Output/curves.csv'
+NOTICE   [2024-Jul-01 15:42:03.233414]       (OREData\ored\report\csvreport.cpp:199) : CSV file report 'example/example14/Output/curves.csv' closed.
+NOTICE   [2024-Jul-01 15:42:03.233414]  (...ytics\orea\app\analyticsmanager.cpp:277) : report curves written to example/example14/Output/curves.csv
+NOTICE   [2024-Jul-01 15:42:03.234371]       (OREData\ored\report\csvreport.cpp:110) : Opening CSV file report 'example/example14/Output/npv.csv'
+NOTICE   [2024-Jul-01 15:42:03.234371]       (OREData\ored\report\csvreport.cpp:199) : CSV file report 'example/example14/Output/npv.csv' closed.
+NOTICE   [2024-Jul-01 15:42:03.234371]  (...ytics\orea\app\analyticsmanager.cpp:277) : report npv written to example/example14/Output/npv.csv
+NOTICE   [2024-Jul-01 15:42:03.234371]       (OREData\ored\report\csvreport.cpp:110) : Opening CSV file report 'example/example14/Output/pricingstats.csv'
+NOTICE   [2024-Jul-01 15:42:03.235371]       (OREData\ored\report\csvreport.cpp:199) : CSV file report 'example/example14/Output/pricingstats.csv' closed.
+NOTICE   [2024-Jul-01 15:42:03.235371]  (...ytics\orea\app\analyticsmanager.cpp:277) : report pricingstats written to example/example14/Output/pricingstats.csv
+WARNING  [2024-Jul-01 15:42:03.235371]        (OREAnalytics\orea\app\oreapp.cpp:309) : 12484608|12480512
+NOTICE   [2024-Jul-01 15:42:03.235371]        (OREAnalytics\orea\app\oreapp.cpp:310) : ORE analytics done
+NOTICE   [2024-Jul-01 15:42:03.235371]        (OREAnalytics\orea\app\oreapp.cpp:439) : ORE done.

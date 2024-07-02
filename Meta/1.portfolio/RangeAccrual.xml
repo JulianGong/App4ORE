@@ -1,0 +1,174 @@
+<?xml version="1.0" ?>
+<Portfolio>
+
+  <!-- Reference to external script, default MC engine -->
+  <Trade id="RangeAccrual">
+    <TradeType>ScriptedTrade</TradeType>
+    <Envelope>
+      <CounterParty>ICBC</CounterParty>
+      <NettingSetId>BOCOM</NettingSetId>
+      <PortfolioIds>
+        <PortfolioId>PF2</PortfolioId>
+      </PortfolioIds>
+      <AdditionalFields/>
+    </Envelope>
+    <RangeAccrualData>
+      <Underlying type='index'>FX-ECB-EUR-USD</Underlying>
+      <FX0 type='number'>1.132337</FX0>
+      <CF type='number'>0.0001</CF>
+      <Strike type='number'>
+          <Value>-500</Value>
+          <Value>500</Value>
+      </Strike>
+      <Coupon type='number'>
+          <Value>0.01</Value>
+          <Value>0.05</Value>
+      </Coupon>
+      <LongShort type='number'>1</LongShort>
+      <PayCcy type='currency'>USD</PayCcy>
+      <Expiry type='event'>2017-02-05</Expiry>
+      <Settlement type='event'>2017-02-07</Settlement>
+      <AccrStart type='event'>2016-02-05</AccrStart>
+      <AccrEnd type='event'>2017-02-05</AccrEnd>
+      <dc type='dayCounter'>ACT/360</dc>
+      <ObserverDates type='event'>
+        <ScheduleData>
+            <Rules>
+              <StartDate>2016-02-05</StartDate>
+              <EndDate>2017-02-05</EndDate>
+              <Tenor>1W</Tenor>
+              <Calendar>US</Calendar>
+              <Convention>Following</Convention>
+              <TermConvention>Following</TermConvention>
+              <Rule>Forward</Rule>
+              <EndOfMonth/>
+              <FirstDate/>
+              <LastDate/>
+            </Rules>
+            <!--Dates>
+              <Dates>
+                <Date>2026-02-25</Date>
+                <Date>2027-02-25</Date>
+                <Date>2028-02-25</Date>
+                <Date>2029-02-25</Date>
+                <Date>2030-02-25</Date>
+                <Date>2031-02-25</Date>
+                <Date>2032-02-25</Date>
+                <Date>2033-02-25</Date>
+                <Date>2034-02-25</Date>
+                <Date>2035-02-25</Date>
+              </Dates>
+            </Dates-->
+        </ScheduleData>
+      </ObserverDates>
+      <Notional type='number'>1000000</Notional>
+
+    </RangeAccrualData>
+
+  </Trade>
+
+
+  <Trade id="RangeAccrualEF">
+    <TradeType>ScriptedTrade</TradeType>
+    <Envelope>
+      <CounterParty>ICBC</CounterParty>
+      <NettingSetId>BOCOM</NettingSetId>
+      <AdditionalFields/>
+    </Envelope>
+    <ScriptedTradeData>
+      <ScriptName>RangeAccrual</ScriptName>
+      <Data>
+        <Index>
+          <Name>Underlying</Name>
+          <Value>FX-ECB-EUR-USD</Value>
+        </Index>
+        <Number>
+          <Name>FX0</Name>
+          <Value>1.132337</Value>
+        </Number>
+        <Number>
+          <Name>CF</Name>
+          <Value>0.0001</Value>
+        </Number>
+        <Number>
+          <Name>Strike</Name>
+          <Values>
+            <Value>-500</Value>
+            <Value>500</Value>
+          </Values>
+        </Number>
+        <Number>
+          <Name>Coupon</Name>
+          <Values>
+            <Value>0.01</Value>
+            <Value>0.05</Value>
+          </Values>
+        </Number>
+        <Number>
+          <Name>LongShort</Name>
+          <Value>1</Value>
+        </Number>
+        <Currency>
+          <Name>PayCcy</Name>
+          <Value>USD</Value>
+        </Currency>
+        <Event>
+          <Name>Expiry</Name>
+          <Value>2017-02-05</Value>
+        </Event>
+        <Event>
+          <Name>Settlement</Name>
+          <Value>2017-02-07</Value>
+        </Event>
+        <Event>
+          <Name>AccrStart</Name>
+          <Value>2016-02-07</Value>
+        </Event>
+        <Event>
+          <Name>AccrEnd</Name>
+          <Value>2017-02-07</Value>
+        </Event>
+        <Daycounter>
+          <Name>dc</Name>
+          <Value>ACT/360</Value>
+        </Daycounter>
+        <Event>
+          <Name>ObserverDates</Name>
+          <ScheduleData>
+            <Rules>
+              <StartDate>2016-02-05</StartDate>
+              <EndDate>2017-02-05</EndDate>
+              <Tenor>1W</Tenor>
+              <Calendar>US</Calendar>
+              <Convention>Following</Convention>
+              <TermConvention>Following</TermConvention>
+              <Rule>Forward</Rule>
+              <EndOfMonth/>
+              <FirstDate/>
+              <LastDate/>
+            </Rules>
+            <!--Dates>
+              <Dates>
+                <Date>2026-02-25</Date>
+                <Date>2027-02-25</Date>
+                <Date>2028-02-25</Date>
+                <Date>2029-02-25</Date>
+                <Date>2030-02-25</Date>
+                <Date>2031-02-25</Date>
+                <Date>2032-02-25</Date>
+                <Date>2033-02-25</Date>
+                <Date>2034-02-25</Date>
+                <Date>2035-02-25</Date>
+              </Dates>
+            </Dates-->
+          </ScheduleData>
+        </Event>
+        <Number>
+          <Name>Notional</Name>
+          <Value>1000000</Value>
+        </Number>
+      </Data>
+    </ScriptedTradeData>
+  </Trade>
+
+</Portfolio>

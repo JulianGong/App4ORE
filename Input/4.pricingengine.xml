@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<PricingEngines>
+  <Product type="Swap">
+    <Model>DiscountedCashflows</Model>
+    <ModelParameters/>
+    <Engine>DiscountingSwapEngine</Engine>
+    <EngineParameters>
+      <Parameter name="SensitivityTemplate">IR_Analytical</Parameter>
+    </EngineParameters>
+  </Product>
+
+  <Product type="EuropeanSwaption">
+    <Model>BlackBachelier</Model>
+    <!--  depends on input vol  -->
+    <ModelParameters/>
+    <Engine>BlackBachelierSwaptionEngine</Engine>
+    <EngineParameters/>
+  </Product>
+
+  <Product type="FxOption">
+    <Model>GarmanKohlhagen</Model>
+    <ModelParameters/>
+    <Engine>AnalyticEuropeanEngine</Engine>
+    <EngineParameters>
+      <Parameter name="SensitivityTemplate">COMM_Analytical</Parameter>
+    </EngineParameters>
+  </Product>
+
+  <Product type="FxOptionEuropeanCS">
+    <Model>GarmanKohlhagen</Model>
+    <ModelParameters/>
+    <Engine>AnalyticCashSettledEuropeanEngine</Engine>
+    <EngineParameters>
+      <Parameter name="SensitivityTemplate">COMM_Analytical</Parameter>
+    </EngineParameters>
+  </Product>
+
+  <!--Product type="FxOptionAmerican">
+    <Model>GarmanKohlhagen</Model>
+    <ModelParameters/>
+    <Engine>BaroneAdesiWhaleyApproximationEngine</Engine>
+    <EngineParameters>
+      <Parameter name="SensitivityTemplate">COMM_Analytical</Parameter>
+    </EngineParameters>
+  </Product-->
+
+  <Product type="FxOptionAmerican">
+    <Model>GarmanKohlhagen</Model>
+    <ModelParameters/>
+    <Engine>FdBlackScholesVanillaEngine</Engine>
+    <EngineParameters>
+      <Parameter name="Scheme">Douglas</Parameter>
+      <Parameter name="TimeGridPerYear">100</Parameter>
+      <Parameter name="XGrid">100</Parameter>
+      <Parameter name="DampingSteps">0</Parameter>
+      <Parameter name="EnforceMonotoneVariance">true</Parameter>
+      <Parameter name="SensitivityTemplate">COMM_FD</Parameter>
+    </EngineParameters>
+  </Product>
+
+  <Product type="FxDoubleTouchOption">
+    <Model>GarmanKohlhagen</Model>
+    <ModelParameters/>
+    <Engine>AnalyticDoubleBarrierBinaryEngine</Engine>
+    <EngineParameters>
+      <Parameter name="SensitivityTemplate">FX_Analytical</Parameter>
+    </EngineParameters>
+  </Product>
+
+  <Product type="FxAsianOptionArithmeticStrike">
+    <Model>BlackScholesMerton</Model>
+    <ModelParameters/>
+    <Engine>MCDiscreteArithmeticASEngine</Engine>
+    <EngineParameters>
+      <Parameter name="BrownianBridge">true</Parameter>
+      <Parameter name="AntitheticVariate">true</Parameter>
+      <Parameter name="ControlVariate">true</Parameter>
+      <Parameter name="RequiredSamples">10000</Parameter>
+      <Parameter name="RequiredTolerance">0</Parameter>
+      <Parameter name="MaxSamples">0</Parameter>
+      <Parameter name="Seed">42</Parameter>
+      <Parameter name="SensitivityTemplate">FX_MC</Parameter>
+    </EngineParameters>
+  </Product>
+
+  <Product type="FxAsianOptionArithmeticPrice">
+    <Model>GarmanKohlhagen</Model>
+    <ModelParameters/>
+    <Engine>TurnbullWakemanAsianEngine</Engine>
+    <EngineParameters>
+      <Parameter name="SensitivityTemplate">FX_Analytical</Parameter>
+    </EngineParameters>
+  </Product>
+
+
+  <Product type="ScriptedTrade">
+    <Model>Generic</Model>
+    <ModelParameters>
+      <!-- shared parameters -->
+      <Parameter name="BaseCcy">USD</Parameter>
+      <Parameter name="EnforceBaseCcy">false</Parameter>
+      <Parameter name="FullDynamicFx">false</Parameter>
+      <Parameter name="GridCoarsening">3M(1W),1Y(1M),5Y(3M),10Y(1Y)</Parameter>
+      <Parameter name="Model">BlackScholes</Parameter>
+      <!-- model selection -->
+      <Parameter name="Model_SingleAssetOption(EQ)">BlackScholes</Parameter>
+    </ModelParameters>
+    <Engine>Generic</Engine>
+    <EngineParameters>
+      <!-- shared parameters -->
+      <Parameter name="Interactive">false</Parameter>
+      <Parameter name="BootstrapTolerance">0.1</Parameter>
+      <!-- default parameters-->
+      <Parameter name="Engine">MC</Parameter>
+      <Parameter name="Samples">10000</Parameter>
+      <Parameter name="StateGridPoints">100</Parameter>
+      <Parameter name="RegressionOrder">2</Parameter>
+      <Parameter name="TimeStepsPerYear">24</Parameter>
+      <!-- asset class specific choices -->
+      <Parameter name="Engine_SingleAssetOption(EQ)">MC</Parameter>
+      <Parameter name="Engine_SingleAssetOptionBwd(EQ)">FD</Parameter>
+      <Parameter name="Engine_SingleAssetOptionBwd(FX)">FD</Parameter>
+      <Parameter name="Engine_SingleAssetOptionBwd(COMM)">FD</Parameter>
+    </EngineParameters>
+  </Product>
+
+
+  <GlobalParameters>
+    <Parameter name="ContinueOnCalibrationError">true</Parameter>
+  </GlobalParameters>
+
+</PricingEngines>

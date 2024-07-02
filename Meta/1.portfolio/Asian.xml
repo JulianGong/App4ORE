@@ -1,0 +1,178 @@
+<?xml version="1.0" ?>
+<Portfolio>
+  
+  <Trade id="FXAsianNS">
+    <TradeType>FxAsianOption</TradeType>
+    <Envelope>
+      <CounterParty>ICBC</CounterParty>
+      <NettingSetId>BOCOM</NettingSetId>
+      <PortfolioIds>
+        <PortfolioId>PF1</PortfolioId>
+      </PortfolioIds>
+      <AdditionalFields />
+    </Envelope>
+    <FxAsianOptionData>
+      <Currency>USD</Currency>
+      <Quantity>1000000</Quantity>
+      <Strike>1.13</Strike>
+      <Underlying>
+        <Type>FX</Type>
+        <Name>ECB-EUR-USD</Name>
+      </Underlying>
+      <OptionData>
+        <LongShort>Long</LongShort>
+        <OptionType>Call</OptionType>
+        <PayoffType>Asian</PayoffType>
+        <PayoffType2>Arithmetic</PayoffType2>
+        <ExerciseDates>
+          <ExerciseDate>2017-02-05</ExerciseDate>
+        </ExerciseDates>
+      </OptionData>
+      <Settlement>2017-02-07</Settlement>
+      <ObservationDates>
+        <Rules>
+          <StartDate>2016-02-05</StartDate>
+          <EndDate>2017-02-05</EndDate>
+          <Tenor>1D</Tenor>
+          <Calendar>US</Calendar>
+          <Convention>F</Convention>
+          <TermConvention>F</TermConvention>
+          <Rule>Forward</Rule>
+        </Rules>
+      </ObservationDates>
+    </FxAsianOptionData>
+  </Trade>
+
+
+
+  <Trade id="FXAsian">
+    <TradeType>ScriptedTrade</TradeType>
+    <Envelope>
+      <CounterParty>ICBC</CounterParty>
+      <NettingSetId>BOCOM</NettingSetId>
+      <PortfolioIds>
+        <PortfolioId>PF1</PortfolioId>
+      </PortfolioIds>
+      <AdditionalFields/>
+    </Envelope>
+    <SingleAsianOptionData>
+      <Amount type='number'>1000000</Amount>
+      <OptionType type='number'>1</OptionType>
+      <Strike type='number'>1.13</Strike>
+      <LongShort type='number'>1</LongShort>
+      <PayCcy type='currency'>USD</PayCcy>
+      <Underlying type='index'>FX-ECB-EUR-USD</Underlying>
+      <ObservationDates type='event'>
+          <ScheduleData>
+            <Rules>
+              <StartDate>2016-02-05</StartDate>
+              <EndDate>2017-02-05</EndDate>
+              <Tenor>1D</Tenor>
+              <Calendar>US</Calendar>
+              <Convention>Following</Convention>
+              <TermConvention>Following</TermConvention>
+              <Rule>Forward</Rule>
+              <EndOfMonth/>
+              <FirstDate/>
+              <LastDate/>
+            </Rules>
+
+            <!--Dates>
+              <Dates>
+                <Date>2026-02-25</Date>
+                <Date>2027-02-25</Date>
+                <Date>2028-02-25</Date>
+                <Date>2029-02-25</Date>
+                <Date>2030-02-25</Date>
+                <Date>2031-02-25</Date>
+                <Date>2032-02-25</Date>
+                <Date>2033-02-25</Date>
+                <Date>2034-02-25</Date>
+                <Date>2035-02-25</Date>
+              </Dates>
+            </Dates-->
+          </ScheduleData>
+      </ObservationDates>
+      <ExerciseSettlement type='number'>1</ExerciseSettlement>
+    </SingleAsianOptionData>
+  </Trade>
+
+  
+  <Trade id="FXAsianEF">
+    <TradeType>ScriptedTrade</TradeType>
+    <Envelope>
+      <CounterParty>ICBC</CounterParty>
+      <NettingSetId>BOCOM</NettingSetId>
+      <AdditionalFields/>
+    </Envelope>
+    <ScriptedTradeData>
+      <ScriptName>SingleAsianOption</ScriptName>
+      <Data>
+        <Number>
+          <Name>Amount</Name>
+          <Value>1000000</Value>
+        </Number>
+        <Number>
+          <Name>OptionType</Name>
+          <Value>1</Value>
+        </Number>
+        <Number>
+          <Name>Strike</Name>
+          <Value>1.13</Value>
+        </Number>
+        <Number>
+          <Name>LongShort</Name>
+          <Value>1</Value>
+        </Number>
+        <Currency>
+          <Name>PayCcy</Name>
+          <Value>USD</Value>
+        </Currency>
+        <Index>
+          <Name>Underlying</Name>
+          <Value>FX-ECB-EUR-USD</Value>
+        </Index>
+        <Event>
+          <Name>ObservationDates</Name>
+          <ScheduleData>
+            <Rules>
+              <StartDate>2016-02-05</StartDate>
+              <EndDate>2017-02-05</EndDate>
+              <Tenor>1D</Tenor>
+              <Calendar>US</Calendar>
+              <Convention>Following</Convention>
+              <TermConvention>Following</TermConvention>
+              <Rule>Forward</Rule>
+              <EndOfMonth/>
+              <FirstDate/>
+              <LastDate/>
+            </Rules>
+
+            <!--Dates>
+              <Dates>
+                <Date>2026-02-25</Date>
+                <Date>2027-02-25</Date>
+                <Date>2028-02-25</Date>
+                <Date>2029-02-25</Date>
+                <Date>2030-02-25</Date>
+                <Date>2031-02-25</Date>
+                <Date>2032-02-25</Date>
+                <Date>2033-02-25</Date>
+                <Date>2034-02-25</Date>
+                <Date>2035-02-25</Date>
+              </Dates>
+            </Dates-->
+          </ScheduleData>
+        </Event>
+        <Number>
+          <Name>ExerciseSettlement</Name>
+          <!-- 0 = cash, 1 = physcial -->
+          <Value>1</Value>
+        </Number>
+      </Data>
+    </ScriptedTradeData>
+  </Trade>
+
+
+
+</Portfolio>

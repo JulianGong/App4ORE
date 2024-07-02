@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<ScriptLibrary>
+  
+  <!-- Accumulator
+       Inputs:
+       Notional                        notional
+       PutCall                         1 for call, -1 for put
+       LongShort                       1 for a long, -1 for a short position
+       Underlying                      underlying index
+       PayCcy                          payment currency
+       Expiry                          expiry date
+       Settlement                      settlement date
+       AccrStart                       accrual start date
+       AccrEnd                         accrual end date
+       dc                              daycounter
+       FX0                             FX Spot
+       CF                              Conversion Factor
+       Strike                          [strikeL, strikeH]
+       Coupon                          [base coupon, couponL, couponH]
+
+       Results:
+       value                           npv of the option
+       CurrentNotional                 current notional
+       notionalCurrency                notional currency
+  -->
+  <Script>
+    <Name>MultipleRanges</Name>
+    <Script>
+      <Code><![CDATA[
+            REQUIRE SIZE(Coupon)-SIZE(Strike) == 1;
+            NUMBER i, Payoff, accrTerm, rate, Outright[SIZE(Strike)];
+            
+            FOR i IN (1, SIZE(Strike), 1) DO
+              Outright[i] = FX0 + Strike[i]* CF;
+            END;
+
+            rate = Coupon[1];
+            FOR i IN (SIZE(Strike), 1, -1) DO
+              IF PutCall* Underlying(Expiry) >= PutCall* Outright[i] THEN
+                rate = Coupon[i+1];
+              END;
+            END;
+            accrTerm = dcf(dc, AccrStart, AccrEnd);
+            Payoff = PAY(Notional* rate* accrTerm, Expiry, Settlement, PayCcy);
+            value = LongShort * Payoff;
+            
+        ]]></Code>
+      <NPV>value</NPV>
+      <Results>
+        <Result rename="notionalCurrency">PayCcy</Result>
+      </Results>
+
+    </Script>
+  </Script>
+  
+</ScriptLibrary>
